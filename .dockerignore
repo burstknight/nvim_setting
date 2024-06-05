@@ -1,0 +1,12 @@
+# Skip all files in the directory .git
+.git/*
+
+# Skip all markdown files
+*.md
+
+# Skip the license file
+LICENSE
+
+# Skip all docker files
+Dockerfile*
+
