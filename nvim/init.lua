@@ -7,3 +7,6 @@ vim.o.fileencoding = "utf-8" 	-- 使用 utf-8 來儲存檔案
 vim.o.linebreak = true 			-- 如果一行的文字過長，就將其拆行顯示在下一行
 vim.o.showbreak = ">>" 			-- 設定拆行的接續符號
 
+require("plugin_manager")
+require("keymaps")
+require("plugins.nerdtree")
