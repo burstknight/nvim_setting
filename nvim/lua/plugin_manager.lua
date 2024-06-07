@@ -20,4 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 -- 可以和 git 搭配及時顯示當前檔案的修改狀態
 Plug 'airblade/vim-gitgutter'
 
+-- 這個外掛可以產生Doxygen格式的註解
+Plug 'vim-scripts/DoxygenToolkit.vim'
+
 vim.call('plug#end')
