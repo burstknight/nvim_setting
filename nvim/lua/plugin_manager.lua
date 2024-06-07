@@ -17,4 +17,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+-- 可以和 git 搭配及時顯示當前檔案的修改狀態
+Plug 'airblade/vim-gitgutter'
+
 vim.call('plug#end')
