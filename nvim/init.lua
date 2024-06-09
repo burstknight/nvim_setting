@@ -8,6 +8,15 @@ require("plugin_manager")
 require("keymaps")
 
 -- 載入所有外掛的設定檔
-require("plugins.nerdtree")
-require("plugins.vim-gitgutter")
+local plugins = {
+	"plugins.nerdtree",
+	"plugins.vim-gitgutter"
+}
+
+for i = 1, #plugins do
+	local isOk, msg = pcall(require, plugins[i])
+	if false == isOk then
+		print("Failed to load the plugin setting: " .. plugins[i] .. "\nReason: " .. msg)
+	end
+end
 
