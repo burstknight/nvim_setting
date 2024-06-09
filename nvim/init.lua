@@ -13,7 +13,8 @@ require("theme")
 -- 載入所有外掛的設定檔
 local plugins = {
 	"plugins.nerdtree",
-	"plugins.vim-gitgutter"
+	"plugins.vim-gitgutter",
+	"plugins.vim-rainbow"
 }
 
 for i = 1, #plugins do

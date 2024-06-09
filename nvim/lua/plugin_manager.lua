@@ -26,4 +26,7 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 -- 主題外掛
 Plug 'tomasiser/vim-code-dark'
 
+-- 可以使用多個不同顏色來顯示巢狀式括號
+Plug 'frazrepo/vim-rainbow'
+
 vim.call('plug#end')
