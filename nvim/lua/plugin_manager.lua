@@ -23,4 +23,7 @@ Plug 'airblade/vim-gitgutter'
 -- 這個外掛可以產生Doxygen格式的註解
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
+-- 主題外掛
+Plug 'tomasiser/vim-code-dark'
+
 vim.call('plug#end')

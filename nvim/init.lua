@@ -7,6 +7,9 @@ require("plugin_manager")
 -- 載入快捷鍵的設定
 require("keymaps")
 
+-- 載入主題設定
+require("theme")
+
 -- 載入所有外掛的設定檔
 local plugins = {
 	"plugins.nerdtree",
