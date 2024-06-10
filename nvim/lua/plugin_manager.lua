@@ -12,11 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- 這個外掛可以當檔案總管來瀏覽一個專案目錄下的檔案
-	{'preservim/nerdtree'},
-
-	-- 可以配合 nerdtree 顯示每個檔案git的狀態
-	{'Xuyuanp/nerdtree-git-plugin'},
+	-- 使用 nvim-tree 來當作檔案總管
+	{'kyazdani42/nvim-tree.lua', event = "VimEnter", dependencies = "nvim-tree/nvim-web-devicons"},
 
 	-- 這個外掛可以用來括號類符號的自動補齊
 	{'jiangmiao/auto-pairs'},
