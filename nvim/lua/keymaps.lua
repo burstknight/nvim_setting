@@ -24,4 +24,22 @@ pluginKeys.lspKeyBinding = function(mapbuf)
 	mapbuf("n", "<F9>", ":lua vim.lsp.buf.hover()<CR>", keymap_opts)
 end
 
+pluginKeys.cmpKeys = function(cmp)
+	local keys = {
+		["<A-j>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
+		["<A-k>"] = cmp.mapping({
+			i = cmp.mapping.abort(),
+			c = cmp.mapping.close(),
+		}),
+		["<TAB>"] = cmp.mapping.select_next_item(),
+		["<S-TAB>"] = cmp.mapping.select_prev_item(),
+		["<CR>"] = cmp.mapping.confirm({
+			select = true,
+			behavior = cmp.ConfirmBehavior.Replace,
+		}),
+	}
+
+	return keys
+end
+
 return pluginKeys
