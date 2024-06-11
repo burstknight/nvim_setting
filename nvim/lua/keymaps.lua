@@ -18,7 +18,7 @@ local pluginKeys = {}
 
 -- 設定 LSP 快捷鍵
 pluginKeys.lspKeyBinding = function(mapbuf)
-	mapbuf("n", "<leader>rn", ":lua vim.lsp.buf.rename<CR>", keymap_opts)
+	mapbuf("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", keymap_opts)
 	mapbuf("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", keymap_opts)
 	mapbuf("n", "gd", ":lua vim.lsp.buf.definition()<CR>", keymap_opts)
 	mapbuf("n", "<F9>", ":lua vim.lsp.buf.hover()<CR>", keymap_opts)
