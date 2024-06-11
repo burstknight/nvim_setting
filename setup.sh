@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 
 sudo apt-get update
-sudo apt-get install -y git curl ripgrep fd-find
+sudo apt-get install -y git curl ripgrep fd-find clangd
 
 echo "Copy the directory 'nvim' into '$HOME/.config' ..."
 mkdir -p $HOME/.config/nvim
