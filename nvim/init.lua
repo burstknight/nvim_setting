@@ -24,3 +24,6 @@ for i = 1, #plugins do
 	end
 end
 
+-- 載入 mason 的設定以便管理LSP
+require("lsp.mason")
+
