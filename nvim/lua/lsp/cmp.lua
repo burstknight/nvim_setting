@@ -5,16 +5,38 @@ if not status then
 end
 
 cmp.setup({
+	-- 設定 snippet 引擎
 	snippet = {
 		expand = function(args)
 			vim.fn["vsnip#anonymous"](args.body)
 		end,
 	},
 	mapping = require("keymaps").cmpKeys(cmp),
+
+	-- 設定自動補齊的來源
 	sources = cmp.config.sources({
 		{name = "nvim_lsp"},
 		{name = "vsnip"},
 		{name = "buffer"},
 	}),
+})
+
+-- 在使用`/`這個指令搜尋時會輔助做自動補齊
+cmp.setup.cmdline({"/", }, {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = {
+		{name = "buffer"},
+	}
+})
+
+-- 在使用`:`指令時會使用path和cmdline幫忙做自動補齊
+cmp.setup.cmdline(":", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{name = "path"},
+	}, {
+		{name = "cmdline"}
+	}),
+	matching = {disallow_symbol_nonprefix_matching = false},
 })
 
