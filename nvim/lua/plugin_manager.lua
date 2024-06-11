@@ -43,6 +43,10 @@ require("lazy").setup({
 	{'nvim-lua/plenary.nvim'},
 
 	-- 設定LSP
-	{'neovim/nvim-lspconfig'}
+	{'neovim/nvim-lspconfig'},
+
+	-- 這個外掛專門用來管理 LSP server
+	{"williamboman/mason.nvim"},
+	{"williamboman/mason-lspconfig.nvim"},
 })
 
