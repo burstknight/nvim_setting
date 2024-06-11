@@ -16,6 +16,14 @@ if not status then
 	return
 end
 
+mason.setup()
+mason_lspconfig.setup({
+	automatic_installation = true,
+	ensure_installed = {
+		"lua_ls",
+		"clangd",
+	},
+})
 
 -- Tis is a callback function to set shortcuts for LSP.
 function LspKeyBind(client, bufnr)
@@ -25,14 +33,6 @@ function LspKeyBind(client, bufnr)
 
 	require("keymaps").lspKeyBinding(buf_set_keymap)
 end
-
-mason.setup()
-mason_lspconfig.setup({
-	automatic_installation = true,
-	ensure_installed = {
-		"lua_ls",
-	},
-})
 
 -- 設定 lua lsp
 nvim_lsp.lua_ls.setup({
@@ -62,5 +62,10 @@ nvim_lsp.lua_ls.setup({
 
 		return true
 	end,
+})
+
+-- 設定clangd
+nvim_lsp.clangd.setup({
+	on_attach = LspKeyBind,
 })
 
