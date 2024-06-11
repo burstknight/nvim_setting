@@ -36,5 +36,10 @@ require("lazy").setup({
 
 	-- 可以使用多個不同顏色來顯示巢狀式括號
 	{'frazrepo/vim-rainbow'},
+
+	-- 這個外掛可以用來模糊搜尋檔案
+	{'nvim-telescope/telescope.nvim'},
+	{'nvim-treesitter/nvim-treesitter'},
+	{'nvim-lua/plenary.nvim'},
 })
 
