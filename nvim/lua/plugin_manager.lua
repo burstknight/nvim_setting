@@ -41,5 +41,8 @@ require("lazy").setup({
 	{'nvim-telescope/telescope.nvim'},
 	{'nvim-treesitter/nvim-treesitter'},
 	{'nvim-lua/plenary.nvim'},
+
+	-- 設定LSP
+	{'neovim/nvim-lspconfig'}
 })
 
