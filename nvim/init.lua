@@ -14,7 +14,8 @@ require("theme")
 local plugins = {
 	"plugins.nerdtree",
 	"plugins.vim-gitgutter",
-	"plugins.vim-rainbow"
+	"plugins.vim-rainbow",
+	"plugins.ibl",
 }
 
 for i = 1, #plugins do
@@ -23,4 +24,9 @@ for i = 1, #plugins do
 		print("Failed to load the plugin setting: " .. plugins[i] .. "\nReason: " .. msg)
 	end
 end
+
+-- 載入 mason 的設定以便管理LSP
+require("lsp.mason")
+
+require("lsp.cmp")
 

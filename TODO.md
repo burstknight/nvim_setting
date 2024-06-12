@@ -4,11 +4,11 @@
 ## [Unrelease]
 * File browser
 * LSP
-	- [ ] c/c++
-	- [ ] python3.x
-	- [ ] cmake
-	- [ ] lua
-	- [ ] bash
-	- [ ] json
-	- [ ] yaml
+	- [x] c/c++
+	- [x] python3.x
+	- [x] cmake
+	- [x] lua
+	- [x] bash
+	- [x] json
+	- [x] yaml
 

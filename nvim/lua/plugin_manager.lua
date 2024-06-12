@@ -41,5 +41,25 @@ require("lazy").setup({
 	{'nvim-telescope/telescope.nvim'},
 	{'nvim-treesitter/nvim-treesitter'},
 	{'nvim-lua/plenary.nvim'},
-})
 
+	-- 設定LSP
+	{'neovim/nvim-lspconfig'},
+
+	-- 這個外掛專門用來管理 LSP server
+	{"williamboman/mason.nvim"},
+	{"williamboman/mason-lspconfig.nvim"},
+
+	-- 這些外掛可以用來處理自動補齊
+	{'hrsh7th/nvim-cmp'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/cmp-path'},
+	{'hrsh7th/cmp-cmdline'},
+	{'hrsh7th/cmp-buffer'},
+
+	-- 使用 vsnip 處理自動補齊
+	{'hrsh7th/cmp-vsnip'},
+	{'hrsh7th/vim-vsnip'},
+
+	-- 這個外掛可以用來顯示縮排
+	{"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}},
+})
