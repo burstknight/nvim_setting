@@ -23,6 +23,7 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"clangd",
 		"cmake",
+		"jsonls",
 	},
 })
 
@@ -72,6 +73,11 @@ nvim_lsp.clangd.setup({
 
 -- 設定 lsp 可以支援 cmake
 nvim_lsp.cmake.setup({
+	on_attach = LspKeyBind,
+})
+
+-- 設定 lsp 可以支援 json
+nvim_lsp.jsonls.setup({
 	on_attach = LspKeyBind,
 })
 
