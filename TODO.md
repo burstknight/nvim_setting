@@ -4,9 +4,9 @@
 ## [Unrelease]
 * File browser
 * LSP
-	- [ ] c/c++
+	- [x] c/c++
 	- [ ] python3.x
-	- [ ] cmake
+	- [x] cmake
 	- [x] lua
 	- [ ] bash
 	- [ ] json
