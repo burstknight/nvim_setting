@@ -8,7 +8,7 @@
 	- [ ] python3.x
 	- [x] cmake
 	- [x] lua
-	- [ ] bash
-	- [ ] json
+	- [x] bash
+	- [x] json
 	- [ ] yaml
 
