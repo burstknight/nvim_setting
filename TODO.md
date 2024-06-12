@@ -10,5 +10,5 @@
 	- [x] lua
 	- [x] bash
 	- [x] json
-	- [ ] yaml
+	- [x] yaml
 
