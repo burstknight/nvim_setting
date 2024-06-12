@@ -25,6 +25,7 @@ mason_lspconfig.setup({
 		"cmake",
 		"jsonls",
 		"bashls",
+		"yamlls",
 	},
 })
 
@@ -84,6 +85,11 @@ nvim_lsp.jsonls.setup({
 
 -- 設定 lsp 可以支援 bash
 nvim_lsp.bashls.setup({
+	on_attach = LspKeyBind,
+})
+
+-- 設定 lsp 可以支援 yaml
+nvim_lsp.yamlls.setup({
 	on_attach = LspKeyBind,
 })
 
