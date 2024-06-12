@@ -5,7 +5,7 @@
 * File browser
 * LSP
 	- [x] c/c++
-	- [ ] python3.x
+	- [x] python3.x
 	- [x] cmake
 	- [x] lua
 	- [x] bash
