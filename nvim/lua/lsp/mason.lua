@@ -22,6 +22,7 @@ mason_lspconfig.setup({
 	ensure_installed = {
 		"lua_ls",
 		"clangd",
+		"cmake",
 	},
 })
 
@@ -66,6 +67,11 @@ nvim_lsp.lua_ls.setup({
 
 -- 設定clangd
 nvim_lsp.clangd.setup({
+	on_attach = LspKeyBind,
+})
+
+-- 設定 lsp 可以支援 cmake
+nvim_lsp.cmake.setup({
 	on_attach = LspKeyBind,
 })
 
