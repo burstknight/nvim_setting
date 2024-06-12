@@ -26,6 +26,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"bashls",
 		"yamlls",
+		"pyright",
 	},
 })
 
@@ -90,6 +91,11 @@ nvim_lsp.bashls.setup({
 
 -- 設定 lsp 可以支援 yaml
 nvim_lsp.yamlls.setup({
+	on_attach = LspKeyBind,
+})
+
+-- 設定 lsp 使用 pyright 支援 python
+nvim_lsp.pyright.setup({
 	on_attach = LspKeyBind,
 })
 
