@@ -14,7 +14,8 @@ require("theme")
 local plugins = {
 	"plugins.nerdtree",
 	"plugins.vim-gitgutter",
-	"plugins.vim-rainbow"
+	"plugins.vim-rainbow",
+	"plugins.ibl",
 }
 
 for i = 1, #plugins do

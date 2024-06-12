@@ -59,4 +59,7 @@ require("lazy").setup({
 	-- 使用 vsnip 處理自動補齊
 	{'hrsh7th/cmp-vsnip'},
 	{'hrsh7th/vim-vsnip'},
+
+	-- 這個外掛可以用來顯示縮排
+	{"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}},
 })
