@@ -14,8 +14,11 @@ local function on_attach(bufnr)
 	-- default mappings
 	api.config.mappings.default_on_attach(bufnr)
 
-	vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent, opts("Up"))
+	vim.keymap.set('n', "<C-u>", api.tree.change_root_to_parent, opts("Up"));
 	vim.keymap.set('n', "?", api.tree.toggle_help, opts("Help"))
+	vim.keymap.set('n', "s", api.node.open.vertical, opts("Open: Vertical Split"))
+	vim.keymap.set('n', "i", api.node.open.horizontal, opts("Open: Horizontal Split"))
+	vim.keymap.set('n', "t", api.node.open.tab, opts("Open: New Tab"))
 end
 
 nvim_tree.setup({
