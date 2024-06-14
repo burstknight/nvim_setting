@@ -1,27 +1,32 @@
-local vim = vim
+local map = vim.api.nvim_set_keymap
 
-local keymap_opts = {noremap = true}
+local opts = {noremap = true, silent = true}
+local buffer_ops = {noremap = true, silent = true, buffer = bufnr}
 
 -- 設定外掛 NERDTree 的快捷鍵
-vim.api.nvim_set_keymap('n', '<F2>', ':NERDTreeToggle<CR>', keymap_opts)
+map('n', '<F2>', ':NERDTreeToggle<CR>', opts)
 
 -- 設定外掛 DoxygenToolkit.vim 可以使用 <F8> 插入函數的說明註解
-vim.api.nvim_set_keymap('n', "<F8>", ":Dox<CR>", keymap_opts)
+map('n', "<F8>", ":Dox<CR>", opts)
 
 -- 設定外掛 telescope 使用 Ctrl + p 搜尋檔案
-vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", keymap_opts)
+map("n", "<C-p>", ":Telescope find_files<CR>", opts)
 
 -- 設定外掛telescope 使用 Ctrl + f 全域搜尋
-vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope live_grep<CR>", keymap_opts)
+map("n", "<C-f>", ":Telescope live_grep<CR>", opts)
+
+-- 設定 terminal 相關的快捷鍵
+map("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", buffer_ops)
+map("t", "<C-k>", "<C-\\><C-n>", opts)
 
 local pluginKeys = {}
 
 -- 設定 LSP 快捷鍵
 pluginKeys.lspKeyBinding = function(mapbuf)
-	mapbuf("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", keymap_opts)
-	mapbuf("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", keymap_opts)
-	mapbuf("n", "gd", ":lua vim.lsp.buf.definition()<CR>", keymap_opts)
-	mapbuf("n", "<F9>", ":lua vim.lsp.buf.hover()<CR>", keymap_opts)
+	mapbuf("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
+	mapbuf("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
+	mapbuf("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
+	mapbuf("n", "<F9>", ":lua vim.lsp.buf.hover()<CR>", opts)
 end
 
 pluginKeys.cmpKeys = function(cmp)
