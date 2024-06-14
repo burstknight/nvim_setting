@@ -1,5 +1,12 @@
 local vim = vim
 
+-- 關閉 netrw
+ vim.g.loaded_netrw = 1
+ vim.g.loaded_netrwPlugin = 1
+
+ -- 開啟支援 24 位元彩色
+ vim.opt.termguicolors = true
+
 vim.o.nu = true 				-- 顯示行數
 vim.o.tabstop = 4 				-- 設定按下 tab 鍵時產生4格空白字元
 vim.o.shiftwidth = 4 			-- 設定自動縮排對齊寬度為4格
