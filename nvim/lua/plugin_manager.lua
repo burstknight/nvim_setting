@@ -65,4 +65,7 @@ require("lazy").setup({
 
 	-- 這個外掛可以用來優化 lsp 在自動補齊選單的圖示
 	{"onsails/lspkind.nvim"},
+
+	-- 這個外掛可提升 lsp 的使用體驗
+	{"nvimdev/lspsaga.nvim", dependencies = {"nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons"}},
 })
