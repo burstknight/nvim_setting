@@ -62,4 +62,7 @@ require("lazy").setup({
 
 	-- 這個外掛可以用來顯示縮排
 	{"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}},
+
+	-- 這個外掛可以用來優化 lsp 在自動補齊選單的圖示
+	{"onsails/lspkind.nvim"},
 })
