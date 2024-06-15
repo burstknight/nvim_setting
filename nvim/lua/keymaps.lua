@@ -26,7 +26,7 @@ pluginKeys.lspKeyBinding = function(mapbuf)
 	mapbuf("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", opts)
 	mapbuf("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
 	mapbuf("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
-	mapbuf("n", "<F9>", ":lua vim.lsp.buf.hover()<CR>", opts)
+	mapbuf("n", "<leader>gh", "<cmd>Lspsaga hover_doc<CR>", opts)
 end
 
 pluginKeys.cmpKeys = function(cmp)
