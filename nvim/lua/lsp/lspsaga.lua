@@ -5,5 +5,10 @@ if not status then
 end
 
 lspsaga.setup({
+	outline = {
+		keys = {
+			jump = "<CR>",
+		},
+	},
 })
 
