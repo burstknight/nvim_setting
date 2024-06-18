@@ -68,4 +68,14 @@ require("lazy").setup({
 
 	-- 這個外掛可提升 lsp 的使用體驗
 	{"nvimdev/lspsaga.nvim", dependencies = {"nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons"}},
+
+	-- 這個外掛可以在寫程式時顯示出函式的原型
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		opts = {},
+		config = function (_, opts)
+			require("lsp_signature").setup(opts)
+		end
+	},
 })
