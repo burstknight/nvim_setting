@@ -5,6 +5,13 @@ if not status then
 end
 
 lspsaga.setup({
+	finder = {
+		keys = {
+			vsplit = "v",
+			split = "s",
+			toggle_or_open = "o",
+		},
+	},
 	outline = {
 		keys = {
 			jump = "<CR>",

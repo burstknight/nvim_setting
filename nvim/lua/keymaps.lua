@@ -29,6 +29,7 @@ pluginKeys.lspKeyBinding = function(mapbuf)
 	mapbuf("n", "<leader>rn", ":Lspsaga rename<CR>", opts)
 	mapbuf("n", "<leader>ca", ":Lspsaga code_action<CR>", opts)
 	mapbuf("n", "<leader>gd", ":lua vim.lsp.buf.definition()<CR>", opts)
+	mapbuf("n", "<leader>gf", ":Lspsaga finder def+ref+imp<CR>", opts)
 	mapbuf("n", "<F3>", ":Lspsaga outline<CR>", opts)
 	mapbuf("n", "<leader>h", "<cmd>Lspsaga hover_doc<CR>", opts)
 end
