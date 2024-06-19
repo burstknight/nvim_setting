@@ -39,8 +39,13 @@ function LspKeyBind(client, bufnr)
 	require("keymaps").lspKeyBinding(buf_set_keymap)
 end
 
+-- 取得 handler 可以在自動補齊函數時還會額外提供更多資訊
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 -- 設定 lua lsp
 nvim_lsp.lua_ls.setup({
+	capabilities = capabilities,
+
 	-- 綁定快捷鍵的設定
 	on_attach = LspKeyBind,
 
@@ -72,30 +77,36 @@ nvim_lsp.lua_ls.setup({
 -- 設定clangd
 nvim_lsp.clangd.setup({
 	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
 -- 設定 lsp 可以支援 cmake
 nvim_lsp.cmake.setup({
 	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
 -- 設定 lsp 可以支援 json
 nvim_lsp.jsonls.setup({
 	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
 -- 設定 lsp 可以支援 bash
 nvim_lsp.bashls.setup({
 	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
 -- 設定 lsp 可以支援 yaml
 nvim_lsp.yamlls.setup({
 	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
 -- 設定 lsp 使用 pyright 支援 python
 nvim_lsp.pyright.setup({
 	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
