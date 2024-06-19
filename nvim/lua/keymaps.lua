@@ -1,4 +1,5 @@
 local map = vim.api.nvim_set_keymap
+local cmd = vim.cmd
 
 local opts = {noremap = true, silent = true}
 local buffer_ops = {noremap = true, silent = true, buffer = bufnr}
@@ -21,6 +22,12 @@ map("n", "<C-f>", ":Telescope live_grep<CR>", opts)
 -- 設定 terminal 相關的快捷鍵
 map("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", buffer_ops)
 map("t", "<C-k>", "<C-\\><C-n>", opts)
+
+-- 設定外掛 vim-snip 可以使用 TAB 和 S-TAB 在編輯片斷時轉跳
+cmd("imap <expr> <TAB> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>'")
+cmd("smap <expr> <TAB> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>'")
+cmd("imap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TAB>'")
+cmd("smap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TAB>'")
 
 local pluginKeys = {}
 
