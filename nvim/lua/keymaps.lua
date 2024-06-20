@@ -29,6 +29,12 @@ cmd("smap <expr> <TAB> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>'")
 cmd("imap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TAB>'")
 cmd("smap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TAB>'")
 
+-- 設定 dap 快捷鍵
+map("n", "<leader>dc", "<cmd> lua require'dap'.continue()<CR>", opts)
+map("n", "<leader>dn", "<cmd> lua require'dap'.step_over()<CR>", opts)
+map("n", "<leader>ds", "<cmd> lua require'dap'.step_into()<CR>", opts)
+map("n", "<leader>db", "<cmd> lua require'dap'.toggle_breakpoint()<CR>", opts)
+
 local pluginKeys = {}
 
 -- 設定 LSP 快捷鍵
