@@ -79,4 +79,7 @@ require("lazy").setup({
 			require("lsp_signature").setup(opts)
 		end
 	},
+
+	-- 這個外掛專門用來處理 dap
+	{"mfussenegger/nvim-dap"},
 })
