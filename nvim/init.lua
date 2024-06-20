@@ -33,3 +33,4 @@ require("lsp.cmp")
 require("lsp.lspkind")
 require("lsp.lspsaga")
 
+require("dap.python")
