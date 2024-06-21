@@ -6,10 +6,13 @@ dap.adapters.python = {
 }
 
 dap.configurations.python = {
-	type = "python",
-	request = "launch",
-	program = "${file}",
-	pythonPath = function ()
-		return "/usr/bin/python3"
-	end,
+	{
+		type = "python",
+		request = "launch",
+		name = "launch python file",
+		program = "${file}",
+		pythonPath = function ()
+			return "/usr/bin/python3"
+		end,
+	},
 }
