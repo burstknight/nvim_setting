@@ -82,4 +82,6 @@ require("lazy").setup({
 
 	-- 這個外掛專門用來處理 dap
 	{"mfussenegger/nvim-dap"},
+	{"theHamsta/nvim-dap-virtual-text"},
+	{"rcarriga/nvim-dap-ui"},
 })
