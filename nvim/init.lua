@@ -35,3 +35,4 @@ require("lsp.lspsaga")
 
 require("dap.python")
 require("dap.dapui")
+require("dap.dap-virtual-text")
