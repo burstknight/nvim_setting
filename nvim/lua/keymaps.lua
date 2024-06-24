@@ -34,6 +34,7 @@ map("n", "<leader>c", "<cmd> lua require'dap'.continue()<CR>", opts)
 map("n", "<leader>n", "<cmd> lua require'dap'.step_over()<CR>", opts)
 map("n", "<leader>s", "<cmd> lua require'dap'.step_into()<CR>", opts)
 map("n", "<leader>b", "<cmd> lua require'dap'.toggle_breakpoint()<CR>", opts)
+map("n", "<leader>q", "<cmd> lua require'dap'.disconnect()<CR>", opts)
 
 local pluginKeys = {}
 
