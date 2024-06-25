@@ -30,11 +30,29 @@ cmd("imap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TA
 cmd("smap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TAB>'")
 
 -- 設定 dap 快捷鍵
-map("n", "<leader>c", "<cmd> lua require'dap'.continue()<CR>", opts)
-map("n", "<leader>n", "<cmd> lua require'dap'.step_over()<CR>", opts)
-map("n", "<leader>s", "<cmd> lua require'dap'.step_into()<CR>", opts)
-map("n", "<leader>b", "<cmd> lua require'dap'.toggle_breakpoint()<CR>", opts)
-map("n", "<leader>q", "<cmd> lua require'dap'.disconnect()<CR>", opts)
+local which_key = require("which-key")
+
+local dap_keymaps = {
+	d = {
+		name = "DAP",
+		c = {"<cmd>lua require'dap'.continue()<CR>", "Continue"},
+		n = {"<cmd>lua require'dap'.step_over()<CR>", "Next"},
+		s = {"<cmd>lua require'dap'.step_into()<CR>"},
+		b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Breakpoint"},
+		q = {"<cmd>lua require'dap'.close()<CR>", "Quit"},
+	},
+}
+
+local wk_opts = {
+	mode = "n",
+	prefix = "<leader>",
+	buffer = nil,
+	silent = true,
+	noremap = true,
+	nowait = false,
+}
+
+which_key.register(dap_keymaps, wk_opts)
 
 local pluginKeys = {}
 
