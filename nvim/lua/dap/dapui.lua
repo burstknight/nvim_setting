@@ -43,18 +43,18 @@ dapui.setup({
             id = "watches",
             size = 0.25
           } },
-        position = "left",
-        size = 40
+        position = "right",
+        size = 0.3
       }, {
         elements = { {
             id = "repl",
-            size = 0.5
+            size = 0.45
           }, {
             id = "console",
-            size = 0.5
+            size = 0.55
           } },
         position = "bottom",
-        size = 10
+        size = 0.3
       } },
     mappings = {
       edit = "e",
