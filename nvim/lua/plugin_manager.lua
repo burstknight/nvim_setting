@@ -86,4 +86,14 @@ require("lazy").setup({
 	{"nvim-neotest/nvim-nio"},
 	{"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}},
 	{"jay-babu/mason-nvim-dap.nvim"},
+
+	-- 這個外掛可以管理快捷鍵
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function ()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+	},
 })
