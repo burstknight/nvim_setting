@@ -85,4 +85,5 @@ require("lazy").setup({
 	{"theHamsta/nvim-dap-virtual-text"},
 	{"nvim-neotest/nvim-nio"},
 	{"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}},
+	{"jay-babu/mason-nvim-dap.nvim"},
 })
