@@ -37,9 +37,11 @@ local dap_keymaps = {
 		name = "DAP",
 		c = {"<cmd>lua require'dap'.continue()<CR>", "Continue"},
 		n = {"<cmd>lua require'dap'.step_over()<CR>", "Next"},
-		s = {"<cmd>lua require'dap'.step_into()<CR>"},
+		s = {"<cmd>lua require'dap'.step_into()<CR>", "Step"},
 		b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Breakpoint"},
 		q = {"<cmd>lua require'dap'.close()<CR>", "Quit"},
+		d = {"<cmd>lua require'dap'.disconnect()<CR>", "Disconnect"},
+		x = {"<cmd>lua require'dap'.terminate()<CR>", "Terminate"},
 	},
 }
 
