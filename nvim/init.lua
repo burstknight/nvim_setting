@@ -33,3 +33,8 @@ require("lsp.cmp")
 require("lsp.lspkind")
 require("lsp.lspsaga")
 
+require("dap.python")
+require("dap.dapui")
+require("dap.dap-virtual-text")
+require("dap.mason-nvim-dap")
+require("dap.cpp")
