@@ -32,11 +32,6 @@ cmp.setup({
 			ellipsis_char = "...",
 			before = function (entry, vim_item)
 				local word = entry:get_insert_text()
-				if entry.completion_item.insertTextFormat == types.lsp.InsertTextFormat.Snippet then
-					word = vim.lsp.util.parse_snippet(word)
-				end
-
-				word = str.oneline(word)
 				if entry.completion_item.insertTextFormat == types.lsp.InsertTextFormat and string.sub(vim_item.abbr, -1, -1 == "~") then
 					word = word .. "~"
 				end
