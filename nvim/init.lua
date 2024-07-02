@@ -33,6 +33,7 @@ require("lsp.mason")
 require("lsp.cmp")
 require("lsp.lspkind")
 require("lsp.lspsaga")
+require("lsp.ui")
 
 require("dap.python")
 require("dap.dapui")
