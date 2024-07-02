@@ -1,5 +1,5 @@
 vim.diagnostic.config({
-	vitual_text = true,
+	virtual_text = false,
 	signs = true,
 
 	-- 在插入模式下也會更新 icon，但有可能會影響效能
