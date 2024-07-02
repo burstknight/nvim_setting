@@ -48,6 +48,8 @@ require("lazy").setup({
 	-- 設定LSP
 	{'neovim/nvim-lspconfig'},
 
+	{"rachartier/tiny-inline-diagnostic.nvim", event = "VeryLazy"},
+
 	-- 這個外掛專門用來管理 LSP server
 	{"williamboman/mason.nvim"},
 	{"williamboman/mason-lspconfig.nvim"},
