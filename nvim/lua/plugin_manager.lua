@@ -12,6 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- 這個外掛可以美化 neovim 的通知訊息
+	{"rcarriga/nvim-notify"},
+
 	-- 這個外掛可以當檔案總管來瀏覽一個專案目錄下的檔案
 	{'preservim/nerdtree'},
 
