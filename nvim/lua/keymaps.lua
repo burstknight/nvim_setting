@@ -79,7 +79,6 @@ pluginKeys.cmpKeys = function(cmp)
 		["<S-TAB>"] = cmp.mapping.select_prev_item(),
 		["<CR>"] = cmp.mapping.confirm({
 			select = true,
-			behavior = cmp.ConfirmBehavior.Replace,
 		}),
 	}
 
