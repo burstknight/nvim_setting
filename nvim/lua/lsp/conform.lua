@@ -4,4 +4,13 @@ if not status then
 	return
 end
 
-conform.setup({})
+conform.setup({
+	formatters_by_ft = {
+		lua = {"stylua"},
+		cpp = {"clangd-format"},
+		c = {"clangd-format"},
+	},
+	format_on_save = false,
+})
+
+vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
