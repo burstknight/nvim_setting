@@ -35,6 +35,7 @@ require("lsp.lspkind")
 require("lsp.lspsaga")
 require("lsp.ui")
 require("lsp.tiny-inline-diagnostic")
+require("lsp.none-ls")
 
 require("dap.python")
 require("dap.dapui")

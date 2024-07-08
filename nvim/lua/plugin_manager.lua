@@ -54,6 +54,9 @@ require("lazy").setup({
 	{"williamboman/mason.nvim"},
 	{"williamboman/mason-lspconfig.nvim"},
 
+	-- 使用這個外掛來處理程式碼格式化
+	{"nvimtools/none-ls.nvim"},
+
 	-- 這些外掛可以用來處理自動補齊
 	{'hrsh7th/nvim-cmp'},
 	{'hrsh7th/cmp-nvim-lsp'},
