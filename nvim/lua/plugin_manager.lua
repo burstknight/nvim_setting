@@ -54,6 +54,12 @@ require("lazy").setup({
 	{"williamboman/mason.nvim"},
 	{"williamboman/mason-lspconfig.nvim"},
 
+	-- 這個外掛可以格式化程式碼
+	{"stevearc/conform.nvim"},
+
+	-- 這個外掛可以自動化安裝用來格式化程式碼所需的套件
+	{"zapling/mason-conform.nvim"},
+
 	-- 這些外掛可以用來處理自動補齊
 	{'hrsh7th/nvim-cmp'},
 	{'hrsh7th/cmp-nvim-lsp'},
