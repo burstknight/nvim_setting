@@ -32,7 +32,7 @@ cmd("smap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TA
 -- 設定 dap 快捷鍵
 local which_key = require("which-key")
 
-local dap_keymaps = {
+local wk_keymaps = {
 	d = {
 		name = "DAP",
 		c = {"<cmd>lua require'dap'.continue()<CR>", "Continue"},
@@ -42,6 +42,11 @@ local dap_keymaps = {
 		q = {"<cmd>lua require'dap'.close()<CR>", "Quit"},
 		d = {"<cmd>lua require'dap'.disconnect()<CR>", "Disconnect"},
 		x = {"<cmd>lua require'dap'.terminate()<CR>", "Terminate"},
+	},
+	m = {
+		p = {"<cmd>MarkdownPreview<CR>", "Markdown preview"},
+		s = {"<cmd>MarkdownPreviewStop<CR>", "Markdown preview stop"},
+		t = {"<cmd>MarkdownPreviewToggle<CR>", "Markdown preview toggle"},
 	},
 }
 
@@ -54,7 +59,7 @@ local wk_opts = {
 	nowait = false,
 }
 
-which_key.register(dap_keymaps, wk_opts)
+which_key.register(wk_keymaps, wk_opts)
 
 local pluginKeys = {}
 
