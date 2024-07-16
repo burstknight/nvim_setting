@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 
 sudo apt-get update
-sudo apt-get install -y git curl ripgrep fd-find clangd python3 python3-pip python3-venv
+sudo apt-get install -y git curl ripgrep fd-find clangd python3 python3-pip python3-venv luarocks
 
 echo "Copy the directory 'nvim' into '$HOME/.config' ..."
 mkdir -p $HOME/.config/nvim
