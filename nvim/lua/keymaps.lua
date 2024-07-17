@@ -33,33 +33,20 @@ cmd("smap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TA
 local which_key = require("which-key")
 
 local wk_keymaps = {
-	d = {
-		name = "DAP",
-		c = {"<cmd>lua require'dap'.continue()<CR>", "Continue"},
-		n = {"<cmd>lua require'dap'.step_over()<CR>", "Next"},
-		s = {"<cmd>lua require'dap'.step_into()<CR>", "Step"},
-		b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Breakpoint"},
-		q = {"<cmd>lua require'dap'.close()<CR>", "Quit"},
-		d = {"<cmd>lua require'dap'.disconnect()<CR>", "Disconnect"},
-		x = {"<cmd>lua require'dap'.terminate()<CR>", "Terminate"},
-	},
-	m = {
-		p = {"<cmd>MarkdownPreview<CR>", "Markdown preview"},
-		s = {"<cmd>MarkdownPreviewStop<CR>", "Markdown preview stop"},
-		t = {"<cmd>MarkdownPreviewToggle<CR>", "Markdown preview toggle"},
-	},
+    { "<leader>d", group = "DAP", nowait = false, remap = false },
+    { "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = "Breakpoint", nowait = false, remap = false },
+    { "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", desc = "Continue", nowait = false, remap = false },
+    { "<leader>dd", "<cmd>lua require'dap'.disconnect()<CR>", desc = "Disconnect", nowait = false, remap = false },
+    { "<leader>dn", "<cmd>lua require'dap'.step_over()<CR>", desc = "Next", nowait = false, remap = false },
+    { "<leader>dq", "<cmd>lua require'dap'.close()<CR>", desc = "Quit", nowait = false, remap = false },
+    { "<leader>ds", "<cmd>lua require'dap'.step_into()<CR>", desc = "Step", nowait = false, remap = false },
+    { "<leader>dx", "<cmd>lua require'dap'.terminate()<CR>", desc = "Terminate", nowait = false, remap = false },
+    { "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Markdown preview", nowait = false, remap = false },
+    { "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", desc = "Markdown preview stop", nowait = false, remap = false },
+    { "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview toggle", nowait = false, remap = false },
 }
 
-local wk_opts = {
-	mode = "n",
-	prefix = "<leader>",
-	buffer = nil,
-	silent = true,
-	noremap = true,
-	nowait = false,
-}
-
-which_key.register(wk_keymaps, wk_opts)
+which_key.add(wk_keymaps)
 
 local pluginKeys = {}
 
