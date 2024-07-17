@@ -4,6 +4,7 @@ from os import system
 from os.path import exists, join
 from shutil import copytree, rmtree
 from pathlib import Path
+import platform
 
 
 def installRequirements():
@@ -17,7 +18,12 @@ def installRequirements():
 # End of installRequirements
 
 def copySettingFiles():
-    sTargetPath = join(Path.home(), ".config/nvim")
+    if "Windows" == platform.system():
+        sTargetPath = join(Path.home(), "AppData/Local/nvim")
+    else:
+        sTargetPath = join(Path.home(), ".config/nvim")
+    # End if-condition
+
     if True == exists(sTargetPath):
         rmtree(sTargetPath)
     # End of if-condition
