@@ -52,12 +52,12 @@ local pluginKeys = {}
 
 -- 設定 LSP 快捷鍵
 pluginKeys.lspKeyBinding = function(mapbuf)
-	mapbuf("n", "<leader>rn", ":Lspsaga rename<CR>", opts)
-	mapbuf("n", "<leader>ca", ":Lspsaga code_action<CR>", opts)
+	mapbuf("n", "<leader>gr", ":Lspsaga rename<CR>", opts)
+	mapbuf("n", "<leader>ga", ":Lspsaga code_action<CR>", opts)
 	mapbuf("n", "<leader>gd", ":lua vim.lsp.buf.definition()<CR>", opts)
 	mapbuf("n", "<leader>gf", ":Lspsaga finder def+ref+imp<CR>", opts)
 	mapbuf("n", "<F3>", ":Lspsaga outline<CR>", opts)
-	mapbuf("n", "<leader>h", "<cmd>Lspsaga hover_doc<CR>", opts)
+	mapbuf("n", "<leader>gh", "<cmd>Lspsaga hover_doc<CR>", opts)
 	mapbuf("n", "<leader>=", ":lua vim.lsp.buf.format {async = true}<CR>", opts)
 end
 
