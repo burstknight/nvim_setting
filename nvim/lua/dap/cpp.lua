@@ -3,7 +3,7 @@ local dap = require("dap")
 dap.adapters.cppdbg = {
 	id = "cppdbg",
 	type = "executable",
-	command = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7",
+	command = vim.fn.stdpath("data") .. "/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7",
 }
 
 
