@@ -13,8 +13,12 @@ def installRequirements():
 	=======================================================
 	Install all requirements for neovim.
 	"""
-	system("sudo apt-get update")
-	system("sudo apt-get install -y git curl ripgrep fd-find clangd python3 python3-pip python3-venv")
+	if "Linux" == platform.system():
+		system("sudo apt-get update")
+		system("sudo apt-get install -y git curl ripgrep fd-find clangd python3 python3-pip python3-venv")
+	else:
+		system("choco install -y luarocks tree-sitter nerd-fonts-hack")
+	# End of if-condition
 # End of installRequirements
 
 def copySettingFiles():
