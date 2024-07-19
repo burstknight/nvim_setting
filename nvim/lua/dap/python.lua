@@ -12,7 +12,16 @@ dap.configurations.python = {
 		name = "launch python file",
 		program = "${file}",
 		pythonPath = function ()
-			return "/usr/bin/python3"
+			local cwd = vim.fn.getcwd()
+			if 1 == vim.fn.executable(cwd .. "/venv/bin/python") then
+				return cwd .. "/venv/bin/python"
+			elseif 1 == vim.fn.executable(cwd .. "/.venv/bin/python") then
+				return cwd .. "/.venv/bin/python"
+			elseif 1 == vim.fn.executable(cwd .. "/.env/bin/python") then
+				return cwd .. "/.env/bin/python"
+			else
+				return "/usr/bin/python3"
+			end
 		end,
 	},
 }
