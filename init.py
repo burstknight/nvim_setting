@@ -17,7 +17,7 @@ def installRequirements():
 		system("sudo apt-get update")
 		system("sudo apt-get install -y git curl ripgrep fd-find clangd python3 python3-pip python3-venv")
 	else:
-		system("choco install -y luarocks tree-sitter nerd-fonts-hack")
+		system("choco install -y luarocks tree-sitter nerd-fonts-hack nodejs pwsh tar unzip")
 	# End of if-condition
 # End of installRequirements
 
