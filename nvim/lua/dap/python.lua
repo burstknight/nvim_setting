@@ -1,7 +1,7 @@
 local dap = require("dap")
 dap.adapters.python = {
 	type = "executable",
-	command = "/usr/bin/python3",
+	command = "python",
 	args = {"-m", "debugpy.adapter"},
 }
 
