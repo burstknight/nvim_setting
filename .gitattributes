@@ -1,0 +1,7 @@
+# Set the default behavior to automatically set line ending.
+* text=auto eof=lf
+
+*.[Mm][Dd] text
+*.lua text
+*.py text
+*.sh text
