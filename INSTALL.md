@@ -43,3 +43,11 @@ Please add this line into `~/.bashrc`:
 export PATH=$PATH:$HOME/.local/bin/
 ```
 
+### Run `init.py`
+This repo offers the python file `init.py`. It can install all necessary packages, and then copy all setting files to suitable location. You just run this command.
+```bash
+python3 init.py
+```
+
+If you don't get any error message, you succeed to setup the neovim.
+
