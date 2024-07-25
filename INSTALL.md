@@ -108,3 +108,8 @@ cd msys2_setup
 sh setup.sh
 ```
 
+Now, please follow the commands to add the paths to set your environment variable `PATH` on `powershell`.
+```bash
+[System.Environment]::SetEnvironmentVariable('path', "C:\msys64;" + "C:\msys64\usr\bin;" + "C:\msys64\ucrt64\bin;" + [System.Environment]::GetEnviromentVariable('path', "User"), "User")
+```
+
