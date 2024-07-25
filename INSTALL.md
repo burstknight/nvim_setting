@@ -51,3 +51,31 @@ python3 init.py
 
 If you don't get any error message, you succeed to setup the neovim.
 
+## For windows
+### Install chocolatey
+`chocolatey` is a package manager on windows. We need use `chocolatey` to install all necessary packages for neovim.
+
+Please use supervisor right to open `powershell`. And then use this command to the limits of the current authority.
+```bash
+Get-ExecutionPolicy
+```
+
+If you get the message `Restricted`, you can select one of the commands to get the higher authority.
+```bash
+Set-ExcutionPolicy AllSigned
+
+// or
+
+Set-ExcutionPolicy Bypass -Scope Process
+```
+
+Please run this command to install `chocolatey`.
+```bash
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+Here gives a suggestion. You can use `chocolatey` to install `gsudo` that can easily switch to supervisor right on `powershell`.
+```bash
+choco install gsudo
+```
+
