@@ -79,3 +79,32 @@ Here gives a suggestion. You can use `chocolatey` to install `gsudo` that can ea
 choco install gsudo
 ```
 
+### Install `msys2`
+We need use `msys2` to offer C/C++ develop environment. Please download the installer from [this web](https://www.msys2.org/). And then run the installer. `msys2` will be installed to `C:\`.
+
+Please change the line `db home: cygwin desc` in the file `C:\msys2\etc\nsswitch.conf` to this line:
+```
+db home: windows desc
+```
+
+Please open `ucrt64` terminal, and then run this commands and follow the hint message to upgrade `msys2`
+```bash
+pacman -Syu
+```
+
+Please run this command to install `git` on `ucrt64` terminal.
+```bash
+pacman -S git
+```
+
+You can use my other repo [msys2_steup](https://github.com/burstknight/msys2_setup.git) to install all necessary packages. First, you need clone the repo:
+```bash
+git clone https://github.com/burstknight/msys2_setup.git
+```
+
+And then run the commands:
+```bash
+cd msys2_setup
+sh setup.sh
+```
+
