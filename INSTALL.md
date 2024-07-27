@@ -108,7 +108,7 @@ cd msys2_setup
 sh setup.sh
 ```
 
-Now, please follow the commands to add the paths to set your environment variable `PATH` on `powershell`.
+Now, please follow the commands to add the paths to set your environment variable `User PATH` on `powershell`.
 ```bash
 [System.Environment]::SetEnvironmentVariable('path', "C:\msys64;" + "C:\msys64\usr\bin;" + "C:\msys64\ucrt64\bin;" + [System.Environment]::GetEnvironmentVariable('path', "User"), "User")
 ```
@@ -136,7 +136,7 @@ And then please run the commands on `powershell` to set the environment variable
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 ```
 
-Finally, please run this command to sset the environment variable `PATH`.
+Finally, please run this command to sset the environment variable `User PATH`.
 ```bash
 [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
 ```
@@ -149,5 +149,16 @@ pyenv install 3.10.11
 And then set the global python.
 ```bash
 pyenv global 3.10.11
+```
+
+#### Install poetry
+Please run this command on `powershell` with the supervisor right in order to install `poetry`.
+```bash
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+```
+
+And then you need use this command to add `poetry` add the environment variable `User PATH`.
+```bash
+[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\AppData\Roaming\Python\Scripts" + [System.Environment]::GetEnvironmentVariable('path', "User"), "User")
 ```
 
