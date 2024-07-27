@@ -110,7 +110,7 @@ sh setup.sh
 
 Now, please follow the commands to add the paths to set your environment variable `User PATH` on `powershell`.
 ```bash
-[System.Environment]::SetEnvironmentVariable('path', "C:\msys64;" + "C:\msys64\usr\bin;" + "C:\msys64\ucrt64\bin;" + [System.Environment]::GetEnvironmentVariable('path', "User"), "User")
+[System.Environment]::SetEnvironmentVariable('path', [System.Environment]::GetEnvironmentVariable('path', "User") + "C:\msys64;" + "C:\msys64\usr\bin;" + "C:\msys64\ucrt64\bin;", "User")
 ```
 
 ### Python environment
