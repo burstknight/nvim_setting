@@ -113,3 +113,41 @@ Now, please follow the commands to add the paths to set your environment variabl
 [System.Environment]::SetEnvironmentVariable('path', "C:\msys64;" + "C:\msys64\usr\bin;" + "C:\msys64\ucrt64\bin;" + [System.Environment]::GetEnvironmentVariable('path', "User"), "User")
 ```
 
+### Python environment
+#### Install pyenv
+`pyenv` cannot support windows, but we can use [pyenv-win(https://github.com/pyenv-win/pyenv-win.git) to manage python verisons.
+
+You can run this command to get `pyenv-win` on `powershell`.
+```bash
+git clone https://github.com/pyenv-win/pyenv-win.git "%USERPROFILE%\.pyenv"
+```
+
+Or, you can use this command to get `pyenv-win` on `bash` of `msys2`.
+```bash
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+```
+
+And then please run the commands on `powershell` to set the environment variables `PYENV`, `PYENV_ROOT` and `PYENV_HOME`.
+```bash
+[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+
+[System.Environment]::SetEnvironmentVariable('PYENV_ROOT',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+
+[System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+```
+
+Finally, please run this command to sset the environment variable `PATH`.
+```bash
+[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
+```
+
+Please use `pyenv-win` to install python.
+```bash
+pyenv install 3.10.11
+```
+
+And then set the global python.
+```bash
+pyenv global 3.10.11
+```
+
