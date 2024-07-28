@@ -43,6 +43,11 @@ Please add this line into `~/.bashrc`:
 export PATH=$PATH:$HOME/.local/bin/
 ```
 
+We need change the setting of `poetry` to create `.venv` for each python project, so we should run this command.
+```bash
+poetry config virtualenvs.in-project true
+```
+
 ### Run `init.py`
 This repo offers the python file `init.py`. It can install all necessary packages, and then copy all setting files to suitable location. You just run this command.
 ```bash
@@ -160,5 +165,10 @@ Please run this command on `powershell` with the supervisor right in order to in
 And then you need use this command to add `poetry` add the environment variable `User PATH`.
 ```bash
 [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\AppData\Roaming\Python\Scripts" + [System.Environment]::GetEnvironmentVariable('path', "User"), "User")
+```
+
+We need change the setting of `poetry` to create `.venv` for each python project, so we should run this command.
+```bash
+poetry config virtualenvs.in-project true
 ```
 
