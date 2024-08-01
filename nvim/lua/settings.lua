@@ -20,6 +20,8 @@ local vim = vim
 
  if "Windows" == vim.g.os then
  	vim.cmd("let g:python3_host_prog=\"~/.pyenv/pyenv-win/shims/python\"")
+else
+	vim.cmd("let g:python3_host_prog=\"~/.pyenv/shims/python\"")
  end
 
 vim.o.nu = true 				-- 顯示行數
