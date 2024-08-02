@@ -18,6 +18,7 @@ vim.o.linebreak = true 			-- 如果一行的文字過長，就將其拆行顯示
 vim.o.showbreak = ">>" 			-- 設定拆行的接續符號
 vim.o.cursorline = true 		-- 凸顯出游標所在的行
 vim.o.cursorcolumn = true 		-- 凸顯出游標所在的某一行的位置
+vim.o.fileformats = "unix" 		-- 設定elf使用lf儲存檔案
 
 local status, utils = pcall(require, "utils.init")
 if not status then

@@ -99,6 +99,15 @@ nvim_lsp.bashls.setup({
 	capabilities = capabilities,
 })
 
+local function get_clangd_path()
+	local utils = require("utils.init")
+	if "Windows" == utils.get_platform() then
+		return "C:/msys2/ucrt64/clangd.exe"
+	else
+		return "clangd"
+	end
+end
+
 -- 設定 lsp 可以支援 yaml
 nvim_lsp.yamlls.setup({
 	on_attach = LspKeyBind,
