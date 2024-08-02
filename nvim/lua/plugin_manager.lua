@@ -53,6 +53,7 @@ require("lazy").setup({
 	-- 這個外掛專門用來管理 LSP server
 	{"williamboman/mason.nvim"},
 	{"williamboman/mason-lspconfig.nvim"},
+	{"mason-org/mason-registry"},
 
 	-- 這個外掛可以格式化程式碼
 	{"stevearc/conform.nvim"},
