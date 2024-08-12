@@ -33,4 +33,6 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [lspkind.nvim](https://github.com/onsails/lspkind.nvim.git): It can show cool LSP icons.
 * [lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim.git): It can improve LSP experences in neovim.
 * [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim.git): It can show function signature when I type code.
+* [conform.nvim](https://github.com/stevearc/conform.nvim.git): It can LSP to format code.
+* [mason-conform.nvim](https://github.com/zapling/mason-conform.nvim.git): The plugin `conform.nvim` need use it to automatically install LSP server via `mason.nvim` for formatting code.
 
