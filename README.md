@@ -24,3 +24,13 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [markdown-previw.nvim](https://github.com/iamcco/markdown-preview.nvim.git): It can use web browser to preview markdown files.
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git): It can highlight keywords for each file type.
 
+### For LSP(Language Server protocol) functions
+* [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
+* [tiny-inline-diagnostic.nvim](https://github.com/rachartier/tiny-inline-diagnostic.nvim.git): It can show inline message from LSP server.
+* [mason.nvim](https://github.com/williamboman/mason.nvim.git): It can manage LSP servers.
+* [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim.git): It can automatically install LSP servers.
+* [mason-registry](https://github.com/mason-org/mason-registry.git): The plugin `mason.nvim` need use it to manage LSP servers.
+* [lspkind.nvim](https://github.com/onsails/lspkind.nvim.git): It can show cool LSP icons.
+* [lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim.git): It can improve LSP experences in neovim.
+* [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim.git): It can show function signature when I type code.
+
