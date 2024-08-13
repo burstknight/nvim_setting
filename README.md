@@ -36,3 +36,12 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [conform.nvim](https://github.com/stevearc/conform.nvim.git): It can LSP to format code.
 * [mason-conform.nvim](https://github.com/zapling/mason-conform.nvim.git): The plugin `conform.nvim` need use it to automatically install LSP server via `mason.nvim` for formatting code.
 
+### For auto completion
+* [nvim-cmp](https://github.com/hrsh7th/nvim-cmp.git): It is a completion engine.
+* [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp.git): It can offer information from LSP server to the plugin `nvim-cmp` for auto completion.
+* [cmp-path](https://github.com/hrsh7th/cmp-path.git): The plugin `nvim-cmp` need use it for auto completion filesystem paths.
+* [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline.git): The plugin `nvim-cmp` need use it to implement the completion for command mode.
+* [cmp-buffer](https://github.com/hrsh7th/cmp-buffer.git): The plugin `nvim-cmp` need use it to implement the completion for buffer words.
+* [vim-vsnip](https://github.com/hrsh7th/vim-vsnip.git): It can insert vscode style snippets during typing code for auto completion.
+* [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip.git): The plugin `vim-vsnip` need use it to insert vscode style snippets for auto completion.
+
