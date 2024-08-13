@@ -24,7 +24,7 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [markdown-previw.nvim](https://github.com/iamcco/markdown-preview.nvim.git): It can use web browser to preview markdown files.
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git): It can highlight keywords for each file type.
 
-### For LSP(Language Server protocol) functions
+### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
 * [tiny-inline-diagnostic.nvim](https://github.com/rachartier/tiny-inline-diagnostic.nvim.git): It can show inline message from LSP server.
 * [mason.nvim](https://github.com/williamboman/mason.nvim.git): It can manage LSP servers.
@@ -35,6 +35,7 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim.git): It can show function signature when I type code.
 * [conform.nvim](https://github.com/stevearc/conform.nvim.git): It can LSP to format code.
 * [mason-conform.nvim](https://github.com/zapling/mason-conform.nvim.git): The plugin `conform.nvim` need use it to automatically install LSP server via `mason.nvim` for formatting code.
+* [nvim-nio](https://github.com/nvim-neotest/nvim-nio.git): It can handle ansynchronous IO for neovim.
 
 ### For auto completion
 * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp.git): It is a completion engine.
@@ -45,3 +46,8 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [vim-vsnip](https://github.com/hrsh7th/vim-vsnip.git): It can insert vscode style snippets during typing code for auto completion.
 * [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip.git): The plugin `vim-vsnip` need use it to insert vscode style snippets for auto completion.
 
+### For DAP(Debug Adapter Protocol)
+* [nvim-dap](https://github.com/mfussenegger/nvim-dap.git): It is implemented for DAP(Debug Adapter Protocol) client.
+* [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text.git): It can show debug information on neovim during debugging using neovim.
+* [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git): It can offer cool UI on neovim for DAP.
+* [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim.git): It can use the plugin `mason.nvim` to automatically install DAP servers.
