@@ -51,3 +51,24 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text.git): It can show debug information on neovim during debugging using neovim.
 * [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git): It can offer cool UI on neovim for DAP.
 * [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim.git): It can use the plugin `mason.nvim` to automatically install DAP servers.
+
+## Keymaps
+I use `space key` as the leader key for neovim.
+
+### Keymaps for common functions
+| Keymaps | Description |
+| -------------- | --------------- |
+| `<F2>` | Open the file browser. |
+| `<F8>` | Insert the doxygen style comment for a function signature. |
+| `Ctrl` + `p` | Fuzzy search the file from the currrent project. |
+| `Ctrl` + `f` | Use `grep` to search keyword from the currrent project. |
+| `<leader>mp` | Open the web browser to preview the currrent markdown file. |
+| `<leader>ms` | Stop previewing the currrent markdown file. |
+| `<leader>mt` | Toggle to preview the currrent markdown file. |
+
+### Keymaps for floating terminal
+| Keymaps | Description |
+| -------------- | --------------- |
+| `<leader>t` | Open the floating terminal on neovim. |
+| `Ctrl` + `k` | Return normal mode for the floating terminal on neovim. |
+
