@@ -5,42 +5,65 @@ from os.path import exists, join
 from shutil import copytree, rmtree
 from pathlib import Path
 import platform
+from typing import Dict, List
 
+class myNvimIniter:
+    def __init__(self) -> None:
+        self.__m_sPlatform = platform.system()
+        self.__m_dctPackage:Dict[str, List[str]] = {}
+        self.__m_dctPackage["Linux"] = ["curl", "ripgrep", "fd-find", "clangd", "luarocks", "tree-sitter", "nodejs", "yarn", "python3-venv", "python3", "python3-pip"]
+        self.__m_dctPackage["Windows"] = ["curl", "ripgrep", "fd-find", "nerd-fonts-hack", "nodejs", "pwsh", "unzip", "yarn", "ripgrep", "7zip.install", "fd"]
+    # End of constructor
 
-def installRequirements():
-	"""
-	Description:
-	=======================================================
-	Install all requirements for neovim.
-	"""
-	if "Linux" == platform.system():
-		system("sudo apt-get update")
-		system("sudo apt-get install -y git curl ripgrep fd-find clangd python3 python3-pip python3-venv")
-	else:
-		system("choco install --yes luarocks tree-sitter nerd-fonts-hack nodejs pwsh unzip yarn ripgrep 7zip.install fd")
-	# End of if-condition
-# End of installRequirements
+    def __installRequirements(self):
+        if self.__m_sPlatform not in self.__m_dctPackage.keys():
+            raise RuntimeError("Not support the platform: %s" %(self.__m_sPlatform))
+        # End of if-condition
 
-def copySettingFiles():
-    if "Windows" == platform.system():
-        sTargetPath = join(Path.home(), "AppData/Local/nvim")
-    else:
-        sTargetPath = join(Path.home(), ".config/nvim")
-    # End if-condition
+        print("We need install the packages for neovim:")
+        for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
+            print("\t* %s" %(sPackage))
+        # End of for-loop
 
-    if True == exists(sTargetPath):
-        rmtree(sTargetPath)
-    # End of if-condition
+        if "Linux" == self.__m_sPlatform:
+            system("sudo apt-get update")
+            sRequirements = ""
+            for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
+                sRequirements += sPackage + " "
+            # End of for-loop
 
-    print("Copy the directory 'nvim' into '$HOME/.config' ...")
-    copytree("./nvim/", sTargetPath)
-    print("Done!")
-# End of copySettingFiles
+            system("sudo apt-get install -y %s" %(sRequirements))
+        elif "Windows" == self.__m_sPlatform:
+            for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
+                system("choco install --yes %s" %(sPackage))
+            # End of for-loop
+        # End of if-condition
+    # End of myNvimIniter::installRequirements
 
+    def __copySettingFiles(self):
+        if "Windows" == self.__m_sPlatform:
+            sTargetPath = join(Path.home(), "AppData/Local/nvim")
+        else:
+            sTargetPath = join(Path.home(), ".config/nvim")
+        # End of if-condition
+
+        if True is exists(sTargetPath):
+            rmtree(sTargetPath)
+        # End of if-condition
+
+        print("Copy the directory 'nvim' into '%s' ..." %(sTargetPath))
+        copytree("./nvim/", sTargetPath)
+    # End of myNvimIniter::copySettingFiles
+    
+    def run(self):
+        self.__installRequirements()
+        self.__copySettingFiles()
+    # End of myNvimIniter::run
+# End of class myNvimIniter
 
 def main():
-    installRequirements()
-    copySettingFiles()
+    oNvimIniter = myNvimIniter()
+    oNvimIniter.run()
 # End of main
 
 if "__main__" == __name__:
