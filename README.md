@@ -72,3 +72,34 @@ I use `space key` as the leader key for neovim.
 | `<leader>t` | Open the floating terminal on neovim. |
 | `Ctrl` + `k` | Return normal mode for the floating terminal on neovim. |
 
+### Keymaps for LSP
+| Keymaps | Description |
+| -------------- | --------------- |
+| `<leader>gr` | Rename for variable or function. |
+| `<leader>ga` | Perform code action. |
+| `<leader>gd` | Go to definition for variable or function. |
+| `<leader>gf` | Find the definition, reference or implementation for the keyword. |
+| `<F3>` | Open the outline for the currrent file. |
+| `<leader>gh` | Hover the document for variable or function. |
+| `<leader>=` | Format the currrent code. |
+
+### Keymaps for completion
+| Keymaps | Description |
+| -------------- | --------------- |
+| `Alt` + `j` | Toggle for completion. |
+| `Alt` + `k` | Abort for completion. |
+| `Tab` | Move the next item of the candidate list for completion. |
+| `Shift` + `Tab` | Move the previous item of the candidate list for completion. |
+| `Enter` | Select the current item of the candidate list for completion. |
+
+### Keymaps for DAP
+| Keymaps | Description |
+| -------------- | --------------- |
+| `<leader>db` | Add or remove the break point. |
+| `<leader>dc` | Continue running for debugging. |
+| `<leader>dd` | Disconnect for DAP. |
+| `<leader>dn` | Run the next statement for debugging. |
+| `<leader>dq` | Close DAP. |
+| `<leader>ds` | Run a step into the currrent function for debugging. |
+| `<leader>dx` | Terminate DAP. |
+
