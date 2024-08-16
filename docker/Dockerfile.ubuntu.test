@@ -1,6 +1,8 @@
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
+
+# Install necessary packages for pyenv.
 RUN apt-get update && \
 	apt-get install -y \
 		build-essential \
@@ -35,6 +37,10 @@ RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 	. ~/.bashrc && \
 	pyenv install 3.10.12 && \
 	pyenv global 3.10.12
+RUN curl -sSL https://install.python-poetry.org | python3 - && \
+	echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc && \
+	. ~/.bashrc && \
+	poetry config virtualenvs.in-project true
 
 WORKDIR /workspace
 COPY . .
