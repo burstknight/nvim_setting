@@ -67,7 +67,7 @@ require("lazy").setup({
 	{'hrsh7th/cmp-path'},
 	{'hrsh7th/cmp-cmdline'},
 	{'hrsh7th/cmp-buffer'},
-	{"burstknight/friendly-snippets"},
+	{"burstknight/friendly-snippets", branch = "master"},
 
 	-- 使用 vsnip 處理自動補齊
 	{'hrsh7th/cmp-vsnip'},
