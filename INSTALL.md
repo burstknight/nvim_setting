@@ -14,6 +14,14 @@ You need install neovim `0.10.0+` first. You can clone [neovim](https://github.c
 This repo uses `pyenv` to manage python verisons and `poetry` to manage the virtual environment.
 
 #### Install pyenv
+First, please run these commands to install necessary packages for `pyenv`.
+```bash
+sudo apt-get update
+
+sudo apt-get install build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev curl git \
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
 Please clone `pyenv` into `$HOME/.pyenv`.
 ```bash
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
