@@ -23,6 +23,7 @@ RUN apt-get update && \
 		tk-dev \
 		libffi-dev \
 		liblzma-dev \
+		sudo \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN cd /tmp && \
@@ -44,5 +45,8 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
 
 WORKDIR /workspace
 COPY . .
+RUN . ~/.bashrc && \
+	python init.py && \
+	nvim --headless 'Lazy! sync' +qa
 
 CMD ["/bin/bash"]
