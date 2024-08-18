@@ -11,7 +11,7 @@ class myNvimIniter:
     def __init__(self) -> None:
         self.__m_sPlatform = platform.system()
         self.__m_dctPackage:Dict[str, List[str]] = {}
-        self.__m_dctPackage["Linux"] = ["curl", "ripgrep", "fd-find", "clangd", "luarocks", "tree-sitter", "nodejs", "python3-venv", "python3", "python3-pip"]
+        self.__m_dctPackage["Linux"] = ["curl", "ripgrep", "fd-find", "clangd", "luarocks", "npm", "nodejs", "python3-venv", "python3", "python3-pip"]
         self.__m_dctPackage["Windows"] = ["curl", "ripgrep", "fd-find", "nerd-fonts-hack", "nodejs", "pwsh", "unzip", "yarn", "ripgrep", "7zip.install", "fd"]
     # End of constructor
 
