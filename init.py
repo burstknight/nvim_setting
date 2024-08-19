@@ -11,7 +11,7 @@ class myNvimIniter:
     def __init__(self) -> None:
         self.__m_sPlatform = platform.system()
         self.__m_dctPackage:Dict[str, List[str]] = {}
-        self.__m_dctPackage["Linux"] = ["curl", "ripgrep", "fd-find", "clangd", "luarocks", "npm", "nodejs", "python3-venv", "python3", "python3-pip"]
+        self.__m_dctPackage["Linux"] = ["curl", "ripgrep", "fd-find", "clangd", "luarocks", "nodejs", "python3-venv", "python3", "python3-pip"]
         self.__m_dctPackage["Windows"] = ["curl", "ripgrep", "fd-find", "nerd-fonts-hack", "nodejs", "pwsh", "unzip", "yarn", "ripgrep", "7zip.install", "fd"]
     # End of constructor
 
@@ -26,6 +26,7 @@ class myNvimIniter:
         # End of for-loop
 
         if "Linux" == self.__m_sPlatform:
+            system("curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -")
             system("sudo apt-get update")
             sRequirements = ""
             for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
@@ -33,7 +34,9 @@ class myNvimIniter:
             # End of for-loop
 
             system("sudo apt-get install -y %s" %(sRequirements))
+            system("curl -qL https://www.npmjs.com/install.sh | sh")
             system("sudo npm install -g yarn")
+            system("sudo npm install -g tree-sitter-cli")
         elif "Windows" == self.__m_sPlatform:
             for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
                 system("choco install --yes %s" %(sPackage))
