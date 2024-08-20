@@ -30,6 +30,7 @@ RUN cd /tmp && \
 	wget https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz && \
 	tar zxf nvim*.tar.gz && \
 	cp -R nvim-linux64 /opt && \
+	rm nvim*.tar.gz && \
 	echo 'export PATH=$PATH:/opt/nvim-linux64/bin' >> ~/.bashrc
 RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 	echo 'export PYENV_ROOT=$HOME/.pyenv'  >> ~/.bashrc && \
