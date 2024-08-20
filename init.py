@@ -10,19 +10,41 @@ from typing import Dict, List
 class myNvimIniter:
     def __init__(self) -> None:
         self.__m_sPlatform = platform.system()
-        self.__m_dctPackage:Dict[str, List[str]] = {}
-        self.__m_dctPackage["Linux"] = ["curl", "ripgrep", "fd-find", "clangd", "luarocks", "nodejs", "python3-venv", "python3", "python3-pip"]
-        self.__m_dctPackage["Windows"] = ["curl", "ripgrep", "fd-find", "nerd-fonts-hack", "nodejs", "pwsh", "unzip", "yarn", "ripgrep", "7zip.install", "fd"]
+        self.__m_dctPackage: Dict[str, List[str]] = {}
+        self.__m_dctPackage["Linux"] = [
+            "curl",
+            "ripgrep",
+            "fd-find",
+            "clangd",
+            "luarocks",
+            "nodejs",
+            "python3-venv",
+            "python3",
+            "python3-pip",
+        ]
+        self.__m_dctPackage["Windows"] = [
+            "curl",
+            "ripgrep",
+            "fd-find",
+            "nerd-fonts-hack",
+            "nodejs",
+            "pwsh",
+            "unzip",
+            "yarn",
+            "ripgrep",
+            "7zip.install",
+            "fd",
+        ]
     # End of constructor
 
     def __installRequirements(self):
         if self.__m_sPlatform not in self.__m_dctPackage.keys():
-            raise RuntimeError("Not support the platform: %s" %(self.__m_sPlatform))
+            raise RuntimeError("Not support the platform: %s" % (self.__m_sPlatform))
         # End of if-condition
 
         print("We need install the packages for neovim:")
         for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
-            print("\t* %s" %(sPackage))
+            print("\t* %s" % (sPackage))
         # End of for-loop
 
         if "Linux" == self.__m_sPlatform:
@@ -33,13 +55,13 @@ class myNvimIniter:
                 sRequirements += sPackage + " "
             # End of for-loop
 
-            system("sudo apt-get install -y %s" %(sRequirements))
+            system("sudo apt-get install -y %s" % (sRequirements))
             system("curl -qL https://www.npmjs.com/install.sh | sh")
             system("sudo npm install -g yarn")
             system("sudo npm install -g tree-sitter-cli")
         elif "Windows" == self.__m_sPlatform:
             for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
-                system("choco install --yes %s" %(sPackage))
+                system("choco install --yes %s" % (sPackage))
             # End of for-loop
         # End of if-condition
 
@@ -57,15 +79,16 @@ class myNvimIniter:
             rmtree(sTargetPath)
         # End of if-condition
 
-        print("Copy the directory 'nvim' into '%s' ..." %(sTargetPath))
+        print("Copy the directory 'nvim' into '%s' ..." % (sTargetPath))
         copytree("./nvim/", sTargetPath)
     # End of myNvimIniter::copySettingFiles
-    
+
     def run(self):
         self.__installRequirements()
         self.__copySettingFiles()
     # End of myNvimIniter::run
 # End of class myNvimIniter
+
 
 def main():
     oNvimIniter = myNvimIniter()
@@ -73,5 +96,5 @@ def main():
 # End of main
 
 if "__main__" == __name__:
-	main()
+    main()
 # End of if-condition
