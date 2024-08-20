@@ -16,6 +16,7 @@ class myNvimIniter:
             "ripgrep",
             "fd-find",
             "clangd",
+            "clang-format",
             "luarocks",
             "nodejs",
             "python3-venv",
