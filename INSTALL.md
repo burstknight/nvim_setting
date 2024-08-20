@@ -5,7 +5,7 @@ This document can show how to use this repo to setup for neovim.
 You should run these commands to install necessary tools.
 ```bash
 sudo apt-get update
-sudo apt-get install -y git build-essential cmake
+sudo apt-get install -y git build-essential
 ```
 
 You need install neovim `0.10.0+` first. You can clone [neovim](https://github.com/neovim/neovim), and then build by yourself.
