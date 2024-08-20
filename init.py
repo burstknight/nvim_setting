@@ -42,6 +42,8 @@ class myNvimIniter:
                 system("choco install --yes %s" %(sPackage))
             # End of for-loop
         # End of if-condition
+
+        system("pip install pynvim")
     # End of myNvimIniter::installRequirements
 
     def __copySettingFiles(self):
