@@ -103,3 +103,25 @@ I use `space key` as the leader key for neovim.
 | `<leader>ds` | Run a step into the currrent function for debugging. |
 | `<leader>dx` | Terminate DAP. |
 
+## Try it on docker
+### For linux
+If you want to try my configuration for neovim, you can run [docker](https://www.docker.com/) or [podman](https://podman.io/) with my dockerfiles.
+
+First, you need run this command to build the image.
+```bash
+# For docker.
+docker build -t neovim -f ./docker/Dockerfile.ubuntu .
+
+# For podman
+podman build -t neovim -f ./docker/Dockerfile.ubuntu .
+```
+
+Now, you can use this command to run the image as a container.
+```bash
+# For docker
+docker run --rm -it neovim
+
+# For podman
+podman run --rm -it neovim
+```
+
