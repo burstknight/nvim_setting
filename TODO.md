@@ -6,4 +6,5 @@
 * Fix the bug on windows for failing to install some language server: `ruff-lsp`.
 * Maybe I need replease `choco` with `scoop` as the package manager on windows because `scoop` dosen't need superuser right.
 * Add the plugin [leetcode.nvim](https://github.com/kawre/leetcode.nvim.git) to practice leetcode on neovim.
+* Fix the bug for clipboard.
 
