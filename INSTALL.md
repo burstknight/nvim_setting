@@ -65,66 +65,8 @@ python3 init.py
 If you don't get any error message, you succeed to setup the neovim.
 
 ## For windows
-### Install chocolatey
-`chocolatey` is a package manager on windows. We need use `chocolatey` to install all necessary packages for neovim.
-
-Please use supervisor right to open `powershell`. And then use this command to the limits of the current authority.
-```bash
-Get-ExecutionPolicy
-```
-
-If you get the message `Restricted`, you can select one of the commands to get the higher authority.
-```bash
-Set-ExcutionPolicy AllSigned
-
-// or
-
-Set-ExcutionPolicy Bypass -Scope Process
-```
-
-Please run this command to install `chocolatey`.
-```bash
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-```
-
-Here gives a suggestion. You can use `chocolatey` to install `gsudo` that can easily switch to supervisor right on `powershell`.
-```bash
-choco install gsudo
-```
-
-### Install `msys2`
-We need use `msys2` to offer C/C++ develop environment. Please download the installer from [this web](https://www.msys2.org/). And then run the installer. `msys2` will be installed to `C:\`.
-
-Please change the line `db home: cygwin desc` in the file `C:\msys2\etc\nsswitch.conf` to this line:
-```
-db home: windows desc
-```
-
-Please open `ucrt64` terminal, and then run this commands and follow the hint message to upgrade `msys2`
-```bash
-pacman -Syu
-```
-
-Please run this command to install `git` on `ucrt64` terminal.
-```bash
-pacman -S git
-```
-
-You can use my other repo [msys2_steup](https://github.com/burstknight/msys2_setup.git) to install all necessary packages. First, you need clone the repo:
-```bash
-git clone https://github.com/burstknight/msys2_setup.git
-```
-
-And then run the commands:
-```bash
-cd msys2_setup
-sh setup.sh
-```
-
-Now, please follow the commands to add the paths to set your environment variable `User PATH` on `powershell`.
-```bash
-[System.Environment]::SetEnvironmentVariable('path', [System.Environment]::GetEnvironmentVariable('path', "User") + "C:\msys64;" + "C:\msys64\usr\bin;" + "C:\msys64\ucrt64\bin;", "User")
-```
+### Install git
+Please get the installer from [this web](https://git-scm.com/) for `git` on windows.
 
 ### Python environment
 #### Install pyenv
@@ -178,5 +120,18 @@ And then you need use this command to add `poetry` add the environment variable 
 We need change the setting of `poetry` to create `.venv` for each python project, so we should run this command.
 ```bash
 poetry config virtualenvs.in-project true
+```
+### Install scoop
+`Scoop` is a package manager for windows. We need use `scoop` to install all necessary packages for neovim.
+
+Please use this command on powershell to install `scoop`.
+```bash
+iwr -useb get.scoop.sh | iex
+```
+
+### Run `init.py`
+Please run this command to use the python file `init.py` to set the configuration for neovim.
+```bash
+python init.py
 ```
 
