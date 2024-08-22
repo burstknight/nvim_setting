@@ -1,29 +1,26 @@
 #!/usr/bin/env python
 
+import platform
 from os import system
 from os.path import exists, join
-from shutil import copytree, rmtree
 from pathlib import Path
-import platform
+from shutil import copytree, rmtree
 from typing import Dict, List
+
 
 class myNvimIniter:
     def __init__(self) -> None:
         self.__m_sPlatform = platform.system()
-        self.__m_dctPackage: Dict[str, List[str]] = {}
-        self.__m_dctPackage["Linux"] = [
-            "curl",
-            "ripgrep",
-            "fd-find",
-            "clangd",
-            "clang-format",
-            "luarocks",
-            "nodejs",
-            "python3-venv",
-            "python3",
-            "python3-pip",
+        self.__m_dctInstallCmd: Dict[str, List[str]] = {}
+        self.__m_dctInstallCmd["Linux"] = [
+            "curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -",
+            "sudo apt-get update",
+            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip",
+            "curl -qL https://www.npmjs.com/install.sh | sh",
+            "sudo npm install -g yarn",
+            "sudo npm install -g tree-sitter-cli",
         ]
-        self.__m_dctPackage["Windows"] = [
+        self.__m_dctInstallCmd["Windows"] = [
             "curl",
             "ripgrep",
             "fd-find",
@@ -39,30 +36,20 @@ class myNvimIniter:
     # End of constructor
 
     def __installRequirements(self):
-        if self.__m_sPlatform not in self.__m_dctPackage.keys():
+        if self.__m_sPlatform not in self.__m_dctInstallCmd.keys():
             raise RuntimeError("Not support the platform: %s" % (self.__m_sPlatform))
         # End of if-condition
 
-        print("We need install the packages for neovim:")
-        for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
-            print("\t* %s" % (sPackage))
-        # End of for-loop
-
         if "Linux" == self.__m_sPlatform:
-            system("curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -")
-            system("sudo apt-get update")
-            sRequirements = ""
-            for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
-                sRequirements += sPackage + " "
+            for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
+                iResponse = system(sCmd)
+                if 0 != iResponse:
+                    print("Warning: Failed to run the command '%s'" %(sCmd))
+                # End of if-condition
             # End of for-loop
-
-            system("sudo apt-get install -y %s" % (sRequirements))
-            system("curl -qL https://www.npmjs.com/install.sh | sh")
-            system("sudo npm install -g yarn")
-            system("sudo npm install -g tree-sitter-cli")
         elif "Windows" == self.__m_sPlatform:
-            for sPackage in self.__m_dctPackage[self.__m_sPlatform]:
-                system("choco install --yes %s" % (sPackage))
+            for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
+                system("choco install --yes %s" % (sCmd))
             # End of for-loop
         # End of if-condition
 
