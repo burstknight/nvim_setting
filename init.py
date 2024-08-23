@@ -20,18 +20,29 @@ class myNvimIniter:
             "sudo npm install -g yarn",
             "sudo npm install -g tree-sitter-cli",
         ]
+
         self.__m_dctInstallCmd["Windows"] = [
-            "curl",
-            "ripgrep",
-            "fd-find",
-            "nerd-fonts-hack",
-            "nodejs",
-            "pwsh",
-            "unzip",
-            "yarn",
-            "ripgrep",
-            "7zip.install",
-            "fd",
+            "scoop bucket add main",
+            "scoop bucket add versions",
+            "scoop bucket add extras",
+            "scoop bucket add nerd-fonts",
+            "scoop update",
+            "scoop install main/pwsh",
+            "scoop install main/7zip",
+            "scoop install main/wget",
+            "scoop install main/unzip",
+            "scoop install main/luarocks",
+            "scoop install main/luajit",
+            "scoop install main/gzip",
+            "scoop install main/nodejs",
+            "scoop install main/yarn",
+            "scoop install main/tree-sitter",
+            "scoop install main/ripgrep",
+            "scoop install main/fd",
+            "scoop install main/cmake",
+            "scoop install main/clangd",
+            "scoop install Hack-NF",
+            "scoop install main/mingw",
         ]
     # End of constructor
 
@@ -40,18 +51,12 @@ class myNvimIniter:
             raise RuntimeError("Not support the platform: %s" % (self.__m_sPlatform))
         # End of if-condition
 
-        if "Linux" == self.__m_sPlatform:
-            for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
-                iResponse = system(sCmd)
-                if 0 != iResponse:
-                    print("Warning: Failed to run the command '%s'" %(sCmd))
-                # End of if-condition
-            # End of for-loop
-        elif "Windows" == self.__m_sPlatform:
-            for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
-                system("choco install --yes %s" % (sCmd))
-            # End of for-loop
-        # End of if-condition
+        for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
+            iResponse = system(sCmd)
+            if 0 != iResponse:
+                print("Warning: Failed to run the command '%s'" % (sCmd))
+            # End of if-condition
+        # End of for-loop
 
         system("pip install pynvim")
     # End of myNvimIniter::installRequirements
