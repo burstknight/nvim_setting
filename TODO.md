@@ -7,4 +7,7 @@
 * Maybe I need replease `choco` with `scoop` as the package manager on windows because `scoop` dosen't need superuser right.
 * Add the plugin [leetcode.nvim](https://github.com/kawre/leetcode.nvim.git) to practice leetcode on neovim.
 * Fix the bug for clipboard.
+* Support powershell.
+* Maybe I should replace [vim-airline](https://github.com/vim-airline/vim-airline.git) with [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim.git) for the status bar.
+* Try to use the plugin [gitignore.nvim](https://github.com/wintermute-cell/gitignore.nvim.git) for `.gitignore`.
 
