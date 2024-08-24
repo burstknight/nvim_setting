@@ -118,4 +118,7 @@ require("lazy").setup({
 		end,
 		ft = {"markdown"},
 	},
+
+	-- 這個外掛可以輔助輸入.gitignore
+	{"wintermute-cell/gitignore.nvim"},
 })

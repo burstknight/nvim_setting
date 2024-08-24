@@ -33,6 +33,7 @@ cmd("smap <expr> <S-TAB> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-next)' : '<S-TA
 local which_key = require("which-key")
 
 local wk_keymaps = {
+	-- For DAP
     { "<leader>d", group = "DAP", nowait = false, remap = false },
     { "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = "Breakpoint", nowait = false, remap = false },
     { "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", desc = "Continue", nowait = false, remap = false },
@@ -41,9 +42,14 @@ local wk_keymaps = {
     { "<leader>dq", "<cmd>lua require'dap'.close()<CR>", desc = "Quit", nowait = false, remap = false },
     { "<leader>ds", "<cmd>lua require'dap'.step_into()<CR>", desc = "Step", nowait = false, remap = false },
     { "<leader>dx", "<cmd>lua require'dap'.terminate()<CR>", desc = "Terminate", nowait = false, remap = false },
+
+	-- For MarkdownPreview
+	{"<leader>m", group = "MarkdownPreview", nowait = false, remap = false},
     { "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Markdown preview", nowait = false, remap = false },
     { "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", desc = "Markdown preview stop", nowait = false, remap = false },
     { "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview toggle", nowait = false, remap = false },
+
+	{"<leader>G", "<cmd>Gitignore<CR>", desc = "Generate '.gitignore'"},
 }
 
 which_key.add(wk_keymaps)
