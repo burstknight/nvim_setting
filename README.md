@@ -23,6 +23,7 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [which-key.nvim](https://github.com/folke/which-key.nvim.git): It can show the shortcuts on a floating dialog.
 * [markdown-previw.nvim](https://github.com/iamcco/markdown-preview.nvim.git): It can use web browser to preview markdown files.
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git): It can highlight keywords for each file type.
+* [gitignore.nvim](https://github.com/wintermute-cell/gitignore.nvim.git): It can generate `.gitignore`.
 
 ### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
@@ -65,6 +66,7 @@ I use `space key` as the leader key for neovim.
 | `<leader>mp` | Open the web browser to preview the currrent markdown file. |
 | `<leader>ms` | Stop previewing the currrent markdown file. |
 | `<leader>mt` | Toggle to preview the currrent markdown file. |
+| `<leader>G` | Use the plugin `gitignore.nvim` to generate `.gitignore`. |
 
 ### Keymaps for floating terminal
 | Keymaps | Description |
