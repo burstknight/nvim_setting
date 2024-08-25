@@ -1,5 +1,5 @@
 # Set the default behavior to automatically set line ending.
-* text=auto eof=lf
+* text=auto eol=lf
 
 *.[Mm][Dd] text
 *.lua text
