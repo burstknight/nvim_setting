@@ -29,6 +29,7 @@ nvim_treesitter.setup({
 		"yaml",
 		"ini",
 		"http",
+		"powershell",
 	},
 	auto_install = true,
 	sync_install = false,
