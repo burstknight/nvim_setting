@@ -28,6 +28,7 @@ mason_lspconfig.setup({
 		"yamlls",
 		"pyright",
 		"ruff_lsp",
+		"powershell_es",
 	},
 })
 
@@ -136,3 +137,8 @@ nvim_lsp.ruff_lsp.setup({
 	capabilities = capabilities,
 })
 
+-- 設定 lsp 支援 powershell
+nvim_lsp.powershell_es.setup({
+	on_attach = LspKeyBind,
+	capabilities = capabilities,
+})
