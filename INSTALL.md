@@ -129,6 +129,9 @@ Please use this command on powershell to install `scoop`.
 iwr -useb get.scoop.sh | iex
 ```
 
+### Install Visual Studio
+In order to find standard library for `clangd`, we need install `Visual Studio`. You can download the installer from [this web](https://visualstudio.microsoft.com/zh-hant/vs/).
+
 ### Run `init.py`
 Please run this command to use the python file `init.py` to set the configuration for neovim.
 ```bash
