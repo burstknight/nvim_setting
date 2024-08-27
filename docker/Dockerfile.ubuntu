@@ -47,7 +47,6 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
 WORKDIR /workspace
 COPY . .
 RUN . ~/.bashrc && \
-	python init.py && \
-	nvim --headless 'Lazy! sync' +qa
+	python init.py
 
 CMD ["/bin/bash"]
