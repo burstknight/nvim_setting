@@ -79,6 +79,7 @@ class myNvimIniter:
     def run(self):
         self.__installRequirements()
         self.__copySettingFiles()
+        system("nvim --headless 'Lazy! sync' +qa")
     # End of myNvimIniter::run
 # End of class myNvimIniter
 
