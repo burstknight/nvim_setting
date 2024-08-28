@@ -77,12 +77,12 @@ I use `space key` as the leader key for neovim.
 ### Keymaps for LSP
 | Keymaps | Description |
 | -------------- | --------------- |
-| `<leader>gr` | Rename for variable or function. |
-| `<leader>ga` | Perform code action. |
-| `<leader>gd` | Go to definition for variable or function. |
-| `<leader>gf` | Find the definition, reference or implementation for the keyword. |
+| `<leader>lr` | Rename for variable or function. |
+| `<leader>la` | Perform code action. |
+| `<leader>ld` | Go to definition for variable or function. |
+| `<leader>lf` | Find the definition, reference or implementation for the keyword. |
 | `<F3>` | Open the outline for the currrent file. |
-| `<leader>gh` | Hover the document for variable or function. |
+| `<leader>lh` | Hover the document for variable or function. |
 | `<leader>=` | Format the currrent code. |
 
 ### Keymaps for completion
