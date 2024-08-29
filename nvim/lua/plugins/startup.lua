@@ -56,8 +56,24 @@ startup.setup({
 		default_color = "",
 		oldfiles_amount = 0,
 	},
+	clock = {
+		type = "text",
+		content = function ()
+			local time = "󰥔  " .. os.date("%Y/%m/%d %H:%M")
+			return {time}
+		end,
+		oldfiles_directory = false,
+		align = "center",
+		title = "",
+		fold_section = false,
+		margin = 0,
+		highlight = "TSString",
+		default_color = "#FFFFFF",
+		oldfiles_amount = 0,
+	},
 	parts = {
 		"header",
 		"body",
+		"clock",
 	},
 })
