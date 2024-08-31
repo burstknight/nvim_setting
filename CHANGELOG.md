@@ -51,6 +51,7 @@
 * Add the plugin `which-key.nvim` to show the shortcuts on a floating dialog.
 * Add the plugin `markdown-previw.nvim` to use web browser to preview makrdown files.
 * Add the plugin `gitignore.nvim` to generate `.gitignore`.
+* Add the plugin `startup.nvim` to show the welcome page on neovim.
 
 ### [Fixed]
 
