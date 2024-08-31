@@ -18,6 +18,7 @@ local plugins = {
 	"plugins.vim-rainbow",
 	"plugins.ibl",
 	"plugins.gitignore",
+	"plugins.startup",
 }
 
 for i = 1, #plugins do

@@ -121,4 +121,13 @@ require("lazy").setup({
 
 	-- 這個外掛可以輔助輸入.gitignore
 	{"wintermute-cell/gitignore.nvim"},
+
+	-- 這個外掛可以在開啟 neovim 時顯示歡迎畫面
+	{
+		"startup-nvim/startup.nvim", 
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+	},
 })
