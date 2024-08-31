@@ -24,6 +24,7 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [markdown-previw.nvim](https://github.com/iamcco/markdown-preview.nvim.git): It can use web browser to preview markdown files.
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git): It can highlight keywords for each file type.
 * [gitignore.nvim](https://github.com/wintermute-cell/gitignore.nvim.git): It can generate `.gitignore`.
+* [startup.nvim](https://github.com/max397574/startup.nvim.git): It can show the welcome page on neovim.
 
 ### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
