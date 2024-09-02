@@ -19,6 +19,7 @@ local plugins = {
 	"plugins.ibl",
 	"plugins.gitignore",
 	"plugins.startup",
+	"plugins.leetcode",
 }
 
 for i = 1, #plugins do

@@ -50,6 +50,18 @@ local wk_keymaps = {
     { "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview toggle", nowait = false, remap = false },
 
 	{"<leader>G", "<cmd>Gitignore<CR>", desc = "Generate '.gitignore'"},
+
+	-- For leetcode.nvim
+	{"<leader>L", group = "LeetCode", nowait = false, remap = false},
+	{"<leader>LL", "<cmd>Leet<CR>", desc = "Open leetcode.nvim", nowait = false, remap = false},
+	{"<leader>Lq", "<cmd>Leet exit<CR>", desc = "Close leetcode.nvim", nowait = false, remap = false},
+	{"<leader>Lm", "<cmd>Leet menu<CR>", desc = "Return leet code menu", nowait = false, remap = false},
+	{"<leader>Ld", "<cmd>Leet daily<CR>", desc = "Open the question of today", nowait = false, remap = false},
+	{"<leader>Ll", "<cmd>Leet list<CR>", desc = "Open a problem list picker", nowait = false, remap = false},
+	{"<leader>LR", "<cmd>Leet random<CR>", desc = "Open a random question", nowait = false, remap = false},
+	{"<leader>Lr", "<cmd>Leet run<CR>", desc = "Run currently opened question", nowait = false, remap = false},
+	{"<leader>La", "<cmd>Leet lang<CR>", desc = "Change the language", nowait = false, remap = false},
+	{"<leader>Ls", "<cmd>Leet submit<CR>", desc = "Submit currently opened question", nowait = false, remap = false},
 }
 
 which_key.add(wk_keymaps)

@@ -52,6 +52,7 @@
 * Add the plugin `markdown-previw.nvim` to use web browser to preview makrdown files.
 * Add the plugin `gitignore.nvim` to generate `.gitignore`.
 * Add the plugin `startup.nvim` to show the welcome page on neovim.
+* Add the plugin `leetcode.nvim` to practice `LeetCode` on neovim.
 
 ### [Fixed]
 
