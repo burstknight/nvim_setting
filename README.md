@@ -25,6 +25,7 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git): It can highlight keywords for each file type.
 * [gitignore.nvim](https://github.com/wintermute-cell/gitignore.nvim.git): It can generate `.gitignore`.
 * [startup.nvim](https://github.com/max397574/startup.nvim.git): It can show the welcome page on neovim.
+* [leetcode.nvim](https://github.com/kawre/leetcode.nvim.git): It can use neovim to practice `LeetCode`.
 
 ### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
@@ -47,6 +48,7 @@ You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 * [cmp-buffer](https://github.com/hrsh7th/cmp-buffer.git): The plugin `nvim-cmp` need use it to implement the completion for buffer words.
 * [vim-vsnip](https://github.com/hrsh7th/vim-vsnip.git): It can insert vscode style snippets during typing code for auto completion.
 * [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip.git): The plugin `vim-vsnip` need use it to insert vscode style snippets for auto completion.
+* [friendly-snippets](https://github.com/burstknight/friendly-snippets.git): This plugin has defined many snippets for auto completion.
 
 ### For DAP(Debug Adapter Protocol)
 * [nvim-dap](https://github.com/mfussenegger/nvim-dap.git): It is implemented for DAP(Debug Adapter Protocol) client.
@@ -62,11 +64,11 @@ I use `space key` as the leader key for neovim.
 | -------------- | --------------- |
 | `<F2>` | Open the file browser. |
 | `<F8>` | Insert the doxygen style comment for a function signature. |
-| `Ctrl` + `p` | Fuzzy search the file from the currrent project. |
-| `Ctrl` + `f` | Use `grep` to search keyword from the currrent project. |
-| `<leader>mp` | Open the web browser to preview the currrent markdown file. |
-| `<leader>ms` | Stop previewing the currrent markdown file. |
-| `<leader>mt` | Toggle to preview the currrent markdown file. |
+| `Ctrl` + `p` | Fuzzy search the file from the current project. |
+| `Ctrl` + `f` | Use `grep` to search keyword from the current project. |
+| `<leader>mp` | Open the web browser to preview the current markdown file. |
+| `<leader>ms` | Stop previewing the current markdown file. |
+| `<leader>mt` | Toggle to preview the current markdown file. |
 | `<leader>G` | Use the plugin `gitignore.nvim` to generate `.gitignore`. |
 
 ### Keymaps for floating terminal
@@ -105,6 +107,19 @@ I use `space key` as the leader key for neovim.
 | `<leader>dq` | Close DAP. |
 | `<leader>ds` | Run a step into the currrent function for debugging. |
 | `<leader>dx` | Terminate DAP. |
+
+### Keymaps for `leetcode.nvim`
+| Keymaps | Description |
+| -------------- | --------------- |
+| `<leader>LL` | Open the plugin `leetcode.nvim`. |
+| `<leader>Lq` | Close the plugin `leetcode.nvim`. |
+| `<leader>Lm` | Return the menu. |
+| `<leader>Ld` | Open the question of the today. |
+| `<leader>Ll` | Open a problem list picker. |
+| `<leader>LR` | Open a random question. |
+| `<leader>Lr` | Run the currently opened question. |
+| `<leader>La` | Change the language for the currently opened question. |
+| `<leader>Ls` | Submit the currently opened question. |
 
 ## Try it on docker
 ### For linux
