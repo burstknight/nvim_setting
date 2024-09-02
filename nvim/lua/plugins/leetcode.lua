@@ -6,7 +6,7 @@ end
 
 leetcode.setup({
 	arg = "leetcode",
-	lang = "cpp",
+	lang = "c",
 	storage = {
 		home = vim.fn.stdpath("data") .. "/leetcode",
 		cache = vim.fn.stdpath("cache") .. "/leetcode",
