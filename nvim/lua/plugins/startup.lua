@@ -202,9 +202,10 @@ startup.setup({
 		title = "Basic Commands",
 		margin = 0,
 		content = {
-			{"  Find file", "Telescope find_files", "<C-p>"},
-			{"  File manager", "NERDTreeToggle", "<F2>"},
+			{"  Find File", "Telescope find_files", "<C-p>"},
+			{"  File Browser", "NERDTreeToggle", "<F2>"},
 			{"  Recent", "Telescope oldfiles", "<leader>fr"},
+			{"󰙨 Leet Code", "Leet", "<leader>LL"},
 		},
 		highlight = "String",
 		default_color = "",
