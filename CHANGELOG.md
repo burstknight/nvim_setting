@@ -2,6 +2,17 @@
 
 ## [Unrelease]
 ### [Added]
+
+### [Fixed]
+
+### [Changed]
+
+### [Removed]
+
+### [Deprecated]
+
+## [0.1.0] - 2024/09/03
+### [Added]
 * Add the plugins for LSP: `mason.nvim`, `mason-lspconfig.nvim`, `mason-registry`. So far support langauge:
     * [x] `C/C++`
     * [x] `Python 3.x`
@@ -53,12 +64,4 @@
 * Add the plugin `gitignore.nvim` to generate `.gitignore`.
 * Add the plugin `startup.nvim` to show the welcome page on neovim.
 * Add the plugin `leetcode.nvim` to practice `LeetCode` on neovim.
-
-### [Fixed]
-
-### [Changed]
-
-### [Removed]
-
-### [Deprecated]
 
