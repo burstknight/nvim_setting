@@ -10,6 +10,8 @@
 ### [Removed]
 
 ### [Deprecated]
+* The plugin `nerdtree` will be removed because I want to use other plugin for the file browser.
+* The plugin `vim-airline` will be removed because I want to use other plugin to show the status bar on neovim.
 
 ## [0.1.0] - 2024/09/03
 ### [Added]
