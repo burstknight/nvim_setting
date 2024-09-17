@@ -14,4 +14,5 @@
 * Support `powershell` for lsp.
 * Support `powershell` for builtin terminal.
 * Maybe I should replace [vim-airline](https://github.com/vim-airline/vim-airline.git) with [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim.git) for the status bar.
+* Maybe I need the plugin [vim-doge](https://github.com/kkoomen/vim-doge.git) to generate document during coding.
 
