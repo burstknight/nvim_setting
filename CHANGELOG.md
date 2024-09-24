@@ -6,6 +6,7 @@
 ### [Fixed]
 
 ### [Changed]
+* Change the update cache interval to 60 days for the plugin `leetcode.nvim`.
 
 ### [Removed]
 
