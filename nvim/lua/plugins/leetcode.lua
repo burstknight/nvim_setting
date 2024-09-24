@@ -16,7 +16,7 @@ leetcode.setup({
 	},
 	logging = true,
 	cache = {
-		update_interval = 60*60*24*7,
+		update_interval = 60*60*24*60,
 	},
 	console = {
 		open_on_runcode = true,
