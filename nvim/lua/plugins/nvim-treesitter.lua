@@ -30,6 +30,8 @@ nvim_treesitter.setup({
 		"ini",
 		"http",
 		"powershell",
+		"gdscript",
+		"godot_resource",
 	},
 	auto_install = true,
 	sync_install = false,
