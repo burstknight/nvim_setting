@@ -2,6 +2,7 @@
 
 ## [Unrelease]
 ### [Added]
+* Update LSP setting to support godot.
 
 ### [Fixed]
 
