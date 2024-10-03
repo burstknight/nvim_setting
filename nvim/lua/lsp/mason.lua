@@ -142,3 +142,9 @@ nvim_lsp.powershell_es.setup({
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
 })
+
+-- 設定 lsp 支援 godot
+nvim_lsp.gdscript.setup({
+	on_attach = LspKeyBind,
+	capabilities = capabilities,
+})
