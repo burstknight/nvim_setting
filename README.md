@@ -8,6 +8,8 @@ Some plugins need use `nerd font`, so we need download a font from [this web](ht
 
 You can read [INSTALL.md](./INSTALL.md) to get more information to setup neovim.
 
+If you want to use neovim to write `gdscript` for godot, you have to install [godot 4.x](https://godotengine.org/).
+
 ## Used plugins
 ### For common functions
 * [nerdtree](https://github.com/preservim/nerdtree.git): I use this plugin as the file explorer. 
