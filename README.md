@@ -19,7 +19,7 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 * [DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim.git): It can insert doxygen style comments for `C/C++`.
 * [vim-code-dark](https://github.com/tomasiser/vim-code-dark.git): I use this plugin to set the color scheme for neovim.
 * [vim-ranbow](https://github.com/frazrepo/vim-rainbow.git): This plugin can use multiple colors to show nest parentheses.
-* [vim-airline](https://github.com/vim-airline/vim-airline.git) and [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git): I need use these plugins to show the status bar on neovim. 
+* [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim.git): I need use these plugins to show the status bar on neovim. 
 * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git): This plugin can offer a fuzzy file finder. 
 * [indent-blackline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim.git): It can show indentation line.
 * [which-key.nvim](https://github.com/folke/which-key.nvim.git): It can show the shortcuts on a floating dialog.
