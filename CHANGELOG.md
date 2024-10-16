@@ -8,12 +8,13 @@
 
 ### [Changed]
 * Change the update cache interval to 60 days for the plugin `leetcode.nvim`.
+* I replace the plugin `vim-airline` with the plugin `lualine.nvim` to show the status bar on neovim.
 
 ### [Removed]
+* Remove the plugin `vim-airline-themes` because I has removed the plugin `vim-airline`.
 
 ### [Deprecated]
 * The plugin `nerdtree` will be removed because I want to use other plugin for the file browser.
-* The plugin `vim-airline` will be removed because I want to use other plugin to show the status bar on neovim.
 
 ## [0.1.0] - 2024/09/03
 ### [Added]
