@@ -25,8 +25,10 @@ require("lazy").setup({
 	{'jiangmiao/auto-pairs'},
 	--
 	-- 使用這兩個外掛來顯示vim的狀態列
-	{'vim-airline/vim-airline'},
-	{'vim-airline/vim-airline-themes'},
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = {'nvim-tree/nvim-web-devicons'},
+	},
 
 	-- 可以和 git 搭配及時顯示當前檔案的修改狀態
 	{'airblade/vim-gitgutter'},
