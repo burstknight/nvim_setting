@@ -8,7 +8,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- 設定外掛 NERDTree 的快捷鍵
-map('n', '<F2>', ':NERDTreeToggle<CR>', opts)
+map('n', '<F2>', ':CHADopen<CR>', opts)
 
 -- 設定外掛 DoxygenToolkit.vim 可以使用 <F8> 插入函數的說明註解
 map('n', "<F8>", ":Dox<CR>", opts)

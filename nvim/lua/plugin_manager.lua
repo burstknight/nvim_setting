@@ -16,10 +16,11 @@ require("lazy").setup({
 	{"rcarriga/nvim-notify"},
 
 	-- 這個外掛可以當檔案總管來瀏覽一個專案目錄下的檔案
-	{'preservim/nerdtree'},
-
-	-- 可以配合 nerdtree 顯示每個檔案git的狀態
-	{'Xuyuanp/nerdtree-git-plugin'},
+	{
+		"ms-jpq/chadtree",
+		branch = "chad",
+		build = "python -m chadtree deps",
+	},
 
 	-- 這個外掛可以用來括號類符號的自動補齊
 	{'jiangmiao/auto-pairs'},

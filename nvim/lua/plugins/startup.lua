@@ -203,7 +203,7 @@ startup.setup({
 		margin = 0,
 		content = {
 			{"  Find File", "Telescope find_files", "<C-p>"},
-			{"  File Browser", "NERDTreeToggle", "<F2>"},
+			{"  File Browser", "CHADopen", "<F2>"},
 			{"  Recent", "Telescope oldfiles", "<leader>fr"},
 			{"󰙨 Leet Code", "Leet", "<leader>LL"},
 		},

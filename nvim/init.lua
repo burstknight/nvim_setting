@@ -13,7 +13,7 @@ require("theme")
 -- 載入所有外掛的設定檔
 local plugins = {
 	"plugins.nvim-notify",
-	"plugins.nerdtree",
+	"plugins.chadtree",
 	"plugins.vim-gitgutter",
 	"plugins.vim-rainbow",
 	"plugins.ibl",
