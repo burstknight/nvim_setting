@@ -2,9 +2,20 @@
 
 ## [Unrelease]
 ### [Added]
-* Update LSP setting to support godot.
 
 ### [Fixed]
+
+### [Changed]
+
+### [Removed]
+
+### [Deprecated]
+* The plugin `nerdtree` will be removed because I want to use other plugin for the file browser.
+
+
+## [0.2.0] - 2024/10/21
+### [Added]
+* Update LSP setting to support godot.
 
 ### [Changed]
 * Change the update cache interval to 60 days for the plugin `leetcode.nvim`.
@@ -13,8 +24,6 @@
 ### [Removed]
 * Remove the plugin `vim-airline-themes` because I has removed the plugin `vim-airline`.
 
-### [Deprecated]
-* The plugin `nerdtree` will be removed because I want to use other plugin for the file browser.
 
 ## [0.1.0] - 2024/09/03
 ### [Added]
