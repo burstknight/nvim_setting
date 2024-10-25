@@ -59,6 +59,7 @@ class myNvimIniter:
         # End of for-loop
 
         system("pip install pynvim")
+        system("pip install virtualenv")
     # End of myNvimIniter::installRequirements
 
     def __copySettingFiles(self):
