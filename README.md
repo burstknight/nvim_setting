@@ -12,8 +12,7 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 
 ## Used plugins
 ### For common functions
-* [nerdtree](https://github.com/preservim/nerdtree.git): I use this plugin as the file explorer. 
-* [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin.git): The plugin `nerdtree` need use this plugin to show git status for each files.
+* [chadtree](https://github.com/ms-jpq/chadtree.git): I use this plugin as the file explorer. 
 * [nvim-notify](https://github.com/rcarriga/nvim-notify.git): It can use cool dialog to show message. 
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs.git): It can automatically brackets, parens and quotes in pair.
 * [DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim.git): It can insert doxygen style comments for `C/C++`.
@@ -122,6 +121,21 @@ I use `space key` as the leader key for neovim.
 | `<leader>Lr` | Run the currently opened question. |
 | `<leader>La` | Change the language for the currently opened question. |
 | `<leader>Ls` | Submit the currently opened question. |
+
+### Keymaps for `chadtree`
+| Keymaps | Description |
+| -------------- | --------------- |
+| `q` | Close the file browser. |
+| `L` | Show the status for a file or directory. |
+| `i` | Open the selected file in horizontal split. |
+| `I` | Open the selected file in vertical split. |
+| `c` | Collpase all subdirectories for the directory at the currrent cursor on the file browser. |
+| `W` | Change the current working directory for neovim. |
+| `a` | Create a new file or a new directory at the location under the current cursor on the file browser. |
+| `r` | Rename a file or a directory. |
+| `c` | Copy the selected files for directories to the location under the current cursor on the file browser. |
+| `x` | Move the selected files or directories to the location under the current cursor on the files browser. |
+| `d` | Delete the selected files. |
 
 ## Try it on docker
 ### For linux
