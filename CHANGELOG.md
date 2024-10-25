@@ -6,11 +6,12 @@
 ### [Fixed]
 
 ### [Changed]
+* Replace the plugin `nerdtree` with `chadtree` for the file browser.
 
 ### [Removed]
+* Remove the plugin `nerdtree-git-plugin` because the plugin `nerdtree` has been removed.
 
 ### [Deprecated]
-* The plugin `nerdtree` will be removed because I want to use other plugin for the file browser.
 
 
 ## [0.2.0] - 2024/10/21
