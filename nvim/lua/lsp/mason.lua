@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		"pyright",
 		"ruff_lsp",
 		"powershell_es",
+		"csharp_ls",
 	},
 })
 
@@ -145,6 +146,12 @@ nvim_lsp.powershell_es.setup({
 
 -- 設定 lsp 支援 godot
 nvim_lsp.gdscript.setup({
+	on_attach = LspKeyBind,
+	capabilities = capabilities,
+})
+
+-- 設定 lsp 支援 c#
+nvim_lsp.csharp_ls.setup({
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
 })
