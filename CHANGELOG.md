@@ -2,6 +2,7 @@
 
 ## [Unrelease]
 ### [Added]
+* LSP supports `C#`.
 
 ### [Changed]
 
