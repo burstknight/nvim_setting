@@ -14,5 +14,4 @@
 * Support `powershell` for lsp.
 * Support `powershell` for builtin terminal.
 * Maybe I need the plugin [vim-doge](https://github.com/kkoomen/vim-doge.git) to generate document during coding.
-* I want to support `C#` for lsp because maybe I need use neovim to develop `C#` application.
 

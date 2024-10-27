@@ -14,6 +14,7 @@ nvim_treesitter.setup({
 		"bash",
 		"c",
 		"cpp",
+		"c_sharp",
 		"cmnake",
 		"dockerfile",
 		"doxygen",

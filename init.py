@@ -15,7 +15,7 @@ class myNvimIniter:
         self.__m_dctInstallCmd["Linux"] = [
             "curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -",
             "sudo apt-get update",
-            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip xclip",
+            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip xclip dotnet-sdk-8.0",
             "curl -qL https://www.npmjs.com/install.sh | sh",
             "sudo npm install -g yarn",
             "sudo npm install -g tree-sitter-cli",
@@ -43,6 +43,7 @@ class myNvimIniter:
             "scoop install main/clangd",
             "scoop install Hack-NF",
             "scoop install main/mingw",
+            "scoop install main/dotnet-sdk",
         ]
     # End of constructor
 
@@ -60,6 +61,7 @@ class myNvimIniter:
 
         system("pip install pynvim")
         system("pip install virtualenv")
+        system("dotnet tool install --global csharp-ls")
     # End of myNvimIniter::installRequirements
 
     def __copySettingFiles(self):
