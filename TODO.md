@@ -14,4 +14,6 @@
 * Support `powershell` for lsp.
 * Support `powershell` for builtin terminal.
 * Maybe I need the plugin [vim-doge](https://github.com/kkoomen/vim-doge.git) to generate document during coding.
+* Maybe I will use the plugin [cmp-git](https://github.com/petertriho/cmp-git.git) for git completion.
+* Maybe I will use the plugin [vim-cursorword](https://github.com/itchyny/vim-cursorword.git) to underline the word under the current cursor.
 
