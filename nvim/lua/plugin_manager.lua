@@ -147,4 +147,7 @@ require("lazy").setup({
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
+
+	-- 這個外掛可以會用底線凸顯出游標所在的文字
+	{"itchyny/vim-cursorword"},
 })
