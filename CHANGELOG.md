@@ -3,6 +3,7 @@
 ## [Unrelease]
 ### [Added]
 * LSP supports `C#`.
+* Add the plugin `vim-cursorword` to underline the word under the current cursor on neovim.
 
 ### [Changed]
 
