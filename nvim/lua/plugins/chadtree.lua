@@ -13,6 +13,9 @@ local chadtree_settings = {
 		toggle_follow = {},
 		toggle_follow_links = {},
 	},
+	theme = {
+		text_colour_set = "nerdtree_syntax_dark",
+	},
 }
 
 nvim_set_var("chadtree_settings", chadtree_settings)

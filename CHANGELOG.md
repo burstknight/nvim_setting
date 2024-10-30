@@ -6,6 +6,7 @@
 * Add the plugin `vim-cursorword` to underline the word under the current cursor on neovim.
 
 ### [Changed]
+* Change the theme to use `nerdtree_syntax_dark` for the plugin `chadtree`.
 
 ### [Fixed]
 
