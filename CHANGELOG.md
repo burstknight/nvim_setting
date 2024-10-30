@@ -10,9 +10,9 @@
 ### [Fixed]
 
 ### [Removed]
+* The file `setup.sh` has been removed because this repo offers `init.py` to setup the setting for neovim.
 
 ### [Deprecated]
-* The file `setup.sh` shoud be removed in future because this repo offers `init.py` to setup the setting for neovim.
 
 
 ## [0.3.0] - 2024/10/25
