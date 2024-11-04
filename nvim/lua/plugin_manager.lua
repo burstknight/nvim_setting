@@ -150,4 +150,10 @@ require("lazy").setup({
 
 	-- 這個外掛可以會用底線凸顯出游標所在的文字
 	{"itchyny/vim-cursorword"},
+
+	-- 這個外掛可以用來管理 dotnet 專案
+	{
+		"MoaidHathot/dotnet.nvim",
+		cmd = "DotnetUI",
+	}
 })
