@@ -7,6 +7,7 @@
 
 ### [Changed]
 * Change the theme to use `nerdtree_syntax_dark` for the plugin `chadtree`.
+* Replace `ruff_lsp` with `ruff` to format python code because `ruff_lsp` will be deprecated by neovim lspconfig.
 
 ### [Fixed]
 * Change the source of the plugin `mason.nvim` to use my fork because I has been added some code to fix the bug. The bug is that the plugin `mason.nvim` couldn't install some langauge servers if I use `pyenv-win` on windows.
