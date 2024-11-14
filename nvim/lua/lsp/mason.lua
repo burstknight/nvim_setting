@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		"pyright",
 		"powershell_es",
 		"csharp_ls",
+		"ruff",
 	},
 })
 
@@ -129,6 +130,12 @@ nvim_lsp.pyright.setup({
 			},
 		},
 	},
+})
+
+-- 設定 lsp 使用 ruff 格式化 python 程式碼
+nvim_lsp.ruff.setup({
+	on_attach = LspKeyBind,
+	capabilities = capabilities,
 })
 
 -- 設定 lsp 支援 powershell

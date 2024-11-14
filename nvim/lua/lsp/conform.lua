@@ -9,6 +9,7 @@ conform.setup({
 		lua = {"stylua"},
 		cpp = {"clang-format"},
 		c = {"clang-format"},
+		python = {"isort", "ruff_format"},
 	},
 	format_on_save = false,
 })
