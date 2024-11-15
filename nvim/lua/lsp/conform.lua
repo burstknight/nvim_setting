@@ -10,6 +10,7 @@ conform.setup({
 		cpp = {"clang-format"},
 		c = {"clang-format"},
 		python = {"isort", "ruff_format"},
+		cs = {"clang-format"},
 	},
 	format_on_save = false,
 })

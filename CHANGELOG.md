@@ -4,6 +4,7 @@
 ### [Added]
 * LSP supports `C#`.
 * Add the plugin `vim-cursorword` to underline the word under the current cursor on neovim.
+* The plugin `conform.nvim` can use `clang-format` to format `C#` code.
 
 ### [Changed]
 * Change the theme to use `nerdtree_syntax_dark` for the plugin `chadtree`.
