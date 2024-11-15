@@ -13,7 +13,6 @@ conform.setup({
 		cs = {"clang-format"},
 	},
 	format_on_save = false,
-	log_level = vim.log.levels.DEBUG,
 })
 
 vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
