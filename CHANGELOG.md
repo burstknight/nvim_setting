@@ -4,12 +4,16 @@
 ### [Added]
 * LSP supports `C#`.
 * Add the plugin `vim-cursorword` to underline the word under the current cursor on neovim.
+* The plugin `conform.nvim` can use `clang-format` to format `C#` code.
 
 ### [Changed]
 * Change the theme to use `nerdtree_syntax_dark` for the plugin `chadtree`.
+* Replace `ruff_lsp` with `ruff` to format python code because `ruff_lsp` will be deprecated by neovim lspconfig.
 
 ### [Fixed]
 * Change the source of the plugin `mason.nvim` to use my fork because I has been added some code to fix the bug. The bug is that the plugin `mason.nvim` couldn't install some langauge servers if I use `pyenv-win` on windows.
+* Neovim alert the error about failing to use `clang-format` to format c/c++ code.
+* Change the setting for the plugin `conform.nvim` because I used the wrong way to format code.
 
 ### [Removed]
 * The file `setup.sh` has been removed because this repo offers `init.py` to setup the setting for neovim.

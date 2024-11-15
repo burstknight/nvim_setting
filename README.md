@@ -27,6 +27,7 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 * [gitignore.nvim](https://github.com/wintermute-cell/gitignore.nvim.git): It can generate `.gitignore`.
 * [startup.nvim](https://github.com/max397574/startup.nvim.git): It can show the welcome page on neovim.
 * [leetcode.nvim](https://github.com/kawre/leetcode.nvim.git): It can use neovim to practice `LeetCode`.
+* [vim-cursorword](https://github.com/itchyny/vim-cursorword.git): It can use underline to show the word under the current cursor.
 
 ### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
