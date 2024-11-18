@@ -43,7 +43,7 @@ class myNvimIniter:
             "scoop install main/clangd",
             "scoop install Hack-NF",
             "scoop install main/mingw",
-            "scoop install main/dotnet-sdk",
+            "scoop install versions/dotnet-sdk-lts",
         ]
     # End of constructor
 
