@@ -62,3 +62,5 @@ cmp.setup.cmdline(":", {
 	matching = {disallow_symbol_nonprefix_matching = false},
 })
 
+-- 可以針對C#的註解使用snippet
+vim.cmd("let g:vsnip_filetypes.cs = ['csharpdoc']")
