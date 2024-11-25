@@ -13,12 +13,6 @@ map('n', '<F2>', ':CHADopen<CR>', opts)
 -- 設定外掛 DoxygenToolkit.vim 可以使用 <F8> 插入函數的說明註解
 map('n', "<F8>", ":Dox<CR>", opts)
 
--- 設定外掛 telescope 使用 Ctrl + p 搜尋檔案
-map("n", "<C-p>", ":Telescope find_files<CR>", opts)
-
--- 設定外掛telescope 使用 Ctrl + f 全域搜尋
-map("n", "<C-f>", ":Telescope live_grep<CR>", opts)
-
 -- 設定 terminal 相關的快捷鍵
 map("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", buffer_ops)
 map("t", "<C-k>", "<C-\\><C-n>", opts)
@@ -62,6 +56,13 @@ local wk_keymaps = {
 	{"<leader>Lr", "<cmd>Leet run<CR>", desc = "Run currently opened question", nowait = false, remap = false},
 	{"<leader>La", "<cmd>Leet lang<CR>", desc = "Change the language", nowait = false, remap = false},
 	{"<leader>Ls", "<cmd>Leet submit<CR>", desc = "Submit currently opened question", nowait = false, remap = false},
+
+	-- For telescope
+	{"<leader>f", group = "Telescope", nowait = false, remap = false},
+	{"<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find the file", nowait = false, remap = false},
+	{"<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Globally find file with keyword", nowait = false, remap = false},
+	{"<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Globally find file with keyword", nowait = false, remap = false},
+	{"<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Find the recent file", nowait = false, remap = false},
 }
 
 which_key.add(wk_keymaps)

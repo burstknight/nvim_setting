@@ -202,7 +202,7 @@ startup.setup({
 		title = "Basic Commands",
 		margin = 0,
 		content = {
-			{"  Find File", "Telescope find_files", "<C-p>"},
+			{"  Find File", "Telescope find_files", "<leader>ff"},
 			{"  File Browser", "CHADopen", "<F2>"},
 			{"  Recent", "Telescope oldfiles", "<leader>fr"},
 			{"󰙨 Leet Code", "Leet", "<leader>LL"},
