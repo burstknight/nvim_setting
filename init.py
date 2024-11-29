@@ -44,6 +44,7 @@ class myNvimIniter:
             "scoop install Hack-NF",
             "scoop install main/mingw",
             "scoop install versions/dotnet-sdk-lts",
+			"scoop install main/omnisharp",
         ]
     # End of constructor
 
@@ -61,7 +62,6 @@ class myNvimIniter:
 
         system("pip install pynvim")
         system("pip install virtualenv")
-        system("dotnet tool install --global csharp-ls")
     # End of myNvimIniter::installRequirements
 
     def __copySettingFiles(self):

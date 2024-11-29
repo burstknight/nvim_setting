@@ -28,7 +28,7 @@ mason_lspconfig.setup({
 		"yamlls",
 		"pyright",
 		"powershell_es",
-		"csharp_ls",
+		"omnisharp",
 		"ruff",
 	},
 })
@@ -145,7 +145,20 @@ nvim_lsp.gdscript.setup({
 })
 
 -- 設定 lsp 支援 c#
-nvim_lsp.csharp_ls.setup({
+local get_platform = require("utils.init").get_platform
+
+local omnisharp_bin = ""
+if "Windows" == get_platform() then
+	omnisharp_bin = vim.fn.expand("~/scoop/apps/omnisharp/current/OmniSharp.exe")
+else
+	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/omnisharp.cmd")
+end
+
+
+nvim_lsp.omnisharp.setup({
+	cmd = {
+		omnisharp_bin,
+	},
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
 })
