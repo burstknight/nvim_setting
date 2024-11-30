@@ -14,6 +14,7 @@
 	* `<leader>fg`: `<cmd>telescope live_grep`
 	* `<leader>fr`: `<cmd>telescope oldfiles`
 * Replace `csharp_ls` with `omnisharp` for `C#` langauge server because I need develop `C#` program on windows.
+* Change the setting of the plugin `gitignore.nvim` to append new ignore rules into `.gitignore`.
 
 ### [Fixed]
 * Change the source of the plugin `mason.nvim` to use my fork because I has been added some code to fix the bug. The bug is that the plugin `mason.nvim` couldn't install some langauge servers if I use `pyenv-win` on windows.
