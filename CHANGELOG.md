@@ -1,6 +1,21 @@
 # Change Log
 
-## [Unrelease]
+## [Unreleased]
+### [Added]
+
+### [Changed]
+
+### [Fixed]
+
+### [Security]
+
+### [Removed]
+
+### [Deprecated]
+* The plugin `DoxygenToolkit` will be deprecated because the plugins `vim-vsnip` and `friendly-snippets` can generate doxygen style comments for `C/C++`.
+
+
+## [0.4.0] - 2024/12/08
 ### [Added]
 * LSP supports `C#`.
 * Add the plugin `vim-cursorword` to underline the word under the current cursor on neovim.
@@ -23,9 +38,6 @@
 
 ### [Removed]
 * The file `setup.sh` has been removed because this repo offers `init.py` to setup the setting for neovim.
-
-### [Deprecated]
-* The plugin `DoxygenToolkit` will be deprecated because the plugins `vim-vsnip` and `friendly-snippets` can generate doxygen style comments for `C/C++`.
 
 
 ## [0.3.0] - 2024/10/25
