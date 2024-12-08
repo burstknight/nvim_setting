@@ -64,21 +64,6 @@ python3 init.py
 
 If you don't get any error message, you succeed to setup the neovim.
 
-### Setup godot
-Please download [godot 4.x](https://godotengine.org/). And then we need run `godot` to change some setting in order to use neovim to write `gdscript`.
-
-Please click `Editor`, and then click `Editor settings...` like this image.
-
-![setup_godot_00](./doc/images/setup_godot_00.png)
-
-The dialog `Editor Settings` will show on the screen. You need click the tag `External` of `Text Editor`. And then you need follow these steups:
-* Enable the check box `Use External Editor`.
-* Set the value of `ExecPath`: `nvim`
-* Set the value of `Exec Flags`: `--server 127.0.0.1:6004 --remote-send \"<esc>:n {file}<CR>:call cursor({line},{col})<CR>\"`
-
-![setup_godot_01](./doc/images/setup_godot_01.png)
-
-Now, you can write `gdscript` on neovim. Note, you need execute `godot` before running neovim. Otherwise, neovim LSP cannot work.
 
 ## For windows
 ### Install git
@@ -154,3 +139,18 @@ Please run this command to use the python file `init.py` to set the configuratio
 python init.py
 ```
 
+## Setup godot
+Please download [godot 4.x](https://godotengine.org/). And then we need run `godot` to change some setting in order to use neovim to write `gdscript`.
+
+Please click `Editor`, and then click `Editor settings...` like this image.
+
+![setup_godot_00](./doc/images/setup_godot_00.png)
+
+The dialog `Editor Settings` will show on the screen. You need click the tag `External` of `Text Editor`. And then you need follow these steups:
+* Enable the check box `Use External Editor`.
+* Set the value of `ExecPath`: `nvim`
+* Set the value of `Exec Flags`: `--server 127.0.0.1:6004 --remote-send \"<esc>:n {file}<CR>:call cursor({line},{col})<CR>\"`
+
+![setup_godot_01](./doc/images/setup_godot_01.png)
+
+Now, you can write `gdscript` on neovim. Note, you need execute `godot` before running neovim. Otherwise, neovim LSP cannot work.
