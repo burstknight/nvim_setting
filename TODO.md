@@ -13,4 +13,5 @@
 * Maybe I need the plugin [todo-comments.nvim](https://github.com/folke/todo-comments.nvim.git) to search todo comments.
 * Maybe I need use the plugin [cmake-tools.nvim](https://github.com/Civitasv/cmake-tools.nvim.git) to use cmake to build code on neovim.
 * Maybe I will replace the plugin `markdown-preview.nvim` with [peek.nvim](https://github.com/toppair/peek.nvim.git) to preview markdown files.
+* Maybe I need the plugin [symbol-usage.nvim](https://github.com/Wansmer/symbol-usage.nvim.git) to show more information for lsp.
 
