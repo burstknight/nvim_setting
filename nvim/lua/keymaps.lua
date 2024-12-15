@@ -37,12 +37,6 @@ local wk_keymaps = {
     { "<leader>ds", "<cmd>lua require'dap'.step_into()<CR>", desc = "Step", nowait = false, remap = false },
     { "<leader>dx", "<cmd>lua require'dap'.terminate()<CR>", desc = "Terminate", nowait = false, remap = false },
 
-	-- For MarkdownPreview
-	{"<leader>m", group = "MarkdownPreview", nowait = false, remap = false},
-    { "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Markdown preview", nowait = false, remap = false },
-    { "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", desc = "Markdown preview stop", nowait = false, remap = false },
-    { "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview toggle", nowait = false, remap = false },
-
 	{"<leader>G", "<cmd>Gitignore<CR>", desc = "Generate '.gitignore'"},
 
 	-- For leetcode.nvim
