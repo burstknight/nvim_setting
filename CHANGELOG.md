@@ -10,6 +10,7 @@
 ### [Security]
 
 ### [Removed]
+* The plugin `markdown-previw.nvim` is removed because I want to use the plugin `peek.nvim` to preview markdown files.
 
 ### [Deprecated]
 * The plugin `DoxygenToolkit` will be deprecated because the plugins `vim-vsnip` and `friendly-snippets` can generate doxygen style comments for `C/C++`.
