@@ -19,6 +19,7 @@ class myNvimIniter:
             "curl -qL https://www.npmjs.com/install.sh | sh",
             "sudo npm install -g yarn",
             "sudo npm install -g tree-sitter-cli",
+			"curl -fsSL https://deno.land/install.sh | sh",
         ]
 
         self.__m_dctInstallCmd["Windows"] = [

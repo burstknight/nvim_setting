@@ -140,4 +140,11 @@ require("lazy").setup({
 
 	-- 這個外掛可以會用底線凸顯出游標所在的文字
 	{"itchyny/vim-cursorword"},
+
+	-- 這個外掛可以預覽markdown
+	{
+		"toppair/peek.nvim",
+		event = {"VeryLazy"},
+		build = "deno task --quiet build:fast",
+	},
 })
