@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### [Added]
+* Use the langauge server `mesonlsp` to support the build setting files for the build tool `meson`.
 
 ### [Changed]
 
