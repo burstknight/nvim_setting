@@ -30,6 +30,7 @@ mason_lspconfig.setup({
 		"powershell_es",
 		"omnisharp",
 		"ruff",
+		"mesonlsp",
 	},
 })
 
@@ -159,6 +160,12 @@ nvim_lsp.omnisharp.setup({
 	cmd = {
 		omnisharp_bin,
 	},
+	on_attach = LspKeyBind,
+	capabilities = capabilities,
+})
+
+-- 設定 lsp 支援 meson
+nvim_lsp.mesonlsp.setup({
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
 })
