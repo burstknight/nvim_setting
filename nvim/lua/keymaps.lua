@@ -1,6 +1,12 @@
 local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 
+local status, utils = pcall(require, "utils.init")
+if not status then
+	vim.notify("Not found the module: utils.init")
+	return
+end
+
 local opts = {noremap = true, silent = true}
 local buffer_ops = {noremap = true, silent = true, buffer = bufnr}
 
@@ -14,7 +20,11 @@ map('n', '<F2>', ':CHADopen<CR>', opts)
 map('n', "<F8>", ":Dox<CR>", opts)
 
 -- 設定 terminal 相關的快捷鍵
-map("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", buffer_ops)
+local defualt_shell = ""
+if "Windows" == utils.get_platform() then
+	defualt_shell = "pwsh.exe"
+end
+map("n", "<leader>t", "<cmd>Lspsaga term_toggle " .. defualt_shell .. "<CR>", buffer_ops)
 map("t", "<C-k>", "<C-\\><C-n>", opts)
 
 -- 設定外掛 vim-snip 可以使用 TAB 和 S-TAB 在編輯片斷時轉跳
