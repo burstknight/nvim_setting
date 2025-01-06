@@ -24,7 +24,6 @@ local defualt_shell = ""
 if "Windows" == utils.get_platform() then
 	defualt_shell = "pwsh.exe"
 end
-map("n", "<leader>t", "<cmd>Lspsaga term_toggle " .. defualt_shell .. "<CR>", buffer_ops)
 map("t", "<C-k>", "<C-\\><C-n>", opts)
 
 -- 設定外掛 vim-snip 可以使用 TAB 和 S-TAB 在編輯片斷時轉跳
@@ -73,6 +72,13 @@ local wk_keymaps = {
 	{"<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Globally find file with keyword", nowait = false, remap = false},
 	{"<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Globally find file with keyword", nowait = false, remap = false},
 	{"<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Find the recent file", nowait = false, remap = false},
+
+	-- For terminal
+	{"<leader>t", group = "Terminal", nowait = false, remap = false},
+	{"<leader>tf", "<cmd>Lspsaga term_toggle " .. defualt_shell .. "<CR>", desc = "Open a floating terminal", nowait = false},
+	{"<leader>tv", ":vsplit +terminal<CR>", desc = "Vertically open a terminal.", nowait = false},
+	{"<leader>ts", ":split +terminal<CR>", desc = "Horizontally open a terminal.", nowait = false},
+	{"<leader>tt", ":tab terminal<CR>", desc = "Open a tab terminal.", nowait = false},
 }
 
 which_key.add(wk_keymaps)
