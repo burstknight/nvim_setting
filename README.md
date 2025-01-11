@@ -2,7 +2,7 @@
 This repo is my neovim setting.
 
 ## Requirements
-Neovim version must be `0.10+`. 
+Neovim version must be `0.10+`.
 
 Some plugins need use `nerd font`, so we need download a font from [this web](https://www.nerdfonts.com/font-downloads). And then decompress the downloaded compressed file. Finally, please copy `*.ttf` files into the path `/usr/local/share/fonts`.
 
@@ -12,14 +12,14 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 
 ## Used plugins
 ### For common functions
-* [chadtree](https://github.com/ms-jpq/chadtree.git): I use this plugin as the file explorer. 
-* [nvim-notify](https://github.com/rcarriga/nvim-notify.git): It can use cool dialog to show message. 
+* [chadtree](https://github.com/ms-jpq/chadtree.git): I use this plugin as the file explorer.
+* [nvim-notify](https://github.com/rcarriga/nvim-notify.git): It can use cool dialog to show message.
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs.git): It can automatically brackets, parens and quotes in pair.
 * [DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim.git): It can insert doxygen style comments for `C/C++`.
 * [vim-code-dark](https://github.com/tomasiser/vim-code-dark.git): I use this plugin to set the color scheme for neovim.
 * [vim-ranbow](https://github.com/frazrepo/vim-rainbow.git): This plugin can use multiple colors to show nest parentheses.
-* [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim.git): I need use these plugins to show the status bar on neovim. 
-* [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git): This plugin can offer a fuzzy file finder. 
+* [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim.git): I need use these plugins to show the status bar on neovim.
+* [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git): This plugin can offer a fuzzy file finder.
 * [indent-blackline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim.git): It can show indentation line.
 * [which-key.nvim](https://github.com/folke/which-key.nvim.git): It can show the shortcuts on a floating dialog.
 * [markdown-previw.nvim](https://github.com/iamcco/markdown-preview.nvim.git): It can use web browser to preview markdown files.
@@ -73,10 +73,13 @@ I use `space key` as the leader key for neovim.
 | `<leader>mt` | Toggle to preview the current markdown file. |
 | `<leader>G` | Use the plugin `gitignore.nvim` to generate `.gitignore`. |
 
-### Keymaps for floating terminal
+### Keymaps for internal terminal.
 | Keymaps | Description |
 | -------------- | --------------- |
-| `<leader>t` | Open the floating terminal on neovim. |
+| `<leader>tf` | Open the floating terminal on neovim. |
+| `<leader>tt` | Open a tab to run a terminal on neovim. |
+| `<leader>ts` | Horizontally split window to open a terminal on neovim. |
+| `<leader>tv` | Vertically split window to open a terminal on neovim. |
 | `Ctrl` + `k` | Return normal mode for the floating terminal on neovim. |
 
 ### Keymaps for LSP
