@@ -1,0 +1,5 @@
+indent_type = "Tabs"
+line_endings = "Unix"
+
+[sort_requires]
+enabled = false
