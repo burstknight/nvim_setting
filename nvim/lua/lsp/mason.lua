@@ -31,6 +31,7 @@ mason_lspconfig.setup({
 		"omnisharp",
 		"ruff",
 		"mesonlsp",
+		"lemminx",
 	},
 })
 
@@ -166,6 +167,12 @@ nvim_lsp.omnisharp.setup({
 
 -- 設定 lsp 支援 meson
 nvim_lsp.mesonlsp.setup({
+	on_attach = LspKeyBind,
+	capabilities = capabilities,
+})
+
+-- 設定 lsp 支援 xml
+nvim_lsp.lemminx.setup({
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
 })

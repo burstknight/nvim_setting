@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
+  local result = vim.fn.system({
     "git",
     "clone",
     "--filter=blob:none",
@@ -8,6 +8,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     "--branch=stable", -- latest stable release
     lazypath,
   })
+
+  if 0 ~= result then
+	  vim.api.nvim_echo({
+		  {"Failed to clone lazy.nvim:\n", "ErrorMsg"},
+		  {result, "WarningMsg"},
+		  {"\nPress any key to exit..."},
+	  }, true, {})
+	  os.exit(1)
+  end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -127,7 +136,7 @@ require("lazy").setup({
 
 	-- 這個外掛可以在開啟 neovim 時顯示歡迎畫面
 	{
-		"startup-nvim/startup.nvim", 
+		"startup-nvim/startup.nvim",
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 			"nvim-lua/plenary.nvim",
