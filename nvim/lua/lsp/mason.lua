@@ -36,7 +36,7 @@ mason_lspconfig.setup({
 })
 
 -- Tis is a callback function to set shortcuts for LSP.
-function LspKeyBind(client, bufnr)
+local function LspKeyBind(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
@@ -161,7 +161,16 @@ nvim_lsp.omnisharp.setup({
 	cmd = {
 		omnisharp_bin,
 	},
-	on_attach = LspKeyBind,
+	on_attach = function (client, bufnr)
+		local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+		if 0 == #lines or (1 == #lines and "" == lines[1]) then
+			vim.notify("OmniSharp is not attached to an empty file!")
+			client.stop()
+			return
+		end
+
+		LspKeyBind(client, bufnr)
+	end,
 	capabilities = capabilities,
 })
 

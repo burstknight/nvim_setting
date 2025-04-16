@@ -83,7 +83,7 @@ require("lazy").setup({
 
 	-- 使用 vsnip 處理自動補齊
 	{'hrsh7th/cmp-vsnip'},
-	{'hrsh7th/vim-vsnip'},
+	{'hrsh7th/vim-vsnip', commit = "02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9"},
 
 	-- 這個外掛可以用來顯示縮排
 	{"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}},
