@@ -10,6 +10,7 @@
 ### [Changed]
 
 ### [Fixed]
+* Hold the version of the plugin `vim-vsnip` to `02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9` because this plugin dosen't work for `C#`.
 
 ### [Security]
 
