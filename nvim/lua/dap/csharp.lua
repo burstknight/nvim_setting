@@ -35,6 +35,7 @@ dap.configurations.cs = {
 			end
 			local _, end_index = string.find(dotnet_last_dll_path, "-> ")
 			dotnet_last_dll_path = string.sub(dotnet_last_dll_path, end_index + 1)
+			dotnet_last_dll_path = string.gsub(dotnet_last_dll_path, "\r", "")
 			vim.notify("Dll path: `" .. dotnet_last_dll_path .. "`")
 			return dotnet_last_dll_path
 		end,
