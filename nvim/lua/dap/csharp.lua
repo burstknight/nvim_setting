@@ -39,5 +39,5 @@ dap.configurations.cs = {
 			vim.notify("Dll path: `" .. dotnet_last_dll_path .. "`")
 			return dotnet_last_dll_path
 		end,
-	}
+	},
 }
