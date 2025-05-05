@@ -27,7 +27,6 @@ dap.configurations.cs = {
 			local build_output = vim.fn.systemlist("dotnet build -c Debug")
 			local dotnet_last_dll_path = ""
 			for _, line in pairs(build_output) do
-				vim.notify("Build file path: `" .. line .. "`")
 				if line:match(".dll") then
 					dotnet_last_dll_path = line
 					break
@@ -36,7 +35,7 @@ dap.configurations.cs = {
 			local _, end_index = string.find(dotnet_last_dll_path, "-> ")
 			dotnet_last_dll_path = string.sub(dotnet_last_dll_path, end_index + 1)
 			dotnet_last_dll_path = string.gsub(dotnet_last_dll_path, "\r", "")
-			vim.notify("Dll path: `" .. dotnet_last_dll_path .. "`")
+			vim.notify("Debug Dll path: `" .. dotnet_last_dll_path .. "`")
 			return dotnet_last_dll_path
 		end,
 	},
