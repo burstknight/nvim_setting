@@ -1,5 +1,4 @@
 local dap = require("dap")
-dap.set_log_level("TRACE")
 
 local function getDebugBinPath()
 	local get_platform = require("utils.init").get_platform
