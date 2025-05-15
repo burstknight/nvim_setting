@@ -63,7 +63,7 @@ require("lazy").setup({
 	{ "rachartier/tiny-inline-diagnostic.nvim", event = "VeryLazy", commit = "b4a76ef" },
 
 	-- 這個外掛專門用來管理 LSP server
-	{ "burstknight/mason.nvim", branch = "master" },
+	{ "mason-org/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "mason-org/mason-registry" },
 
