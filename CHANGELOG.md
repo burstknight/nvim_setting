@@ -6,6 +6,7 @@
 * Set `powershell` as the defualt shell on floating terminal for windows.
 * Add some shortcuts for internal terminals because just using floating terminal cannot statisfy me.
 * Use the langauge server `lemmix` for `xml`.
+* Add the dap setting to support `C#`.
 
 ### [Changed]
 
