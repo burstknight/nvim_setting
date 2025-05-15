@@ -26,9 +26,8 @@ dap.configurations.cs = {
 			local build_output = vim.fn.systemlist("dotnet build -c Debug")
 			local dotnet_last_dll_path = ""
 			for _, line in pairs(build_output) do
-				if line:match(".dll") then
+				if line:match(".dll") and line:match("->") then
 					dotnet_last_dll_path = line
-					break
 				end
 			end
 			local _, end_index = string.find(dotnet_last_dll_path, "-> ")
