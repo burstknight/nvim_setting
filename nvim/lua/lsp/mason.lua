@@ -47,79 +47,58 @@ end
 -- 取得 handler 可以在自動補齊函數時還會額外提供更多資訊
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- 設定 lua lsp
-nvim_lsp.lua_ls.setup({
-	capabilities = capabilities,
-
-	-- 綁定快捷鍵的設定
-	on_attach = LspKeyBind,
-
-	-- 給予初始化設定
-	on_init = function(client)
-		local path = client.workspace_folders[1].name
-		if not vim.loop.fs_stat(path .. "/.luarc.json") and not vim.loop.fs_stat(path .. "luarc.jsonc") then
-			client.config.settings = vim.tbl_deep_extend("force", client.config.settings, {
-				Lua = {
-					runtime = {
-						version = "LuaJIT",
-					},
-					workspace = {
-						checkThirdParty = false,
-						library = {
-							vim.env.VIMRUNTIME,
-						},
-					},
-				},
-			})
-
-			client.notify("workspace/didChangeConfiguration", {settings = client.config.settings})
-		end
-
-		return true
-	end,
+vim.lsp.enable({
+	"lua_ls",
+	"clangd",
+	"cmake",
+	"jsonls",
+	"bashls",
+	"yamlls",
+	"pyright",
+	"powershell_es",
+	"omnisharp",
+	"mesonlsp",
+	"lemminx",
 })
+
+-- 設定 lua lsp
+vim.lsp.config.lua_ls = {
+	capabilities = capabilities,
+	on_attach = LspKeyBind,
+}
 
 -- 設定clangd
-nvim_lsp.clangd.setup({
+vim.lsp.config.clangd = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 可以支援 cmake
-nvim_lsp.cmake.setup({
+vim.lsp.config.cmake = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 可以支援 json
-nvim_lsp.jsonls.setup({
+vim.lsp.config.jsonls = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 可以支援 bash
-nvim_lsp.bashls.setup({
+vim.lsp.config.bashls = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
-
-local function get_clangd_path()
-	local utils = require("utils.init")
-	if "Windows" == utils.get_platform() then
-		return "C:/msys2/ucrt64/clangd.exe"
-	else
-		return "clangd"
-	end
-end
+}
 
 -- 設定 lsp 可以支援 yaml
-nvim_lsp.yamlls.setup({
+vim.lsp.config.yamlls = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 使用 pyright 支援 python
-nvim_lsp.pyright.setup({
+vim.lsp.config.pyright = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
 	settings = {
@@ -128,23 +107,23 @@ nvim_lsp.pyright.setup({
 		},
 		python = {
 			analysis = {
-				ignore = {"*"},
+				ignore = { "*" },
 			},
 		},
 	},
-})
+}
 
 -- 設定 lsp 支援 powershell
-nvim_lsp.powershell_es.setup({
+vim.lsp.config.powershell_es = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 支援 godot
-nvim_lsp.gdscript.setup({
+vim.lsp.config.gdscript = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 支援 c#
 local get_platform = require("utils.init").get_platform
@@ -156,12 +135,11 @@ else
 	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/omnisharp")
 end
 
-
-nvim_lsp.omnisharp.setup({
+vim.lsp.config.omnisharp = {
 	cmd = {
 		omnisharp_bin,
 	},
-	on_attach = function (client, bufnr)
+	on_attach = function(client, bufnr)
 		local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 		if 0 == #lines or (1 == #lines and "" == lines[1]) then
 			vim.notify("OmniSharp is not attached to an empty file!")
@@ -172,16 +150,16 @@ nvim_lsp.omnisharp.setup({
 		LspKeyBind(client, bufnr)
 	end,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 支援 meson
-nvim_lsp.mesonlsp.setup({
+vim.lsp.config.mesonlsp = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
 
 -- 設定 lsp 支援 xml
-nvim_lsp.lemminx.setup({
+vim.lsp.config.lemminx = {
 	on_attach = LspKeyBind,
 	capabilities = capabilities,
-})
+}
