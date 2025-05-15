@@ -9,6 +9,8 @@
 * Add the dap setting to support `C#`.
 
 ### [Changed]
+* Change the source of the plugin `mason.nvim` to [mason-org/mason.nvim](https://github.com/mason-org/mason.nvim.git) because this plugin must be updated to `v2.0.0` for the plugin `nvim-lspconfig v2.0.0`.
+* Change lsp settings for all langauges because the plugin `nvim-lspconfig` has been updated to `v2.0.0`.
 
 ### [Fixed]
 * Hold the version of the plugin `vim-vsnip` to `02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9` because this plugin dosen't work for `C#`.
