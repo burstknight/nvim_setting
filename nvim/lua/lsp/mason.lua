@@ -138,17 +138,15 @@ end
 vim.lsp.config.omnisharp = {
 	cmd = {
 		omnisharp_bin,
+		"-z",
+		"--hostPID",
+		"12345",
+		"DotNet:enablePackageRestore=false",
+		"--encoding",
+		"utf-8",
+		"--languageserver",
 	},
-	on_attach = function(client, bufnr)
-		local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
-		if 0 == #lines or (1 == #lines and "" == lines[1]) then
-			vim.notify("OmniSharp is not attached to an empty file!")
-			client.stop()
-			return
-		end
-
-		LspKeyBind(client, bufnr)
-	end,
+	on_attach = LspKeyBind,
 	capabilities = capabilities,
 }
 
