@@ -66,8 +66,9 @@ I use `space key` as the leader key for neovim.
 | -------------- | --------------- |
 | `<F2>` | Open the file browser. |
 | `<F8>` | Insert the doxygen style comment for a function signature. |
-| `Ctrl` + `p` | Fuzzy search the file from the current project. |
-| `Ctrl` + `f` | Use `grep` to search keyword from the current project. |
+| `<leader>ff` | Fuzzy search the file from the current project. |
+| `<leader>fg` | Use `grep` to search keyword from the current project. |
+| `<leader>fr` | Fuzzy search the recent opened files. |
 | `<leader>mp` | Open the web browser to preview the current markdown file. |
 | `<leader>ms` | Stop previewing the current markdown file. |
 | `<leader>mt` | Toggle to preview the current markdown file. |
