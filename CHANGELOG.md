@@ -2,6 +2,21 @@
 
 ## [Unreleased]
 ### [Added]
+
+### [Changed]
+
+### [Fixed]
+
+### [Security]
+
+### [Removed]
+
+### [Deprecated]
+
+
+----
+## [0.5.0] - 2025/05/18
+### [Added]
 * Use the langauge server `mesonlsp` to support the build setting files for the build tool `meson`.
 * Set `powershell` as the defualt shell on floating terminal for windows.
 * Add some shortcuts for internal terminals because just using floating terminal cannot statisfy me.
@@ -16,14 +31,11 @@
 ### [Fixed]
 * Hold the version of the plugin `vim-vsnip` to `02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9` because this plugin dosen't work for `C#`.
 
-### [Security]
-
-### [Removed]
-
 ### [Deprecated]
 * The plugin `DoxygenToolkit` will be deprecated because the plugins `vim-vsnip` and `friendly-snippets` can generate doxygen style comments for `C/C++`.
 
 
+----
 ## [0.4.0] - 2024/12/08
 ### [Added]
 * LSP supports `C#`.
@@ -57,6 +69,7 @@
 * Remove the plugin `nerdtree-git-plugin` because the plugin `nerdtree` has been removed.
 
 
+----
 ## [0.2.0] - 2024/10/21
 ### [Added]
 * Update LSP setting to support godot.
@@ -69,6 +82,7 @@
 * Remove the plugin `vim-airline-themes` because I has removed the plugin `vim-airline`.
 
 
+----
 ## [0.1.0] - 2024/09/03
 ### [Added]
 * Add the plugins for LSP: `mason.nvim`, `mason-lspconfig.nvim`, `mason-registry`. So far support langauge:
