@@ -93,7 +93,7 @@ pluginKeys.lspKeyBinding = function(mapbuf)
 	mapbuf("n", "<leader>lf", ":Lspsaga finder def+ref+imp<CR>", opts)
 	mapbuf("n", "<F3>", ":Lspsaga outline<CR>", opts)
 	mapbuf("n", "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", opts)
-	mapbuf("n", "<leader>=", "<cmd>Format<CR>", opts)
+	mapbuf("n", "<leader>l=", "<cmd>Format<CR>", opts)
 end
 
 pluginKeys.cmpKeys = function(cmp)
