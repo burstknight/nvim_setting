@@ -2,7 +2,7 @@
 This repo is my neovim setting.
 
 ## Requirements
-Neovim version must be `0.11.0+`.
+Neovim version must be `0.11.x+`.
 
 Some plugins need use `nerd font`, so we need download a font from [this web](https://www.nerdfonts.com/font-downloads). And then decompress the downloaded compressed file. Finally, please copy `*.ttf` files into the path `/usr/local/share/fonts`.
 
@@ -92,7 +92,7 @@ I use `space key` as the leader key for neovim.
 | `<leader>lf` | Find the definition, reference or implementation for the keyword. |
 | `<F3>` | Open the outline for the currrent file. |
 | `<leader>lh` | Hover the document for variable or function. |
-| `<leader>=` | Format the currrent code. |
+| `<leader>l=` | Format the currrent code. |
 
 ### Keymaps for completion
 | Keymaps | Description |
