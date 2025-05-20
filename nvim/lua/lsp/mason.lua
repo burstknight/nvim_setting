@@ -32,6 +32,7 @@ mason_lspconfig.setup({
 		"ruff",
 		"mesonlsp",
 		"lemminx",
+		"protols",
 	},
 })
 
@@ -59,6 +60,7 @@ vim.lsp.enable({
 	"omnisharp",
 	"mesonlsp",
 	"lemminx",
+	"protols",
 })
 
 -- For common lsp settings.
@@ -66,6 +68,15 @@ vim.lsp.config("*", {
 	capabilities = capabilities,
 	on_attach = LspKeyBind,
 })
+
+vim.lsp.config.clangd.filetypes = {
+	"c",
+	"cpp",
+	"objc",
+	"objcpp",
+	"cuda",
+	"cc",
+}
 
 -- Change some settings for pyright.
 vim.lsp.config.pyright.settings = {
