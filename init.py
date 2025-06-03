@@ -45,6 +45,7 @@ class myNvimIniter:
             "scoop install main/mingw",
             "scoop install versions/dotnet-sdk-lts",
 			"scoop install main/omnisharp",
+			"scoop install main/rust",
         ]
     # End of constructor
 
