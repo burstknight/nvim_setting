@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### [Added]
+* Use the langauge server `marksman` to support markdown.
 
 ### [Changed]
 
