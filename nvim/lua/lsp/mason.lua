@@ -32,6 +32,7 @@ mason_lspconfig.setup({
 		"ruff",
 		"mesonlsp",
 		"lemminx",
+		"marksman",
 	},
 })
 
@@ -59,6 +60,7 @@ vim.lsp.enable({
 	"omnisharp",
 	"mesonlsp",
 	"lemminx",
+	"marksman",
 })
 
 -- For common lsp settings.
