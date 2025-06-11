@@ -69,6 +69,9 @@ vim.lsp.config("*", {
 	on_attach = LspKeyBind,
 })
 
+-- Change some settings for clangd.
+vim.lsp.config.clangd.on_attach = LspKeyBind
+
 -- Change some settings for pyright.
 vim.lsp.config.pyright.settings = {
 	pyright = {
