@@ -1,4 +1,23 @@
 # Install Tutorial
+
+<!--toc:start-->
+- [Install Tutorial](#install-tutorial)
+  - [For linux](#for-linux)
+    - [Python environment](#python-environment)
+      - [Install pyenv](#install-pyenv)
+      - [Install poetry](#install-poetry)
+    - [Run `init.py`](#run-initpy)
+  - [For windows](#for-windows)
+    - [Install git](#install-git)
+    - [Python environment](#python-environment)
+      - [Install pyenv](#install-pyenv)
+      - [Install poetry](#install-poetry)
+    - [Install scoop](#install-scoop)
+    - [Install Visual Studio](#install-visual-studio)
+    - [Run `init.py`](#run-initpy)
+  - [Setup godot](#setup-godot)
+<!--toc:end-->
+
 This document can show how to use this repo to setup for neovim.
 
 ## For linux
