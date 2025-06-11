@@ -1,6 +1,27 @@
 # nvim_setting
 This repo is my neovim setting.
 
+<!--toc:start-->
+- [nvim_setting](#nvimsetting)
+  - [Requirements](#requirements)
+  - [Used plugins](#used-plugins)
+    - [For common functions](#for-common-functions)
+    - [For LSP(Language Server Protocol) functions](#for-lsplanguage-server-protocol-functions)
+    - [For auto completion](#for-auto-completion)
+    - [For DAP(Debug Adapter Protocol)](#for-dapdebug-adapter-protocol)
+  - [Keymaps](#keymaps)
+    - [Keymaps for common functions](#keymaps-for-common-functions)
+    - [Keymaps for internal terminal.](#keymaps-for-internal-terminal)
+    - [Keymaps for LSP](#keymaps-for-lsp)
+    - [Keymaps for completion](#keymaps-for-completion)
+    - [Keymaps for DAP](#keymaps-for-dap)
+    - [Keymaps for `leetcode.nvim`](#keymaps-for-leetcodenvim)
+    - [Keymaps for `chadtree`](#keymaps-for-chadtree)
+  - [Try it on docker](#try-it-on-docker)
+    - [For linux](#for-linux)
+<!--toc:end-->
+
+
 ## Requirements
 Neovim version must be `0.11.x+`.
 
