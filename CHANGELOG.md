@@ -5,6 +5,7 @@
 * Use the langauge server `marksman` to support markdown.
 
 ### [Changed]
+* Change the setting file [mason.lua](./nvim/lua/lsp/mason.lua) to use the simple way for setting all lsp configurations.
 
 ### [Fixed]
 
