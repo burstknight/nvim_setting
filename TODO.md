@@ -13,4 +13,8 @@
 * Maybe I need the plugin [todo-comments.nvim](https://github.com/folke/todo-comments.nvim.git) to search todo comments.
 * Maybe I need use the plugin [cmake-tools.nvim](https://github.com/Civitasv/cmake-tools.nvim.git) to use cmake to build code on neovim.
 * Maybe I need the plugin [symbol-usage.nvim](https://github.com/Wansmer/symbol-usage.nvim.git) to show more information for lsp.
+* Maybe I need plugins for AI:
+	* [copilot.vim](https://github.com/github/copilot.vim.git)
+	* [windsuerf.nvim](https://github.com/Exafunction/windsurf.nvim.git)
+	* [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim.git)
 
