@@ -75,10 +75,10 @@ We need change the setting of `poetry` to create `.venv` for each python project
 poetry config virtualenvs.in-project true
 ```
 
-### Run `init.py`
-This repo offers the python file `init.py`. It can install all necessary packages, and then copy all setting files to suitable location. You just run this command.
+### Run `install.py`
+This repo offers the python file `install.py`. It can install all necessary packages, and then copy all setting files to suitable location. You just run this command.
 ```bash
-python3 init.py
+python3 install.py
 ```
 
 If you don't get any error message, you succeed to setup the neovim.
