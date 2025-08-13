@@ -4,6 +4,7 @@
 ### [Added]
 * Use the langauge server `marksman` to support markdown.
 * Add the file `init.lua` into the folder `nvim/lua/lsp` to include all setting files in this folder for LSP.
+* Change the folder name `dap` to `Dap` in ordert to add the file `init.lua` into this folder to easily include the settings for dap.
 
 ### [Changed]
 * Change the setting file [mason.lua](./nvim/lua/lsp/mason.lua) to use the simple way for setting all lsp configurations.
