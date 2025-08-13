@@ -14,6 +14,7 @@
 	* `plugins` -> `Plugins`
 	* `dap` -> `Dap`
 	* `utils` -> `Utils`
+* Rename the python file `init.py` to `install.py`.
 
 ### [Fixed]
 
