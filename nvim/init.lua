@@ -31,7 +31,7 @@ for i = 1, #plugins do
 end
 
 -- Include settings for lsp.
-require("lsp.init")
+require("Lsp.init")
 
 -- Include settings for dap.
 require("Dap.init")
