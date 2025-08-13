@@ -85,7 +85,7 @@ vim.lsp.config.pyright.settings = {
 }
 
 -- Change omnisharp executable file path for cross-platform.
-local get_platform = require("utils.init").get_platform
+local get_platform = require("Utils.init").get_platform
 
 local omnisharp_bin = ""
 if "Windows" == get_platform() then

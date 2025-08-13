@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 
-local status, utils = pcall(require, "utils.init")
+local status, utils = pcall(require, "Utils.init")
 if not status then
 	vim.notify("Not found the module: utils.init")
 	return

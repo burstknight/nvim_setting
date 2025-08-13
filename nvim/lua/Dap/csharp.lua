@@ -1,7 +1,7 @@
 local dap = require("dap")
 
 local function getDebugBinPath()
-	local get_platform = require("utils.init").get_platform
+	local get_platform = require("Utils.init").get_platform
 	if "Windows" == get_platform() then
 		return vim.fn.expand("~/scoop/apps/netcoredbg/current/netcoredbg.exe")
 	else
