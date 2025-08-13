@@ -12,7 +12,8 @@
 * Rename the folders in the directory `nvim/lua`:
 	* `lsp` -> `Lsp`
 	* `plugins` -> `Plugins`
-	* `dap` -> `Dap`.
+	* `dap` -> `Dap`
+	* `utils` -> `Utils`
 
 ### [Fixed]
 
