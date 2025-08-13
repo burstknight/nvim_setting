@@ -8,6 +8,10 @@
 
 ### [Changed]
 * Change the setting file [mason.lua](./nvim/lua/lsp/mason.lua) to use the simple way for setting all lsp configurations.
+* Rename the folders in the directory `nvim/lua`:
+	* `lsp` -> `Lsp`
+	* `plugins` -> `Plugins`
+	* `dap` -> `Dap`.
 
 ### [Fixed]
 
