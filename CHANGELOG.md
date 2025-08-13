@@ -2,6 +2,21 @@
 
 ## [Unreleased]
 ### [Added]
+
+### [Changed]
+
+### [Fixed]
+
+### [Security]
+
+### [Removed]
+
+### [Deprecated]
+
+
+----------
+## [0.6.0] - 2025/08/13
+### [Added]
 * Use the langauge server `marksman` to support markdown.
 * Add the file `init.lua` into the folder `nvim/lua/Lsp` to include all setting files in this folder for LSP.
 * Add the file `init.lua` into the directory `nvim/lua/Dap` to easily include all the settings for dap.
@@ -15,14 +30,6 @@
 	* `dap` -> `Dap`
 	* `utils` -> `Utils`
 * Rename the python file `init.py` to `install.py`.
-
-### [Fixed]
-
-### [Security]
-
-### [Removed]
-
-### [Deprecated]
 
 
 ----
