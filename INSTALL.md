@@ -6,7 +6,7 @@
     - [Python environment](#python-environment)
       - [Install pyenv](#install-pyenv)
       - [Install poetry](#install-poetry)
-    - [Run `init.py`](#run-initpy)
+    - [Run `install.py`](#run-install.py)
   - [For windows](#for-windows)
     - [Install git](#install-git)
     - [Python environment](#python-environment)
@@ -14,7 +14,7 @@
       - [Install poetry](#install-poetry)
     - [Install scoop](#install-scoop)
     - [Install Visual Studio](#install-visual-studio)
-    - [Run `init.py`](#run-initpy)
+    - [Run `install.py`](#run-install.py-2)
   - [Setup godot](#setup-godot)
 <!--toc:end-->
 
@@ -152,10 +152,10 @@ iwr -useb get.scoop.sh | iex
 ### Install Visual Studio
 In order to find standard library for `clangd`, we need install `Visual Studio`. You can download the installer from [this web](https://visualstudio.microsoft.com/zh-hant/vs/).
 
-### Run `init.py`
-Please run this command to use the python file `init.py` to set the configuration for neovim.
+### Run `install.py`
+Please run this command to use the python file `install.py` to set the configuration for neovim.
 ```bash
-python init.py
+python install.py
 ```
 
 ## Setup godot
