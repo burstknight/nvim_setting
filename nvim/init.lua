@@ -33,9 +33,5 @@ end
 -- Include settings for lsp.
 require("lsp.init")
 
-require("dap.python")
-require("dap.dapui")
-require("dap.dap-virtual-text")
-require("dap.mason-nvim-dap")
-require("dap.cpp")
-require("dap.csharp")
+-- Include settings for dap.
+require("Dap.init")
