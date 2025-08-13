@@ -12,15 +12,15 @@ require("theme")
 
 -- 載入所有外掛的設定檔
 local plugins = {
-	"plugins.nvim-notify",
-	"plugins.chadtree",
-	"plugins.vim-gitgutter",
-	"plugins.vim-rainbow",
-	"plugins.ibl",
-	"plugins.gitignore",
-	"plugins.startup",
-	"plugins.leetcode",
-	"plugins.lualine"
+	"Plugins.nvim-notify",
+	"Plugins.chadtree",
+	"Plugins.vim-gitgutter",
+	"Plugins.vim-rainbow",
+	"Plugins.ibl",
+	"Plugins.gitignore",
+	"Plugins.startup",
+	"Plugins.leetcode",
+	"Plugins.lualine"
 }
 
 for i = 1, #plugins do
