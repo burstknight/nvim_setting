@@ -34,4 +34,4 @@ end
 require("lsp.init")
 
 -- Include settings for dap.
-require("dap.init")
+require("Dap.init")

@@ -1,6 +1,0 @@
-require("dap.python")
-require("dap.dapui")
-require("dap.dap-virtual-text")
-require("dap.mason-nvim-dap")
-require("dap.cpp")
-require("dap.csharp")
