@@ -31,6 +31,9 @@
 	* `utils` -> `Utils`
 * Rename the python file `init.py` to `install.py`.
 
+### [Deprecated]
+* The plugin `DoxygenToolkit` will be deprecated because the plugins `vim-vsnip` and `friendly-snippets` can generate doxygen style comments for `C/C++`.
+
 
 ----
 ## [0.5.0] - 2025/05/18
