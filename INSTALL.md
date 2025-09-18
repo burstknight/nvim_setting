@@ -27,7 +27,7 @@ sudo apt-get update
 sudo apt-get install -y git build-essential
 ```
 
-You need install neovim `0.10.0+` first. You can clone [neovim](https://github.com/neovim/neovim), and then build by yourself.
+You need install neovim `0.11.0+` first. You can clone [neovim](https://github.com/neovim/neovim), and then build by yourself.
 
 ### Python environment
 This repo uses `pyenv` to manage python verisons and `poetry` to manage the virtual environment.
@@ -81,8 +81,28 @@ This repo offers the python file `install.py`. It can install all necessary pack
 python3 install.py
 ```
 
-If you don't get any error message, you succeed to setup the neovim.
+### Install nerd fonts
+We should install nerd fonts to show cool symbols. You can select one of font on [this web](https://www.nerdfonts.com/font-downloads).
 
+![nerd_fonts_web](./doc/images/nerd_fonts_web.png)
+
+You need download the compressed file, and then decompress it and copy to the directory `~/.local/share/fonts/`. Here gives the commands to show the steps:
+```bash
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CodeNewRoman.zip
+unzip CodeNewRoman.zip -d CodeNewRoman
+cd CodeNewRoman
+mkdir -p ~/.local/share/fonts
+cp *.otf ~/.local/share/fonts/
+```
+
+We should run this command to rebuild the font cache:
+```bash
+fc-cache -fv
+```
+
+Now, we succeed to install the nerd fonts. Finally, you need change the font of the terminal to use the added fonts.
+
+![change_font_for_terminal](./doc/images/change_font_for_terminal.png)
 
 ## For windows
 ### Install git
