@@ -85,7 +85,6 @@ I use `space key` as the leader key for neovim.
 | Keymaps | Description |
 | -------------- | --------------- |
 | `<F2>` | Open the file browser. |
-| `<F8>` | Insert the doxygen style comment for a function signature. |
 | `<leader>ff` | Fuzzy search the file from the current project. |
 | `<leader>fg` | Use `grep` to search keyword from the current project. |
 | `<leader>fr` | Fuzzy search the recent opened files. |
