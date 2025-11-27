@@ -36,7 +36,6 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 * [chadtree](https://github.com/ms-jpq/chadtree.git): I use this plugin as the file explorer.
 * [nvim-notify](https://github.com/rcarriga/nvim-notify.git): It can use cool dialog to show message.
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs.git): It can automatically brackets, parens and quotes in pair.
-* [DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim.git): It can insert doxygen style comments for `C/C++`.
 * [vim-code-dark](https://github.com/tomasiser/vim-code-dark.git): I use this plugin to set the color scheme for neovim.
 * [vim-ranbow](https://github.com/frazrepo/vim-rainbow.git): This plugin can use multiple colors to show nest parentheses.
 * [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim.git): I need use these plugins to show the status bar on neovim.
@@ -86,7 +85,6 @@ I use `space key` as the leader key for neovim.
 | Keymaps | Description |
 | -------------- | --------------- |
 | `<F2>` | Open the file browser. |
-| `<F8>` | Insert the doxygen style comment for a function signature. |
 | `<leader>ff` | Fuzzy search the file from the current project. |
 | `<leader>fg` | Use `grep` to search keyword from the current project. |
 | `<leader>fr` | Fuzzy search the recent opened files. |

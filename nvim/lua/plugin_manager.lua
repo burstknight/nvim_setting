@@ -43,9 +43,6 @@ require("lazy").setup({
 	-- 可以和 git 搭配及時顯示當前檔案的修改狀態
 	{ "airblade/vim-gitgutter" },
 
-	-- 這個外掛可以產生Doxygen格式的註解
-	{ "vim-scripts/DoxygenToolkit.vim" },
-
 	-- 主題外掛
 	{ "tomasiser/vim-code-dark" },
 

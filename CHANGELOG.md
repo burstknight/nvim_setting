@@ -4,12 +4,14 @@
 ### [Added]
 
 ### [Changed]
+* Update the file [cmp.lua](./nvim/lua/Lsp/cmp.lua) to use snippets to auto complete doxygen style comments for `C/C++` projects.
 
 ### [Fixed]
 
 ### [Security]
 
 ### [Removed]
+* Remove the plugin `DoxygenToolkit.vim` because I want to snippets to auto complete doxygen style comments for `C/C++` projects.
 
 ### [Deprecated]
 
