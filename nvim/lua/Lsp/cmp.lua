@@ -66,4 +66,4 @@ cmp.setup.cmdline(":", {
 vim.cmd("let g:vsnip_filetypes.cs = ['csharpdoc']")
 
 vim.cmd("let g:vsnip_filetypes.c = ['cdoc']")
-vim.cmd("let g:vsnip_filetypes.cpp = ['cdoc', 'cppdoc']")
+vim.cmd("let g:vsnip_filetypes.cpp = ['cdoc', 'cppdoc', 'c']")
