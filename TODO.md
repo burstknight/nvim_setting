@@ -18,4 +18,5 @@
 	* [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim.git)
 	* [windsuerf.nvim](https://github.com/Exafunction/windsurf.nvim.git)
 	* [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim.git)
+* Maybe I will replace `pyright` with [`astral/ty`](https://github.com/astral-sh/ty.git) as the language server for python.
 
