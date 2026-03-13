@@ -19,4 +19,5 @@
 	* [windsuerf.nvim](https://github.com/Exafunction/windsurf.nvim.git)
 	* [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim.git)
 * Maybe I will replace `pyright` with [`astral/ty`](https://github.com/astral-sh/ty.git) as the language server for python.
+* Maybe I will try replace `pyenv` and `poetry` with `uv` to manage python projects.
 
