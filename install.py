@@ -46,6 +46,11 @@ class myNvimIniter:
             "scoop install versions/dotnet-sdk-lts",
 			"scoop install main/omnisharp",
         ]
+
+        self.__m_dctInstallCmd["uv_tool"] =[
+			"uv tool install pynvim",
+			"uv tool install yapf"
+		]
     # End of constructor
 
     def __installRequirements(self):
@@ -59,9 +64,6 @@ class myNvimIniter:
                 print("Warning: Failed to run the command '%s'" % (sCmd))
             # End of if-condition
         # End of for-loop
-
-        system("pip install pynvim")
-        system("pip install virtualenv")
     # End of myNvimIniter::installRequirements
 
     def __copySettingFiles(self):
