@@ -103,6 +103,11 @@ And then you need run this command to install the latest python:
 uv python install
 ```
 
+Finally, please use this command to set the environment variable `PATH` for `uv`:
+```bash
+uv tool update-shell
+```
+
 ### Run `install.py`
 Please run this command to use the python file `install.py` to set the configuration for neovim.
 ```bash
