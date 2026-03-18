@@ -20,15 +20,14 @@ vim.o.cursorline = true 		-- 凸顯出游標所在的行
 vim.o.cursorcolumn = true 		-- 凸顯出游標所在的某一行的位置
 vim.o.fileformats = "unix" 		-- 設定elf使用lf儲存檔案
 
-local status, utils = pcall(require, "Utils.init")
-if not status then
-	vim.notify("Not found the module: Utils.init")
+-- Set the python executable file path from uv.
+local oCmdHandler = io.popen("uv python find --system")
+if nil == oCmdHandler then
+	vim.notify("Error: Failed to run the command 'uv python find' to find python path!")
 	return
 end
-
-
-if "Windows" == utils.get_platform() then
-	vim.cmd("let g:python3_host_prog=\"~/.pyenv/pyenv-win/shims/python\"")
-else
-	vim.cmd("let g:python3_host_prog=\"~/.pyenv/shims/python\"")
-end
+local sPythonPath = oCmdHandler:read("*l")
+sPythonPath = string.sub(sPythonPath, 1, string.len(sPythonPath) - 4)
+sVimCmd = string.format('let g:python3_host_prog=\"%s\"', sPythonPath)
+vim.cmd(sVimCmd)
+oCmdHandler:close()
