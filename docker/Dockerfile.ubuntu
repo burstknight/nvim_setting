@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -17,11 +17,11 @@ RUN apt-get update && \
 
 USER root
 RUN cd /tmp && \
-	wget https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz && \
+	wget https://github.com/neovim/neovim/releases/download/v0.11.6/nvim-linux-x86_64.tar.gz && \
 	tar zxf nvim*.tar.gz && \
-	cp -R nvim-linux64 /opt && \
+	cp -R nvim-linux-x86_64 /opt && \
 	rm nvim*.tar.gz && \
-	echo 'export PATH=$PATH:/opt/nvim-linux64/bin' >> ~/.bashrc
+	echo 'export PATH=$PATH:/opt/nvim-linux-x86_64/bin' >> ~/.bashrc
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
 	echo 'PATH=$PATH:/root/.local/bin' >> ~/.bashrc && \
