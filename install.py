@@ -49,7 +49,8 @@ class myNvimIniter:
 
         self.__m_vsPythonPackages =[
 			"uv tool install pynvim",
-			"uv tool install yapf"
+			"uv tool install yapf",
+            "uv tool install debugpy",
 		]
     # End of constructor
 
