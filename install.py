@@ -47,7 +47,7 @@ class myNvimIniter:
 			"scoop install main/omnisharp",
         ]
 
-        self.__m_dctInstallCmd["uv_tool"] =[
+        self.__m_vsPythonPackages =[
 			"uv tool install pynvim",
 			"uv tool install yapf"
 		]
@@ -61,7 +61,14 @@ class myNvimIniter:
         for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
             iResponse = system(sCmd)
             if 0 != iResponse:
-                print("Warning: Failed to run the command '%s'" % (sCmd))
+                print("Warning: Failed to run the command '%s'!" % (sCmd))
+            # End of if-condition
+        # End of for-loop
+
+        for sCmd in self.__m_vsPythonPackages:
+            iResponse = system(sCmd)
+            if 0 != iResponse:
+                print("Warning: Failed to run the command '%s' to install python package!" %(sCmd))
             # End of if-condition
         # End of for-loop
     # End of myNvimIniter::installRequirements
