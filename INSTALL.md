@@ -80,15 +80,18 @@ Now, we succeed to install the nerd fonts. Finally, you need change the font of 
 ![change_font_for_terminal](./doc/images/change_font_for_terminal.png)
 
 ## For windows
-### Install git
-Please get the installer from [this web](https://git-scm.com/) for `git` on windows.
-
 ### Install scoop
-`Scoop` is a package manager for windows. We need use `scoop` to install all necessary packages for neovim.
+`scoop` is a package manager for windows. We need use `scoop` to install all necessary packages for neovim.
 
-Please use this command on powershell to install `scoop`.
+First, please install `powershell 5.1+`, and then use these commands on powershell to install `scoop`.
 ```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 iwr -useb get.scoop.sh | iex
+```
+
+`scoop` need use `git` to manage `bucket` that can collect all newest apps and packages for windows. If you haven't install `git` yet, you can use this command to install `git`:
+```bash
+scoop install git
 ```
 
 ### Install `uv` for python environment
