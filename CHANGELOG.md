@@ -9,6 +9,7 @@
 	* `install.py`: Use the python tool `uv` to install some python packages.
 	* `./nvim/lua/settings.lua`: Set the python executable filepath for the python tool `uv`.
 	* `./nvim/lua/Dap/python.lua`: Set the python dap server for the python tool `uv`.
+* Update the file [cmp.lua](./nvim/lua/Lsp/cmp.lua) to use snippets for python docs.
 
 ### [Fixed]
 
