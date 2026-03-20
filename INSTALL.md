@@ -3,20 +3,18 @@
 <!--toc:start-->
 - [Install Tutorial](#install-tutorial)
   - [For linux](#for-linux)
-    - [Python environment](#python-environment)
-      - [Install pyenv](#install-pyenv)
-      - [Install poetry](#install-poetry)
-    - [Run `install.py`](#run-install.py)
+    - [Install `uv` for python environment](#install-uv-for-python-environment)
+    - [Run `install.py`](#run-installpy)
+    - [Install nerd fonts](#install-nerd-fonts)
   - [For windows](#for-windows)
     - [Install git](#install-git)
-    - [Python environment](#python-environment)
-      - [Install pyenv](#install-pyenv)
-      - [Install poetry](#install-poetry)
     - [Install scoop](#install-scoop)
+    - [Install `uv` for python environment](#install-uv-for-python-environment)
+    - [Run `install.py`](#run-installpy)
     - [Install Visual Studio](#install-visual-studio)
-    - [Run `install.py`](#run-install.py-2)
   - [Setup godot](#setup-godot)
 <!--toc:end-->
+
 
 This document can show how to use this repo to setup for neovim.
 
@@ -29,56 +27,33 @@ sudo apt-get install -y git build-essential
 
 You need install neovim `0.11.0+` first. You can clone [neovim](https://github.com/neovim/neovim), and then build by yourself.
 
-### Python environment
-This repo uses `pyenv` to manage python verisons and `poetry` to manage the virtual environment.
+### Install `uv` for python environment
+This repo uses `uv` to manage python verisons, the virtual environment and python projects.
 
-#### Install pyenv
-First, please run these commands to install necessary packages for `pyenv`.
+Please run this command to install `uv`:
 ```bash
-sudo apt-get update
-
-sudo apt-get install build-essential libssl-dev zlib1g-dev \
-    libbz2-dev libreadline-dev libsqlite3-dev curl git \
-    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-```
-Please clone `pyenv` into `$HOME/.pyenv`.
-```bash
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-And then you should add the lines into `~/.bashrc`:
+And then you should add this line into `~/.bashrc` for automatically completion on bash:
 ```bash
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv > /dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(uv generate-shell-completion bash)"
 ```
 
-Please use `pyenv` to install a python as the global python.
+Please run this command to install the latest python with `uv`:
 ```bash
-pyenv install 3.10.12
-pyenv global 3.10.12
+uv python install
 ```
 
-#### Install poetry
-Please run this command to install `poetry`.
+Of course, you can give a version after the command `uv python install` to install specific verison python. For example, you can run this command to install `python 3.10`:
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
-```
-
-Please add this line into `~/.bashrc`:
-```bash
-export PATH=$PATH:$HOME/.local/bin/
-```
-
-We need change the setting of `poetry` to create `.venv` for each python project, so we should run this command.
-```bash
-poetry config virtualenvs.in-project true
+uv python install 3.10
 ```
 
 ### Run `install.py`
 This repo offers the python file `install.py`. It can install all necessary packages, and then copy all setting files to suitable location. You just run this command.
 ```bash
-python3 install.py
+uv run install.py
 ```
 
 ### Install nerd fonts
@@ -105,78 +80,45 @@ Now, we succeed to install the nerd fonts. Finally, you need change the font of 
 ![change_font_for_terminal](./doc/images/change_font_for_terminal.png)
 
 ## For windows
-### Install git
-Please get the installer from [this web](https://git-scm.com/) for `git` on windows.
-
-### Python environment
-#### Install pyenv
-`pyenv` cannot support windows, but we can use [pyenv-win(https://github.com/pyenv-win/pyenv-win.git) to manage python verisons.
-
-You can run this command to get `pyenv-win` on `powershell`.
-```bash
-git clone https://github.com/pyenv-win/pyenv-win.git "%USERPROFILE%\.pyenv"
-```
-
-Or, you can use this command to get `pyenv-win` on `bash` of `msys2`.
-```bash
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-```
-
-And then please run the commands on `powershell` to set the environment variables `PYENV`, `PYENV_ROOT` and `PYENV_HOME`.
-```bash
-[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
-
-[System.Environment]::SetEnvironmentVariable('PYENV_ROOT',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
-
-[System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
-```
-
-Finally, please run this command to sset the environment variable `User PATH`.
-```bash
-[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
-```
-
-Please use `pyenv-win` to install python.
-```bash
-pyenv install 3.10.11
-```
-
-And then set the global python.
-```bash
-pyenv global 3.10.11
-```
-
-#### Install poetry
-Please run this command on `powershell` with the supervisor right in order to install `poetry`.
-```bash
-(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
-```
-
-And then you need use this command to add `poetry` add the environment variable `User PATH`.
-```bash
-[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\AppData\Roaming\Python\Scripts" + [System.Environment]::GetEnvironmentVariable('path', "User"), "User")
-```
-
-We need change the setting of `poetry` to create `.venv` for each python project, so we should run this command.
-```bash
-poetry config virtualenvs.in-project true
-```
 ### Install scoop
-`Scoop` is a package manager for windows. We need use `scoop` to install all necessary packages for neovim.
+`scoop` is a package manager for windows. We need use `scoop` to install all necessary packages for neovim.
 
-Please use this command on powershell to install `scoop`.
+First, please install `powershell 5.1+`, and then use these commands on powershell to install `scoop`.
 ```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 iwr -useb get.scoop.sh | iex
 ```
 
-### Install Visual Studio
-In order to find standard library for `clangd`, we need install `Visual Studio`. You can download the installer from [this web](https://visualstudio.microsoft.com/zh-hant/vs/).
+`scoop` need use `git` to manage `bucket` that can collect all newest apps and packages for windows. If you haven't install `git` yet, you can use this command to install `git`:
+```bash
+scoop install git
+```
+
+### Install `uv` for python environment
+Please use the commands on `pwsh` to install `uv` via `scoop`:
+```bash
+scoop bucket add main
+scoop install main/uv
+```
+
+And then you need run this command to install the latest python:
+```bash
+uv python install
+```
+
+Finally, please use this command to set the environment variable `PATH` for `uv`:
+```bash
+uv tool update-shell
+```
 
 ### Run `install.py`
 Please run this command to use the python file `install.py` to set the configuration for neovim.
 ```bash
 python install.py
 ```
+
+### Install Visual Studio
+In order to find standard library for `clangd`, we need install `Visual Studio`. You can download the installer from [this web](https://visualstudio.microsoft.com/zh-hant/vs/).
 
 ## Setup godot
 Please download [godot 4.x](https://godotengine.org/). And then we need run `godot` to change some setting in order to use neovim to write `gdscript`.

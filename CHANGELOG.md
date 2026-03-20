@@ -5,6 +5,10 @@
 
 ### [Changed]
 * Update the file [cmp.lua](./nvim/lua/Lsp/cmp.lua) to use snippets to auto complete doxygen style comments for `C/C++` projects.
+* Update some files to integrate neovim and the python tool [uv](https://docs.astral.sh/uv/) because `uv` can `pyenv` and `poetry`:
+	* `install.py`: Use the python tool `uv` to install some python packages.
+	* `./nvim/lua/settings.lua`: Set the python executable filepath for the python tool `uv`.
+	* `./nvim/lua/Dap/python.lua`: Set the python dap server for the python tool `uv`.
 
 ### [Fixed]
 

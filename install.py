@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+# /// script
+# requires-python = ">=3.8"
+# dependencies = []
+# ///
 
 import platform
 from os import system
@@ -46,6 +49,12 @@ class myNvimIniter:
             "scoop install versions/dotnet-sdk-lts",
 			"scoop install main/omnisharp",
         ]
+
+        self.__m_vsPythonPackages =[
+			"uv tool install pynvim",
+			"uv tool install yapf",
+            "uv tool install debugpy",
+		]
     # End of constructor
 
     def __installRequirements(self):
@@ -56,12 +65,16 @@ class myNvimIniter:
         for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
             iResponse = system(sCmd)
             if 0 != iResponse:
-                print("Warning: Failed to run the command '%s'" % (sCmd))
+                print("Warning: Failed to run the command '%s'!" % (sCmd))
             # End of if-condition
         # End of for-loop
 
-        system("pip install pynvim")
-        system("pip install virtualenv")
+        for sCmd in self.__m_vsPythonPackages:
+            iResponse = system(sCmd)
+            if 0 != iResponse:
+                print("Warning: Failed to run the command '%s' to install python package!" %(sCmd))
+            # End of if-condition
+        # End of for-loop
     # End of myNvimIniter::installRequirements
 
     def __copySettingFiles(self):
