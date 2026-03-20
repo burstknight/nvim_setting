@@ -45,7 +45,7 @@ Please run this command to install the latest python with `uv`:
 uv python install
 ```
 
-Of course, you can give a version after the command `uv python install` to install specific verison python. For example, you can run this command to install `python 3.10`:
+Of course, you can give a version behind the command `uv python install` to install specific verison python. For example, you can run this command to install `python 3.10`:
 ```bash
 uv python install 3.10
 ```
