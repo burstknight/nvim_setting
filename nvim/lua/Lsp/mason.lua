@@ -33,6 +33,7 @@ mason_lspconfig.setup({
 		"mesonlsp",
 		"lemminx",
 		"marksman",
+		"rust_analyzer",
 	},
 })
 
@@ -61,6 +62,7 @@ vim.lsp.enable({
 	"mesonlsp",
 	"lemminx",
 	"marksman",
+	"rust_analyzer",
 })
 
 -- For common lsp settings.
@@ -104,3 +106,16 @@ vim.lsp.config.omnisharp.cmd = {
 	"utf-8",
 	"--languageserver",
 }
+
+-- Change some settings for rust-analyzer.
+vim.lsp.config.rust_analyzer = {
+	on_attach = LspKeyBind,
+	settings = {
+		["rust-analyzer"] = {
+			diagnostics = {
+				enble = false,
+			},
+		}
+	},
+}
+
