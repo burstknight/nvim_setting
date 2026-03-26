@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### [Added]
+* Use `rust-analyzer` as the langauge server to support `rust`.
 
 ### [Changed]
 
