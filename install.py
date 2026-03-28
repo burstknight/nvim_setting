@@ -4,11 +4,12 @@
 # ///
 
 import platform
-from os import system
+from os import pathconf, system
 from os.path import exists, join
 from pathlib import Path
 from shutil import copytree, rmtree
 from typing import Dict, List
+from time import sleep
 
 
 class myNvimIniter:
@@ -63,6 +64,7 @@ class myNvimIniter:
             raise RuntimeError("Not support the platform: %s" % (self.__m_sPlatform))
         # End of if-condition
 
+        print("Installing necessary requirements...")
         for sCmd in self.__m_dctInstallCmd[self.__m_sPlatform]:
             iResponse = system(sCmd)
             if 0 != iResponse:
@@ -94,9 +96,31 @@ class myNvimIniter:
     # End of myNvimIniter::copySettingFiles
 
     def run(self):
-        self.__installRequirements()
+        isSkipInstall = False
+        try:
+            sUserInput = input("Do you want to just copy all neovim setting files [y/n]? ")
+            if sUserInput.lower() not in ("y", "n"):
+                raise ValueError()
+            # End of if-condition
+
+            if "y" == sUserInput:
+                isSkipInstall = True
+            # End of if-condition
+        except ValueError:
+            print("Warning: You give the invaild input, so we will install all requirements!")
+            sleep(1.5)
+        # End of try-catch
+
+        if True == isSkipInstall:
+            print("Ok, we skip installing requirements, and then just copy all neovim setting files...")
+        else:
+            self.__installRequirements()
+        # End of if-condition
+
         self.__copySettingFiles()
         system("nvim --headless 'Lazy! sync' +qa")
+
+        print("Done!")
     # End of myNvimIniter::run
 # End of class myNvimIniter
 
