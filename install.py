@@ -18,7 +18,7 @@ class myNvimIniter:
         self.__m_dctInstallCmd["Linux"] = [
             "curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -",
             "sudo apt-get update",
-            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip xclip dotnet-sdk-8.0",
+            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip xclip dotnet-sdk-8.0 rustup",
             "curl -qL https://www.npmjs.com/install.sh | sh",
             "sudo npm install -g yarn",
             "sudo npm install -g tree-sitter-cli",
@@ -48,6 +48,7 @@ class myNvimIniter:
             "scoop install main/mingw",
             "scoop install versions/dotnet-sdk-lts",
 			"scoop install main/omnisharp",
+            "scoop install main/rustup",
         ]
 
         self.__m_vsPythonPackages =[
