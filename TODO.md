@@ -21,5 +21,4 @@
 	* [fyler.nvim](https://github.com/A7Lavinraj/fyler.nvim.git)
 	* [oil.nvim](https://github.com/stevearc/oil.nvim.git)
 	* [yazi.nvim](https://github.com/mikavilpas/yazi.nvim.git)
-* The file [Dockerfile.ubuntu](./docker/Dockerfile.ubuntu) should be updated to test the updated python file `install.py`.
 
