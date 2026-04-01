@@ -31,6 +31,6 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
 WORKDIR /workspace
 COPY . .
 RUN . ~/.bashrc && \
-	uv run install.py
+	echo "y" | uv run install.py
 
 CMD ["/bin/bash"]
