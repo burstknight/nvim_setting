@@ -4,7 +4,7 @@
 # ///
 
 import platform
-from os import pathconf, system
+from os import system
 from os.path import exists, join
 from pathlib import Path
 from shutil import copytree, rmtree
@@ -19,7 +19,7 @@ class myNvimIniter:
         self.__m_dctInstallCmd["Linux"] = [
             "curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -",
             "sudo apt-get update",
-            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip xclip dotnet-sdk-8.0 rustup",
+            "sudo apt-get install -y curl ripgrep fd-find clangd clang-format luarocks nodejs python3-venv python3 python3-pip xclip dotnet-sdk-10.0 rustup",
             "curl -qL https://www.npmjs.com/install.sh | sh",
             "sudo npm install -g yarn",
             "sudo npm install -g tree-sitter-cli",
