@@ -98,7 +98,7 @@ class myNvimIniter:
     def run(self):
         isSkipInstall = False
         try:
-            sUserInput = input("Do you want to just copy all neovim setting files [y/n]? ")
+            sUserInput = input("Do you want to JUST COPY all neovim setting files [y/n]? ")
             if sUserInput.lower() not in ("y", "n"):
                 raise ValueError()
             # End of if-condition
