@@ -16,6 +16,8 @@
 	* [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim.git)
 	* [windsuerf.nvim](https://github.com/Exafunction/windsurf.nvim.git)
 	* [ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim.git)
+	* [cmp-ai](https://github.com/tzachar/cmp-ai.git)
+	* [ollama.nvim](https://github.com/nomnivore/ollama.nvim.git)
 * Maybe I will replace `pyright` with [`astral/ty`](https://github.com/astral-sh/ty.git) as the language server for python.
 * Maybe I will try to replace `chadtree` with other plugin for the file explorer.
 	* [fyler.nvim](https://github.com/A7Lavinraj/fyler.nvim.git)
