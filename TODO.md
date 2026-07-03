@@ -15,7 +15,7 @@
 	* [windsuerf.nvim](https://github.com/Exafunction/windsurf.nvim.git)
 	* [cmp-ai](https://github.com/tzachar/cmp-ai.git)
 	* [ollama.nvim](https://github.com/nomnivore/ollama.nvim.git)
-	* [CodeCompanaion.nvim](https://github.com/olimorris/codecompanion.nvim.git)
+	* [CodeCompanion.nvim](https://github.com/olimorris/codecompanion.nvim.git)
 	* [llm.nvim](https://github.com/Kurama622/llm.nvim.git)
 	* [avante.nvim](https://github.com/yetone/avante.nvim.git)
 * Maybe I will replace `pyright` with [`astral/ty`](https://github.com/astral-sh/ty.git) as the language server for python.
