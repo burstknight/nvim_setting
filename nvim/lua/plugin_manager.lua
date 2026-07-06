@@ -157,6 +157,11 @@ require("lazy").setup({
 	-- 這個外掛可以會用底線凸顯出游標所在的文字
 	{ "itchyny/vim-cursorword" },
 
+	-- This plugin can render markdown on neovim.
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+	},
+
 	-- This plugin allows neovim use LLMs as AI coding assistant.
 	{
 		"olimorris/codecompanion.nvim",

@@ -23,4 +23,5 @@
 	* [fyler.nvim](https://github.com/A7Lavinraj/fyler.nvim.git)
 	* [oil.nvim](https://github.com/stevearc/oil.nvim.git)
 	* [yazi.nvim](https://github.com/mikavilpas/yazi.nvim.git)
+* Maybe I want to use the plugin [image.nvim](https://github.com/3rd/image.nvim.git) to show images on markdown files.
 
