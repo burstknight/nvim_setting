@@ -9,6 +9,7 @@ local plugins = {
 	"Plugins.startup",
 	"Plugins.leetcode",
 	"Plugins.lualine",
+	"Plugins.codecompanion",
 }
 
 for i = 1, #plugins do
