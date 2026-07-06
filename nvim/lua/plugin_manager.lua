@@ -160,6 +160,10 @@ require("lazy").setup({
 	-- This plugin can render markdown on neovim.
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
+		ft = {
+			"markdown",
+			"codecompanion",
+		},
 	},
 
 	-- This plugin allows neovim use LLMs as AI coding assistant.
