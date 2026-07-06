@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### [Added]
 * Use `rust-analyzer` as the langauge server to support `rust`.
+* Add the plugin `render-markdown.nvim` to improve viewing markdown files on neovim.
 
 ### [Changed]
 
