@@ -76,6 +76,11 @@ local wk_keymaps = {
 	{"<leader>tv", ":vsplit +terminal<CR>", desc = "Vertically open a terminal.", nowait = false},
 	{"<leader>ts", ":split +terminal<CR>", desc = "Horizontally open a terminal.", nowait = false},
 	{"<leader>tt", ":tab terminal<CR>", desc = "Open a tab terminal.", nowait = false},
+
+	-- For LLM assistant
+	{"<leader>a", group = "LLM assistant", nowait = false, remap = false, mode = { "n", "v" }},
+	{"<leader>ac", "<cmd>CodeCompanionChat Toggle<CR>", desc = "Toggle AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
+	{"<leader>aa", "<cmd>CodeCompanionChat Add<CR>", desc = "Add the selected code into AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
 }
 
 which_key.add(wk_keymaps)
