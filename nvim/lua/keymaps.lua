@@ -81,6 +81,7 @@ local wk_keymaps = {
 	{"<leader>a", group = "LLM assistant", nowait = false, remap = false, mode = { "n", "v" }},
 	{"<leader>ac", "<cmd>CodeCompanionChat Toggle<CR>", desc = "Toggle AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
 	{"<leader>aa", "<cmd>CodeCompanionChat Add<CR>", desc = "Add the selected code into AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
+	{"<leader>as", "<cmd>CodeCompanionActions<CR>", desc = "Add the selected code into AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
 }
 
 which_key.add(wk_keymaps)
