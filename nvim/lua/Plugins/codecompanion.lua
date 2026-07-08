@@ -35,7 +35,7 @@ codecompanion.setup({
 					},
 				},
 				opts = {
-					system_prompt = "你是程式設計師助理。請一律使用繁體中文（台灣習慣用語）回答所有問題和說明程式碼。",
+					system_prompt = "你是程式設計師助理。你必須使用繁體中文（台灣習慣用語）回答所有問題和說明程式碼。",
 				},
 			})
 		end,
@@ -44,5 +44,51 @@ codecompanion.setup({
 	opts = {
 		log_level = "DEBUG",
 		language = "Chinese",
+	},
+
+	prompt_library = {
+		["Explain code (zh_TW)"] = {
+			strategy = "chat",
+			description = "用中文分析程式碼",
+			opts = {
+				index = 1,
+				is_default = true,
+				is_slash_cmd = true,
+				modes = { "v" }, -- Just run this prompt for visual mode.
+				short_name = "Explain",
+				auto_submit = true, -- Automatically send the request to LLM.
+				user_prompt = false, -- User don't need input other texts.
+				stop_context_insertion = true,
+			},
+			prompts = {
+				{
+					role = "system",
+					content = [[你是一個有超過十年經驗的資深程式設計師，當你被要求分析選取的程式碼時，必須執行以下步驟：
+1. 判斷出選取的程式碼的目的是什麼。
+2. 如果選取的程式碼是函數，說明該函數有哪些參數與回傳值，以及那些參數和回傳值是什麼型態。
+3. 必須把所有的說明以繁體中文(台灣慣用語)回覆給我。]],
+				},
+				{
+					role = "user",
+					content = function(context)
+						local input = table.concat(context.lines, "\n")
+
+						return string.format(
+							[[分析段程式碼 `%s` 的用途：
+```%s
+%s
+```
+]],
+							context.filetype,
+							context.filetype,
+							input
+						)
+					end,
+					opts = {
+						contains_code = true,
+					},
+				},
+			},
+		},
 	},
 })
