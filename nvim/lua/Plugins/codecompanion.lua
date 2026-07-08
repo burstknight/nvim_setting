@@ -28,6 +28,10 @@ codecompanion.setup({
 				schema = {
 					model = {
 						default = "gemma3:4b",
+						choices = {
+							"gemma3:4b",
+							"gemma4:e2b",
+						},
 					},
 				},
 				opts = {
