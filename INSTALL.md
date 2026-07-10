@@ -79,6 +79,93 @@ Now, we succeed to install the nerd fonts. Finally, you need change the font of 
 
 ![change_font_for_terminal](./doc/images/change_font_for_terminal.png)
 
+### Install ollama
+This repo uses the plugin [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) to let us use LLM in neovim. Also, this plugin supports [ollama](https://github.com/ollama/ollama), so we need install `ollama` for this plugin.
+
+I prefer to installing [open-webui](https://github.com/open-webui/open-webui) using `docker compose` because `open-webui` offers a friendly web inteface to manage `ollama`. If you want to install `open-webui`, you have to install `docker` and `docker compose`.
+
+And then you need prepare `docker-compose.yaml` and `.env`. You can get these files from [this web](https://github.com/open-webui/open-webui).
+
+Here gives an example for `docker-compose.yaml` on the computer with nvidia GPU:
+```yaml
+services:
+  ollama:
+    volumes:
+      - ollama:/root/.ollama
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
+    ports:
+      - ${OLLAMA_WEBAPI_PORT-11434}:11434
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: ${OLLAMA_GPU_DRIVER-nvidia}
+              count: ${OLLAMA_GPU_COUNT-1}
+              capabilities:
+                - gpu
+  open-webui:
+    build:
+      context: .
+      args:
+        OLLAMA_BASE_URL: '/ollama'
+      dockerfile: Dockerfile
+    image: ghcr.io/open-webui/open-webui:${WEBUI_DOCKER_TAG-main}
+    container_name: open-webui
+    volumes:
+      - open-webui:/app/backend/data
+    depends_on:
+      - ollama
+    ports:
+      - 3000:8080
+    environment:
+      - 'OLLAMA_BASE_URL=http://ollama:11434'
+      - 'WEBUI_SECRET_KEY='
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
+
+volumes:
+  ollama: {}
+  open-webui: {}
+```
+
+Here gives an example for `.env`:
+```ini
+# Ollama URL for the backend to connect
+# The path '/ollama' will be redirected to the specified backend URL
+OLLAMA_BASE_URL='http://localhost:11434'
+
+OPENAI_API_BASE_URL=''
+OPENAI_API_KEY=''
+
+# AUTOMATIC1111_BASE_URL="http://localhost:7860"
+
+# For production, you should only need one host as
+# fastapi serves the svelte-kit built frontend and backend from the same host and port.
+# To test with CORS locally, you can set something like
+# CORS_ALLOW_ORIGIN='http://localhost:5173;http://localhost:8080'
+CORS_ALLOW_ORIGIN='*'
+
+# For production you should set this to match the proxy configuration (127.0.0.1)
+FORWARDED_ALLOW_IPS='*'
+
+# DO NOT TRACK
+SCARF_NO_ANALYTICS=true
+DO_NOT_TRACK=true
+ANONYMIZED_TELEMETRY=false
+```
+
+Now, you have `docker-compose.yaml` and `.env`. You need create a directory to store the two files like `~/open-webui/`, and then you should use this command to run `open-webui`:
+```bash
+docker compose up -d
+```
+
+Finally, you need run web browser to open `open-webui` to download LLM.
+
 ## For windows
 ### Install scoop
 `scoop` is a package manager for windows. We need use `scoop` to install all necessary packages for neovim.
