@@ -170,4 +170,10 @@ require("lazy").setup({
 	{
 		"olimorris/codecompanion.nvim",
 	},
+
+	-- This plugin can insert images into any markup language.
+	{
+		"HakonHarnes/img-clip.nvim",
+		event = "VeryLazy",
+	},
 })

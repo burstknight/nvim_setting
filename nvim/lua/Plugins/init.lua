@@ -10,6 +10,7 @@ local plugins = {
 	"Plugins.leetcode",
 	"Plugins.lualine",
 	"Plugins.codecompanion",
+	"Plugins.img-clip",
 }
 
 for i = 1, #plugins do
