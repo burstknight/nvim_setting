@@ -135,4 +135,14 @@ codecompanion.setup({
 			},
 		},
 	},
+
+	display = {
+		chat = {
+			window = {
+				layout = "vertical",
+				position = "right",
+				width = 0.4,
+			},
+		},
+	},
 })
