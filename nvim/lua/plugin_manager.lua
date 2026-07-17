@@ -160,5 +160,25 @@ require("lazy").setup({
 	-- This plugin can render markdown on neovim.
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
+		ft = {
+			"markdown",
+			"codecompanion",
+		},
+	},
+
+	-- This plugin allows neovim use LLMs as AI coding assistant.
+	{
+		"olimorris/codecompanion.nvim",
+	},
+
+	-- This plugin can insert images into any markup language.
+	{
+		"HakonHarnes/img-clip.nvim",
+		event = "VeryLazy",
+	},
+
+	-- This plugin can improve UI for notifications and LSP progress messages.
+	{
+		"j-hui/fidget.nvim",
 	},
 })

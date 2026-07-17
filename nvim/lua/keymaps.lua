@@ -76,6 +76,18 @@ local wk_keymaps = {
 	{"<leader>tv", ":vsplit +terminal<CR>", desc = "Vertically open a terminal.", nowait = false},
 	{"<leader>ts", ":split +terminal<CR>", desc = "Horizontally open a terminal.", nowait = false},
 	{"<leader>tt", ":tab terminal<CR>", desc = "Open a tab terminal.", nowait = false},
+
+	-- For img-clip.nvim
+	{"<leader>i", group = "Image Paste", nowait = false, remap = false},
+	{"<leader>ip", "<cmd>PasteImage<CR>", desc = "Paste image from system clipboard.", nowait = false},
+	{"<leader>ib", "<cmd>ImgClipDebug<CR>", desc = "Show the debug log.", nowait = false},
+	{"<leader>ic", "<cmd>ImgClipConfig<CR>", desc = "Show the current configuration.", nowait = false},
+
+	-- For LLM assistant
+	{"<leader>a", group = "LLM assistant", nowait = false, remap = false, mode = { "n", "v" }},
+	{"<leader>ac", "<cmd>CodeCompanionChat Toggle<CR>", desc = "Toggle AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
+	{"<leader>aa", "<cmd>CodeCompanionChat Add<CR>", desc = "Add the selected code into AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
+	{"<leader>as", "<cmd>CodeCompanionActions<CR>", desc = "Use the selected code to request AI to do something.", nowait = false, remap = false, mode = { "n", "v" }},
 }
 
 which_key.add(wk_keymaps)
