@@ -176,4 +176,9 @@ require("lazy").setup({
 		"HakonHarnes/img-clip.nvim",
 		event = "VeryLazy",
 	},
+
+	-- This plugin can improve UI for notifications and LSP progress messages.
+	{
+		"j-hui/fidget.nvim",
+	},
 })

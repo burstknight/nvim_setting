@@ -11,6 +11,7 @@ local plugins = {
 	"Plugins.lualine",
 	"Plugins.codecompanion",
 	"Plugins.img-clip",
+	"Plugins.fidget",
 }
 
 for i = 1, #plugins do
