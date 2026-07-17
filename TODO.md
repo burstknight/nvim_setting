@@ -11,13 +11,6 @@
 * Maybe I need the plugin [todo-comments.nvim](https://github.com/folke/todo-comments.nvim.git) to search todo comments.
 * Maybe I need use the plugin [cmake-tools.nvim](https://github.com/Civitasv/cmake-tools.nvim.git) to use cmake to build code on neovim.
 * Maybe I need the plugin [symbol-usage.nvim](https://github.com/Wansmer/symbol-usage.nvim.git) to show more information for lsp.
-* Maybe I need plugins for AI:
-	* [windsuerf.nvim](https://github.com/Exafunction/windsurf.nvim.git)
-	* [cmp-ai](https://github.com/tzachar/cmp-ai.git)
-	* [ollama.nvim](https://github.com/nomnivore/ollama.nvim.git)
-	* [CodeCompanion.nvim](https://github.com/olimorris/codecompanion.nvim.git)
-	* [llm.nvim](https://github.com/Kurama622/llm.nvim.git)
-	* [avante.nvim](https://github.com/yetone/avante.nvim.git)
 * Maybe I will replace `pyright` with [`astral/ty`](https://github.com/astral-sh/ty.git) as the language server for python.
 * Maybe I will try to replace `chadtree` with other plugin for the file explorer.
 	* [fyler.nvim](https://github.com/A7Lavinraj/fyler.nvim.git)
