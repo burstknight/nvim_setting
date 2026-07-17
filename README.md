@@ -48,6 +48,9 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 * [startup.nvim](https://github.com/max397574/startup.nvim.git): It can show the welcome page on neovim.
 * [leetcode.nvim](https://github.com/kawre/leetcode.nvim.git): It can use neovim to practice `LeetCode`.
 * [vim-cursorword](https://github.com/itchyny/vim-cursorword.git): It can use underline to show the word under the current cursor.
+* [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim.git): This plugin can integrate LLM into neovim.
+* [img-clip.nvim](https://github.com/hakonharnes/img-clip.nvim.git): This plugin can easily paste images into markup language files from the system clipboard.
+* [fidget.nvim](https://github.com/j-hui/fidget.nvim.git): This plugin can use floating text to show messages on neovim.
 
 ### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
@@ -92,6 +95,9 @@ I use `space key` as the leader key for neovim.
 | `<leader>ms` | Stop previewing the current markdown file. |
 | `<leader>mt` | Toggle to preview the current markdown file. |
 | `<leader>G` | Use the plugin `gitignore.nvim` to generate `.gitignore`. |
+| `<leader>ip` | Paste the image from the system clipboard. |
+| `<leader>ib` | Show the debug log for the plugin `img-clip.nvim`. |
+| `<leader>ic` | Show the current configuration of the plugin `img-clip.nvim`. |
 
 ### Keymaps for internal terminal.
 | Keymaps | Description |
@@ -160,6 +166,13 @@ I use `space key` as the leader key for neovim.
 | `c` | Copy the selected files for directories to the location under the current cursor on the file browser. |
 | `x` | Move the selected files or directories to the location under the current cursor on the files browser. |
 | `d` | Delete the selected files. |
+
+### Keymaps for LLM
+| Keymaps | Description |
+| -------------- | --------------- |
+| `<leader>ac` | Toggle AI chat. |
+| `<leader>aa` | Add the selected code into AI chat. |
+| `<leader>as` | Use the selected code to request AI to do something. |
 
 ## Try it on docker
 ### For linux
