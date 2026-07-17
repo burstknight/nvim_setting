@@ -17,6 +17,7 @@ This repo is my neovim setting.
     - [Keymaps for DAP](#keymaps-for-dap)
     - [Keymaps for `leetcode.nvim`](#keymaps-for-leetcodenvim)
     - [Keymaps for `chadtree`](#keymaps-for-chadtree)
+    - [Keymaps for LLM](#keymaps-for-llm)
   - [Try it on docker](#try-it-on-docker)
     - [For linux](#for-linux)
 <!--toc:end-->
