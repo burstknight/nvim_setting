@@ -1,7 +1,6 @@
 # To Do List
 
 * Maybe I need find a way to fix the bug on windows: `clangd` not found standard header files like `stdio.h` etc.
-* Try the plugin [neoclip](https://github.com/matveyt/neoclip.git) to fix the bug: `No clipboard tool found`.
 * Maybe I need the plugin [vim-doge](https://github.com/kkoomen/vim-doge.git) to generate document during coding.
 * Maybe I will use the plugin [cmp-git](https://github.com/petertriho/cmp-git.git) for git completion.
 * Maybe I need select one of the plugins to use `dotnet` to develop `C#` programs:
