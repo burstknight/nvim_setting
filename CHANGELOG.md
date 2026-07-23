@@ -2,11 +2,6 @@
 
 ## [Unreleased]
 ### [Added]
-* Use `rust-analyzer` as the language server to support `rust`.
-* Add the plugin `render-markdown.nvim` to improve viewing markdown files on neovim.
-* Add the plugin `codecompanion.nvim` to interate LLM and neovim as AI IDE.
-* Add the plugin `img-clip.nvim` to easily paste images into markup language files from the system clipboard.
-* Add the plugin `fidget.nvim` to use floating text to show messages on neovim.
 
 ### [Changed]
 
@@ -17,6 +12,15 @@
 ### [Removed]
 
 ### [Deprecated]
+
+----------
+## [0.8.0] - 2026/07/23
+### [Added]
+* Use `rust-analyzer` as the language server to support `rust`.
+* Add the plugin `render-markdown.nvim` to improve viewing markdown files on neovim.
+* Add the plugin `codecompanion.nvim` to interate LLM and neovim as AI IDE.
+* Add the plugin `img-clip.nvim` to easily paste images into markup language files from the system clipboard.
+* Add the plugin `fidget.nvim` to use floating text to show messages on neovim.
 
 
 ----------
