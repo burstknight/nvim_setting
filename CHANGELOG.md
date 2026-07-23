@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### [Added]
-* Use `rust-analyzer` as the langauge server to support `rust`.
+* Use `rust-analyzer` as the language server to support `rust`.
 * Add the plugin `render-markdown.nvim` to improve viewing markdown files on neovim.
 * Add the plugin `codecompanion.nvim` to interate LLM and neovim as AI IDE.
 * Add the plugin `img-clip.nvim` to easily paste images into markup language files from the system clipboard.
@@ -36,7 +36,7 @@
 ----------
 ## [0.6.0] - 2025/08/13
 ### [Added]
-* Use the langauge server `marksman` to support markdown.
+* Use the language server `marksman` to support markdown.
 * Add the file `init.lua` into the folder `nvim/lua/Lsp` to include all setting files in this folder for LSP.
 * Add the file `init.lua` into the directory `nvim/lua/Dap` to easily include all the settings for dap.
 * Add the file `init.lua` into the directory `nvim/lua/Plugins` to easily include all the settings for some plugins.
@@ -57,15 +57,15 @@
 ----
 ## [0.5.0] - 2025/05/18
 ### [Added]
-* Use the langauge server `mesonlsp` to support the build setting files for the build tool `meson`.
+* Use the language server `mesonlsp` to support the build setting files for the build tool `meson`.
 * Set `powershell` as the defualt shell on floating terminal for windows.
 * Add some shortcuts for internal terminals because just using floating terminal cannot statisfy me.
-* Use the langauge server `lemmix` for `xml`.
+* Use the language server `lemmix` for `xml`.
 * Add the dap setting to support `C#`.
 
 ### [Changed]
 * Change the source of the plugin `mason.nvim` to [mason-org/mason.nvim](https://github.com/mason-org/mason.nvim.git) because this plugin must be updated to `v2.0.0` for the plugin `nvim-lspconfig v2.0.0`.
-* Change lsp settings for all langauges because the plugin `nvim-lspconfig` has been updated to `v2.0.0`.
+* Change lsp settings for all languages because the plugin `nvim-lspconfig` has been updated to `v2.0.0`.
 * Change the shortcut for formatting code: `<leader>=` -> `<leader>l=`.
 
 ### [Fixed]
@@ -89,11 +89,11 @@
 	* `<leader>ff`: `<cmd>telescope find_files`
 	* `<leader>fg`: `<cmd>telescope live_grep`
 	* `<leader>fr`: `<cmd>telescope oldfiles`
-* Replace `csharp_ls` with `omnisharp` for `C#` langauge server because I need develop `C#` program on windows.
+* Replace `csharp_ls` with `omnisharp` for `C#` language server because I need develop `C#` program on windows.
 * Change the setting of the plugin `gitignore.nvim` to append new ignore rules into `.gitignore`.
 
 ### [Fixed]
-* Change the source of the plugin `mason.nvim` to use my fork because I has been added some code to fix the bug. The bug is that the plugin `mason.nvim` couldn't install some langauge servers if I use `pyenv-win` on windows.
+* Change the source of the plugin `mason.nvim` to use my fork because I has been added some code to fix the bug. The bug is that the plugin `mason.nvim` couldn't install some language servers if I use `pyenv-win` on windows.
 * Neovim alert the error about failing to use `clang-format` to format c/c++ code.
 * Change the setting for the plugin `conform.nvim` because I used the wrong way to format code.
 
@@ -125,7 +125,7 @@
 ----
 ## [0.1.0] - 2024/09/03
 ### [Added]
-* Add the plugins for LSP: `mason.nvim`, `mason-lspconfig.nvim`, `mason-registry`. So far support langauge:
+* Add the plugins for LSP: `mason.nvim`, `mason-lspconfig.nvim`, `mason-registry`. So far support language:
     * [x] `C/C++`
     * [x] `Python 3.x`
     * [x] `cmake`
