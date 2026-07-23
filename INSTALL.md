@@ -7,6 +7,8 @@
     - [Run `install.py`](#run-installpy)
     - [Install nerd fonts](#install-nerd-fonts)
     - [Install ollama](#install-ollama)
+      - [Install `nvidia-container-toolkit` to speed up LLM](#install-nvidia-container-toolkit-to-speed-up-llm)
+      - [Prepare `docker-compose.yaml` for `open-webui`](#prepare-docker-composeyaml-for-open-webui)
   - [For windows](#for-windows)
     - [Install scoop](#install-scoop)
     - [Install `uv` for python environment](#install-uv-for-python-environment)
@@ -84,6 +86,7 @@ This repo uses the plugin [codecompanion.nvim](https://github.com/olimorris/code
 
 I prefer to installing [open-webui](https://github.com/open-webui/open-webui) using `docker compose` because `open-webui` offers a friendly web inteface to manage `ollama`. If you want to install `open-webui`, you have to install `docker` and `docker compose`.
 
+#### Install `nvidia-container-toolkit` to speed up LLM
 In order to speed up the efficiency of LLM with GPU, you need run these commands to install `nvidia container toolkit`:
 ```bash
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -94,7 +97,31 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
 sudo apt-get update && sudo apt-get install nvidia-container-toolkit
 ```
 
-And then you need prepare `docker-compose.yaml` and `.env`. You can get these files from [this web](https://github.com/open-webui/open-webui).
+Please use these commands to set docker to use nvidia GPU:
+```bash
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+```
+
+You can run this command to test if docker uses nvidia GPU or not:
+```bash
+sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
+```
+
+If you get the error message `ERRO[0000] unable to load config for runtime docker: EOF`, you can add the code into `/etc/docker/daemon.json` to fix this error:
+```json
+{
+    "runtimes": {
+        "nvidia": {
+            "path": "nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+}
+```
+
+#### Prepare `docker-compose.yaml` for `open-webui`
+You need prepare `docker-compose.yaml` and `.env`. You can get these files from [this web](https://github.com/open-webui/open-webui).
 
 Here gives an example for `docker-compose.yaml` on the computer with nvidia GPU:
 ```yaml
