@@ -2,7 +2,6 @@
 
 ## [Unreleased]
 ### [Added]
-* Add the plugin `mini.icons` because some plugins need this plugin to show icons on neovim.
 
 ### [Changed]
 
@@ -13,6 +12,13 @@
 ### [Removed]
 
 ### [Deprecated]
+
+
+----------
+## [0.8.1] - 2026/07/24
+### [Added]
+* Add the plugin `mini.icons` because some plugins need this plugin to show icons on neovim.
+
 
 ----------
 ## [0.8.0] - 2026/07/23
