@@ -4,6 +4,9 @@ if not status then
 	return
 end
 
+local system_prompt =
+	"你是資深的程式設計師。你必須使用繁體中文（台灣慣用語）回答所有問題和說明程式碼。"
+
 codecompanion.setup({
 	strategies = {
 		chat = {
@@ -35,7 +38,23 @@ codecompanion.setup({
 					},
 				},
 				opts = {
-					system_prompt = "你是程式設計師助理。你必須使用繁體中文（台灣習慣用語）回答所有問題和說明程式碼。",
+					system_prompt = system_prompt,
+				},
+			})
+		end,
+
+		gemini = function()
+			return require("codecompanion.adapters").extend("gemini", {
+				env = {
+					api_key = os.getenv("GEMINI_API_KEY"),
+				},
+				schema = {
+					model = {
+						default = "gemini-3.5-flash",
+					},
+				},
+				opts = {
+					system_prompt = system_prompt,
 				},
 			})
 		end,
