@@ -53,6 +53,7 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 * [img-clip.nvim](https://github.com/hakonharnes/img-clip.nvim.git): This plugin can easily paste images into markup language files from the system clipboard.
 * [fidget.nvim](https://github.com/j-hui/fidget.nvim.git): This plugin can use floating text to show messages on neovim.
 * [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim.git): This plugin can render markdown on neovim.
+* [mini.icons](https://github.com/nvim-mini/mini.icons.git): This plugin can handle to show icons on neovim.
 
 ### For LSP(Language Server Protocol) functions
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git): It offers a easy way to set configurations for LSP.
