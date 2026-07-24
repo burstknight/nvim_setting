@@ -181,4 +181,9 @@ require("lazy").setup({
 	{
 		"j-hui/fidget.nvim",
 	},
+
+	{
+		"nvim-mini/mini.icons",
+		version = "*"
+	},
 })

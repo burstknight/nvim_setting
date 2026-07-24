@@ -12,6 +12,7 @@ local plugins = {
 	"Plugins.codecompanion",
 	"Plugins.img-clip",
 	"Plugins.fidget",
+	"Plugins.mini-icons",
 }
 
 for i = 1, #plugins do
