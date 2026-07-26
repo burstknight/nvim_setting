@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### [Added]
+* Update the setting of the plugin `codecompanion.nvim` to support gemini.
 
 ### [Changed]
 
