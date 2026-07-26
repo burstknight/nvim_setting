@@ -6,9 +6,11 @@
     - [Install `uv` for python environment](#install-uv-for-python-environment)
     - [Run `install.py`](#run-installpy)
     - [Install nerd fonts](#install-nerd-fonts)
-    - [Install ollama](#install-ollama)
-      - [Install `nvidia-container-toolkit` to speed up LLM](#install-nvidia-container-toolkit-to-speed-up-llm)
-      - [Prepare `docker-compose.yaml` for `open-webui`](#prepare-docker-composeyaml-for-open-webui)
+    - [Setup LLM](#setup-llm)
+      - [For gemini](#for-gemini)
+      - [For ollama](#for-ollama)
+        - [Install `nvidia-container-toolkit` to speed up LLM](#install-nvidia-container-toolkit-to-speed-up-llm)
+        - [Prepare `docker-compose.yaml` for `open-webui`](#prepare-docker-composeyaml-for-open-webui)
   - [For windows](#for-windows)
     - [Install scoop](#install-scoop)
     - [Install `uv` for python environment](#install-uv-for-python-environment)
@@ -81,12 +83,24 @@ Now, we succeed to install the nerd fonts. Finally, you need change the font of 
 
 ![change_font_for_terminal](./doc/images/change_font_for_terminal.png)
 
-### Install ollama
+### Setup LLM
+#### For gemini
+First, you need generate an api key for gemini on [this web](https://aistudio.google.com/api-keys). And then you need add this line into `~/.bashrc` or `~/.zshrc` to store the the gemini api key:
+```bash
+export GEMINI_API_KEY="Please put your gemini api key here"
+```
+
+You can reopen terminal or run this command to load the gemini api key before using nvim:
+```bash
+source ~/.bashrc
+```
+
+#### For ollama
 This repo uses the plugin [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) to let us use LLM in neovim. Also, this plugin supports [ollama](https://github.com/ollama/ollama), so we need install `ollama` for this plugin.
 
 I prefer to installing [open-webui](https://github.com/open-webui/open-webui) using `docker compose` because `open-webui` offers a friendly web inteface to manage `ollama`. If you want to install `open-webui`, you have to install `docker` and `docker compose`.
 
-#### Install `nvidia-container-toolkit` to speed up LLM
+##### Install `nvidia-container-toolkit` to speed up LLM
 In order to speed up the efficiency of LLM with GPU, you need run these commands to install `nvidia container toolkit`:
 ```bash
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -120,7 +134,7 @@ If you get the error message `ERRO[0000] unable to load config for runtime docke
 }
 ```
 
-#### Prepare `docker-compose.yaml` for `open-webui`
+##### Prepare `docker-compose.yaml` for `open-webui`
 You need prepare `docker-compose.yaml` and `.env`. You can get these files from [this web](https://github.com/open-webui/open-webui).
 
 Here gives an example for `docker-compose.yaml` on the computer with nvidia GPU:
