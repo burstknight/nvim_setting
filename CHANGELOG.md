@@ -7,6 +7,7 @@
 ### [Changed]
 
 ### [Fixed]
+* Fix the bug that the language server `omnisharp` couldn't work. The reason of this bug is the file name of this language server has been renamed as `Omnisharp` in `mason.nvim`.
 
 ### [Security]
 
