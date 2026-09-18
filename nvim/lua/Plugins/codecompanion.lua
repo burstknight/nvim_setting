@@ -212,6 +212,46 @@ codecompanion.setup({
 				},
 			},
 		},
+
+		-- This prompt is defined for using comments to generate code.
+		["Use comments to generate code"] = {
+			strategy = "inline",
+			description = "使用註解產對應程式碼",
+			opts = {
+				index = 4,
+				modes = { "v", "n" }, -- Just run this prompt for visual mode.
+				short_name = "Use comments",
+				auto_submit = true, -- Automatically send the request to LLM.
+				user_prompt = false, -- User don't need input other texts.
+			},
+			prompts = {
+				{
+					role = "system",
+					content = [[
+You are an expert software developer. Your task is to generate clean, idiomatic, and efficient code based on the provided comments.
+Output ONLY the code implementation. Do not wrap the output in unnecessary explanations, just provide the code that directly replaces or follows the comments."]]
+				},
+				{
+					role = "user",
+					content = function(context)
+						local input = table.concat(context.lines, "\n")
+
+						return string.format(
+							[[Generate the code based on these comments:
+```%s
+%s
+```
+]],
+							context.filetype,
+							input
+						)
+					end,
+					opts = {
+						contains_code = true,
+					},
+				},
+			},
+		},
 	},
 
 	display = {
