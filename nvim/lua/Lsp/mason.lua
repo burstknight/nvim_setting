@@ -93,18 +93,20 @@ local omnisharp_bin = ""
 if "Windows" == get_platform() then
 	omnisharp_bin = vim.fn.expand("~/scoop/apps/omnisharp/current/OmniSharp.exe")
 else
-	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/omnisharp")
+	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/Omnisharp")
 end
 
-vim.lsp.config.omnisharp.cmd = {
-	omnisharp_bin,
-	"-z",
-	"--hostPID",
-	"12345",
-	"DotNet:enablePackageRestore=false",
-	"--encoding",
-	"utf-8",
-	"--languageserver",
+vim.lsp.config.omnisharp = {
+	cmd = {
+		omnisharp_bin,
+		"-z",
+		"--hostPID",
+		"12345",
+		"DotNet:enablePackageRestore=false",
+		"--encoding",
+		"utf-8",
+		"--languageserver",
+	},
 }
 
 -- Change some settings for rust-analyzer.
@@ -115,7 +117,6 @@ vim.lsp.config.rust_analyzer = {
 			diagnostics = {
 				enble = false,
 			},
-		}
+		},
 	},
 }
-
