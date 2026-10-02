@@ -3,6 +3,9 @@
 ## [Unreleased]
 ### [Added]
 * Update the setting of the plugin `codecompanion.nvim` to support gemini.
+* Add prompts into `prompt_library` to let `codecompanion.nvim` automatically implement code:
+	* Use comments to generate code.
+	* Use docstring, comments and signature to implement a function, struct or class.
 
 ### [Changed]
 
