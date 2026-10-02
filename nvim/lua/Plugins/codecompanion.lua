@@ -229,7 +229,7 @@ codecompanion.setup({
 					role = "system",
 					content = [[
 You are an expert software developer. Your task is to generate clean, idiomatic, and efficient code based on the provided comments.
-Output ONLY the code implementation. Do not wrap the output in unnecessary explanations, just provide the code that directly replaces or follows the comments."]]
+Output ONLY the code implementation. Do not wrap the output in unnecessary explanations, just provide the code that directly replaces or follows the comments."]],
 				},
 				{
 					role = "user",
@@ -238,6 +238,45 @@ Output ONLY the code implementation. Do not wrap the output in unnecessary expla
 
 						return string.format(
 							[[Generate the code based on these comments:
+```%s
+%s
+```
+]],
+							context.filetype,
+							input
+						)
+					end,
+					opts = {
+						contains_code = true,
+					},
+				},
+			},
+		},
+
+		-- This prompt is defined for implement function, class or struct based on signature and docstring.
+		["Implement Function"] = {
+			strategy = "inline",
+			description = "根據signature、docstring和內部註解，自動補齊完整實作",
+			opts = {
+				index = 5,
+				modes = { "v", "n" }, -- Just run this prompt for visual mode.
+				short_name = "impl func",
+				auto_submit = true, -- Automatically send the request to LLM.
+				user_prompt = false, -- User don't need input other texts.
+			},
+			prompts = {
+				{
+					role = "system",
+					content = [[You are an expert software developer. You will be given a function, struct or class definition, including its signature, type hints, docstrings, and internal comments.
+Complete the implementation body. Keep the existing signature, docstrings, and comments intact, and implement the missing logic concisely and correctly. Output ONLY the completed code block.]],
+				},
+				{
+					role = "user",
+					content = function(context)
+						local input = table.concat(context.lines, "\n")
+
+						return string.format(
+							[[Implement the body for this function/class definition:
 ```%s
 %s
 ```
