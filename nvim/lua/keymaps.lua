@@ -19,7 +19,7 @@ map('n', '<F2>', ':CHADopen<CR>', opts)
 -- 設定 terminal 相關的快捷鍵
 local defualt_shell = ""
 if "Windows" == utils.get_platform() then
-	defualt_shell = "pwsh.exe"
+	defualt_shell = "pwsh"
 end
 map("t", "<C-k>", "<C-\\><C-n>", opts)
 
@@ -73,9 +73,9 @@ local wk_keymaps = {
 	-- For terminal
 	{"<leader>t", group = "Terminal", nowait = false, remap = false},
 	{"<leader>tf", "<cmd>Lspsaga term_toggle " .. defualt_shell .. "<CR>", desc = "Open a floating terminal", nowait = false},
-	{"<leader>tv", ":vsplit +terminal<CR>", desc = "Vertically open a terminal.", nowait = false},
-	{"<leader>ts", ":split +terminal<CR>", desc = "Horizontally open a terminal.", nowait = false},
-	{"<leader>tt", ":tab terminal<CR>", desc = "Open a tab terminal.", nowait = false},
+	{"<leader>tv", ":vsplit | terminal " .. defualt_shell .. "<CR>", desc = "Vertically open a terminal.", nowait = false},
+	{"<leader>ts", ":split | terminal ".. defualt_shell .. "<CR>", desc = "Horizontally open a terminal.", nowait = false},
+	{"<leader>tt", ":tab terminal " .. defualt_shell .. "<CR>", desc = "Open a tab terminal.", nowait = false},
 
 	-- For img-clip.nvim
 	{"<leader>i", group = "Image Paste", nowait = false, remap = false},
