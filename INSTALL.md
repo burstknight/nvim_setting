@@ -258,6 +258,19 @@ python install.py
 ### Install Visual Studio
 In order to find standard library for `clangd`, we need install `Visual Studio`. You can download the installer from [this web](https://visualstudio.microsoft.com/zh-hant/vs/).
 
+### Setup LLM
+#### For gemini
+First, you need get an api key from [google ai studio](https://aistudio.google.com/api-keys). And then you need run this command on `pwsh` to set the the api key as an environment variable:
+```sh
+[Environment]::SetEnvironmentVariable(
+    "GEMINI_API_KEY",
+    "Please put your gemini api key here.",
+    "User"
+)
+```
+
+Now, you have to restart terminal in order to load the api key.
+
 ## Setup godot
 Please download [godot 4.x](https://godotengine.org/). And then we need run `godot` to change some setting in order to use neovim to write `gdscript`.
 
