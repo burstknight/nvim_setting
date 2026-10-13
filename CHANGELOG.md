@@ -11,6 +11,7 @@
 
 ### [Fixed]
 * Fix the bug that the language server `omnisharp` couldn't work. The reason of this bug is the file name of this language server has been renamed as `Omnisharp` in `mason.nvim`.
+* Update the setting file `keymaps.lua` to set `pwsh` as the default shell for windows.
 
 ### [Security]
 
