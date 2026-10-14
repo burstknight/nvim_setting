@@ -190,7 +190,12 @@ codecompanion.setup({
 				{
 					role = "user",
 					content = function(context)
-						local handler = io.popen("git ls-files 2>/dev/null || find . -maxdepth 3 -not -path '*/.*'")
+						local utils = require("Utils.init")
+						local cmd = "git ls-files 2>/dev/null || find . -maxdepth 3 -not -path '*/.*'"
+						if "Windows" == utils.get_platform() then
+							cmd = 'git ls-files 2>nul || pwsh -NoProfile -Command "Get-ChildItem -Recurse -File -Name"'
+						end
+						local handler = io.popen(cmd)
 						local project_files = ""
 						if handler then
 							project_files = handler:read("*a")
