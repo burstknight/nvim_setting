@@ -6,6 +6,7 @@
 * Add prompts into `prompt_library` to let `codecompanion.nvim` automatically implement code:
 	* Use comments to generate code.
 	* Use docstring, comments and signature to implement a function, struct or class.
+* Update the user prompt of the AI action `Analyze project structure` to support windows.
 
 ### [Changed]
 
