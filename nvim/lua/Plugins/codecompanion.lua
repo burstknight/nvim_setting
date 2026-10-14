@@ -10,13 +10,13 @@ local system_prompt =
 codecompanion.setup({
 	strategies = {
 		chat = {
-			adapter = "ollama",
+			adapter = "gemini",
 		},
 		inline = {
-			adapter = "ollama",
+			adapter = "gemini",
 		},
 		agent = {
-			adapter = "ollama",
+			adapter = "gemini",
 		},
 	},
 
