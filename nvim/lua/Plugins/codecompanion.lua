@@ -21,43 +21,49 @@ codecompanion.setup({
 	},
 
 	adapters = {
-		ollama = function()
-			return require("codecompanion.adapters").extend("ollama", {
-				name = "ollama",
-				url = "http://localhost:11434",
-				env = {
-					api_key = "",
-				},
-				schema = {
-					model = {
-						default = "gemma3:4b",
-						choices = {
-							"gemma3:4b",
-							"gemma4:e2b",
+		http = {
+			ollama = function()
+				return require("codecompanion.adapters").extend("ollama", {
+					name = "ollama",
+					url = "http://localhost:11434",
+					env = {
+						api_key = "",
+					},
+					schema = {
+						model = {
+							default = "gemma3:4b",
+							choices = {
+								"gemma3:4b",
+								"gemma4:e2b",
+							},
 						},
 					},
-				},
-				opts = {
-					system_prompt = system_prompt,
-				},
-			})
-		end,
-
-		gemini = function()
-			return require("codecompanion.adapters").extend("gemini", {
-				env = {
-					api_key = os.getenv("GEMINI_API_KEY"),
-				},
-				schema = {
-					model = {
-						default = "gemini-3.5-flash",
+					opts = {
+						system_prompt = system_prompt,
 					},
-				},
-				opts = {
-					system_prompt = system_prompt,
-				},
-			})
-		end,
+				})
+			end,
+
+			gemini = function()
+				return require("codecompanion.adapters").extend("gemini", {
+					env = {
+						api_key = os.getenv("GEMINI_API_KEY"),
+					},
+					schema = {
+						model = {
+							default = "gemini-3.5-flash-lite",
+							choices = {
+								"gemini-3.5-flash-lite",
+								"gemini-3.1-flash-lite",
+							},
+						},
+					},
+					opts = {
+						system_prompt = system_prompt,
+					},
+				})
+			end,
+		},
 	},
 
 	opts = {
