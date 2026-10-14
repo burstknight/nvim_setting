@@ -9,6 +9,7 @@
 * Update the user prompt of the AI action `Analyze project structure` to support windows.
 
 ### [Changed]
+* Update the setting of the plugin `codecompanion.nvim` to use gemini as the default AI.
 
 ### [Fixed]
 * Fix the bug that the language server `omnisharp` couldn't work. The reason of this bug is the file name of this language server has been renamed as `Omnisharp` in `mason.nvim`.
