@@ -28,7 +28,7 @@ mason_lspconfig.setup({
 		"yamlls",
 		"pyright",
 		"powershell_es",
-		"omnisharp",
+		"roslyn_ls",
 		"ruff",
 		"mesonlsp",
 		"lemminx",
@@ -58,7 +58,7 @@ vim.lsp.enable({
 	"yamlls",
 	"pyright",
 	"powershell_es",
-	"omnisharp",
+	"roslyn_ls",
 	"mesonlsp",
 	"lemminx",
 	"marksman",
@@ -83,29 +83,6 @@ vim.lsp.config.pyright.settings = {
 		analysis = {
 			ignore = { "*" },
 		},
-	},
-}
-
--- Change omnisharp executable file path for cross-platform.
-local get_platform = require("Utils.init").get_platform
-
-local omnisharp_bin = ""
-if "Windows" == get_platform() then
-	omnisharp_bin = vim.fn.expand("~/scoop/apps/omnisharp/current/OmniSharp.exe")
-else
-	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/Omnisharp")
-end
-
-vim.lsp.config.omnisharp = {
-	cmd = {
-		omnisharp_bin,
-		"-z",
-		"--hostPID",
-		"12345",
-		"DotNet:enablePackageRestore=false",
-		"--encoding",
-		"utf-8",
-		"--languageserver",
 	},
 }
 
