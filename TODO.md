@@ -14,6 +14,7 @@
 * Maybe I will try to replace `chadtree` with other plugin for the file explorer.
 	* [fyler.nvim](https://github.com/A7Lavinraj/fyler.nvim.git)
 	* [oil.nvim](https://github.com/stevearc/oil.nvim.git)
+		- [oil.bar.nvim](https://github.com/Maelwalser/oil-bar.nvim.git)
 	* [yazi.nvim](https://github.com/mikavilpas/yazi.nvim.git)
 * Maybe I want to use the plugin [image.nvim](https://github.com/3rd/image.nvim.git) to show images on markdown files.
 * Maybe I want to use the plugin [uv.nvim](https://github.com/benomahony/uv.nvim.git) to integrate neovim and [uv](https://github.com/astral-sh/uv).
