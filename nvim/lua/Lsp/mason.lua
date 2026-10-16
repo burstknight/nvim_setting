@@ -86,6 +86,11 @@ vim.lsp.config.pyright.settings = {
 	},
 }
 
+-- Change some settings for roslyn_ls.
+vim.lsp.config.roslyn_ls = {
+	on_attach = LspKeyBind,
+}
+
 -- Change some settings for rust-analyzer.
 vim.lsp.config.rust_analyzer = {
 	on_attach = LspKeyBind,
