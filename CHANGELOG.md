@@ -15,7 +15,7 @@
 * Fix the bug that the language server `omnisharp` couldn't work. The reason of this bug is the file name of this language server has been renamed as `Omnisharp` in `mason.nvim`.
 * Update the setting file `keymaps.lua` to set `pwsh` as the default shell for windows.
 * Fix the bug that the plugin `codecompanion.nvim` didn't use the default model. The reason of this bug is the setting used the wrong way to set adapters.
-* Fix the bug that neovim couldn't find python provider. The reason is that I use `uv` to manage python environment. I use `uv tool dir` to set python provider for fixing this bug.
+* Fix the bug that neovim couldn't find python provider. The reason is that I use `uv` to manage python environment. I use `uv tool dir` to get the path of `pynvim` to set python provider for fixing this bug.
 
 ### [Security]
 
