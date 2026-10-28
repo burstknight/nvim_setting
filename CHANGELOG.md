@@ -6,6 +6,7 @@
 ### [Changed]
 
 ### [Fixed]
+* Fix the bug that the language server `omnisharp` didn't work on linux. The reason of this bug is the executable filename is `OmniSharp` instead of `omnisharp` or `Omnisharp`.
 
 ### [Security]
 
