@@ -27,17 +27,20 @@ if not status then
 	return
 end
 
-local oCmdHandler = io.popen("uv python find --system")
+local oCmdHandler = io.popen("uv tool dir")
 if nil == oCmdHandler then
 	vim.notify("Error: Failed to run the command 'uv python find' to find python path!")
 	return
 end
-local sPythonPath = vim.fn.expand(oCmdHandler:read("*l"))
+
+local sPythonPath = oCmdHandler:read("*l")
 
 if "Windows" == utils.get_platform() then
+	sPythonPath = vim.fn.expand(sPythonPath .. "/pynvim/Scripts/python")
 	sPythonPath = string.gsub(sPythonPath, "\\", "/")
+else
+	sPythonPath = vim.fn.expand(sPythonPath .. "/pynvim/bin/python")
 end
-sPythonPath = string.sub(sPythonPath, 1, string.len(sPythonPath) - 4)
 
 local sVimCmd = string.format('let g:python3_host_prog=\"%s\"', sPythonPath)
 vim.cmd(sVimCmd)
