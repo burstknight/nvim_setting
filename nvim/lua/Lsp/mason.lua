@@ -93,7 +93,7 @@ local omnisharp_bin = ""
 if "Windows" == get_platform() then
 	omnisharp_bin = vim.fn.expand("~/scoop/apps/omnisharp/current/OmniSharp.exe")
 else
-	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/Omnisharp")
+	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/OmniSharp")
 end
 
 vim.lsp.config.omnisharp = {
