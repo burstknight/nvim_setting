@@ -20,4 +20,5 @@
 * Maybe I want to use the plugin [uv.nvim](https://github.com/benomahony/uv.nvim.git) to integrate neovim and [uv](https://github.com/astral-sh/uv).
 * I need find a way to fix the bug about failing install language server via `mason.nvim` on windows. Maybe this bug exists on linux.
 * Maybe I need check the setting of the plugin `codecompanion.nvim` to fix the bug about failing to use default models for `ollama` or `open-webui`.
+* Maybe I need change the version of the plugin `codecompanion` to `v19.27.0` because this plugin (`v20.*`) dosen't work on windows.
 
