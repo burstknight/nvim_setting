@@ -89,6 +89,13 @@ vim.lsp.config.pyright.settings = {
 -- Change some settings for roslyn_ls.
 vim.lsp.config.roslyn_ls = {
 	on_attach = LspKeyBind,
+	before_init = function(_, config)
+		local out = vim.system({ config.cmd[1], "--stdio", "--version" }, { text = true }):wait()
+		local version = vim.version.parse(out.stdout or "")
+		if out.code ~= 0 or type(version) ~= "table" or not vim.version.ge(version, "5.8.0") then
+			vim.notify("roslyn_ls: server older than 5.8.0, projects won't be loaded", vim.log.levels.WARN)
+		end
+	end,
 }
 
 -- Change some settings for rust-analyzer.
