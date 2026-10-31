@@ -4,6 +4,7 @@
 ### [Added]
 
 ### [Changed]
+* Replace `omnisharp` with `roslyn_ls` for the `C#` language server because `roslyn_ls` is fater.
 
 ### [Fixed]
 
