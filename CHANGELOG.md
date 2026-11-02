@@ -4,9 +4,10 @@
 ### [Added]
 
 ### [Changed]
+* Replace `omnisharp` with `roslyn_ls` for the `C#` language server because `roslyn_ls` is fater.
 
 ### [Fixed]
-* Fix the bug that the language server `omnisharp` didn't work on linux. The reason of this bug is the executable filename is `OmniSharp` instead of `omnisharp` or `Omnisharp`.
+* Fix the bug about `minimum required version` for `roslyn_ls`. The reason of this bug is that the plugin `nvim-lspconfig` uses the wrong way to set the configuration for `roslyn_ls`.
 
 ### [Security]
 

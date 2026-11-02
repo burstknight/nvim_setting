@@ -28,7 +28,7 @@ mason_lspconfig.setup({
 		"yamlls",
 		"pyright",
 		"powershell_es",
-		"omnisharp",
+		"roslyn_ls",
 		"ruff",
 		"mesonlsp",
 		"lemminx",
@@ -58,7 +58,7 @@ vim.lsp.enable({
 	"yamlls",
 	"pyright",
 	"powershell_es",
-	"omnisharp",
+	"roslyn_ls",
 	"mesonlsp",
 	"lemminx",
 	"marksman",
@@ -86,27 +86,16 @@ vim.lsp.config.pyright.settings = {
 	},
 }
 
--- Change omnisharp executable file path for cross-platform.
-local get_platform = require("Utils.init").get_platform
-
-local omnisharp_bin = ""
-if "Windows" == get_platform() then
-	omnisharp_bin = vim.fn.expand("~/scoop/apps/omnisharp/current/OmniSharp.exe")
-else
-	omnisharp_bin = vim.fn.expand(vim.fn.stdpath("data") .. "/mason/bin/OmniSharp")
-end
-
-vim.lsp.config.omnisharp = {
-	cmd = {
-		omnisharp_bin,
-		"-z",
-		"--hostPID",
-		"12345",
-		"DotNet:enablePackageRestore=false",
-		"--encoding",
-		"utf-8",
-		"--languageserver",
-	},
+-- Change some settings for roslyn_ls.
+vim.lsp.config.roslyn_ls = {
+	on_attach = LspKeyBind,
+	before_init = function(_, config)
+		local out = vim.system({ config.cmd[1], "--stdio", "--version" }, { text = true }):wait()
+		local version = vim.version.parse(out.stdout or "")
+		if out.code ~= 0 or type(version) ~= "table" or not vim.version.ge(version, "5.8.0") then
+			vim.notify("roslyn_ls: server older than 5.8.0, projects won't be loaded", vim.log.levels.WARN)
+		end
+	end,
 }
 
 -- Change some settings for rust-analyzer.
