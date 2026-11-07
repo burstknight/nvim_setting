@@ -13,9 +13,11 @@
         - [Prepare `docker-compose.yaml` for `open-webui`](#prepare-docker-composeyaml-for-open-webui)
   - [For windows](#for-windows)
     - [Install scoop](#install-scoop)
-    - [Install `uv` for python environment](#install-uv-for-python-environment)
-    - [Run `install.py`](#run-installpy)
+    - [Install `uv` for python environment](#install-uv-for-python-environment-1)
+    - [Run `install.py`](#run-installpy-1)
     - [Install Visual Studio](#install-visual-studio)
+    - [Setup LLM](#setup-llm-1)
+      - [For gemini](#for-gemini-1)
   - [Setup godot](#setup-godot)
 <!--toc:end-->
 
