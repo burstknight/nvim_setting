@@ -51,7 +51,11 @@ require("lazy").setup({
 
 	-- 這個外掛可以用來模糊搜尋檔案
 	{ "nvim-telescope/telescope.nvim" },
-	{ "nvim-treesitter/nvim-treesitter" },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		lazy = false,
+		build = ":TSUpdate",
+	},
 	{ "nvim-lua/plenary.nvim" },
 
 	-- 設定LSP
@@ -184,6 +188,6 @@ require("lazy").setup({
 
 	{
 		"nvim-mini/mini.icons",
-		version = "*"
+		version = "*",
 	},
 })

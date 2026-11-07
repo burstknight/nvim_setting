@@ -13,6 +13,7 @@ local plugins = {
 	"Plugins.img-clip",
 	"Plugins.fidget",
 	"Plugins.mini-icons",
+	"Plugins.nvim-treesitter",
 }
 
 for i = 1, #plugins do
