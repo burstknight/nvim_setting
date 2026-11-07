@@ -8,6 +8,7 @@
 
 ### [Fixed]
 * Fix the bug about `minimum required version` for `roslyn_ls`. The reason of this bug is that the plugin `nvim-lspconfig` uses the wrong way to set the configuration for `roslyn_ls`.
+* Fix the bug about failing to automatically install parser for the plugin `nvim-treesitter`.
 
 ### [Security]
 
