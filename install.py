@@ -48,6 +48,7 @@ class myNvimIniter:
             "scoop install main/mingw",
             "scoop install versions/dotnet-sdk-lts",
             "scoop install main/rustup",
+            "scoop install main/file",
         ]
 
         self.__m_vsPythonPackages =[
