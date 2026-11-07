@@ -8,14 +8,13 @@ from os import system
 from os.path import exists, join
 from pathlib import Path
 from shutil import copytree, rmtree
-from typing import Dict, List
 from time import sleep
 
 
 class myNvimIniter:
     def __init__(self) -> None:
         self.__m_sPlatform = platform.system()
-        self.__m_dctInstallCmd: Dict[str, List[str]] = {}
+        self.__m_dctInstallCmd: dict[str, list[str]] = {}
         self.__m_dctInstallCmd["Linux"] = [
             "curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -",
             "sudo apt-get update",
@@ -55,6 +54,7 @@ class myNvimIniter:
 			"uv tool install pynvim",
 			"uv tool install yapf",
             "uv tool install debugpy",
+            "uv tool install markitdown",
 		]
     # End of constructor
 
