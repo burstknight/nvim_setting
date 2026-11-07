@@ -173,6 +173,7 @@ require("lazy").setup({
 	-- This plugin allows neovim use LLMs as AI coding assistant.
 	{
 		"olimorris/codecompanion.nvim",
+		version = "v19.27.0",
 	},
 
 	-- This plugin can insert images into any markup language.
