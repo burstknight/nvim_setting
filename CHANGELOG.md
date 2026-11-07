@@ -9,6 +9,7 @@
 ### [Fixed]
 * Fix the bug about `Invalid JSON payload: syntax error...` for the plugin `codecompanion.nvim` on windows. The reason of this bug is that this plugin has some bugs causing the prompt uses the wrong encode on windows for the version `v20+`.
 * Fix the bug about failing to automatically install parser for the plugin `nvim-treesitter`.
+* Fix the bug about `invalid buffer id` for the plugin `tiny-inline-diagnostic.nvim`. The reason of this bug is that I used the old version plugin and the wrong setting.
 
 ### [Security]
 
