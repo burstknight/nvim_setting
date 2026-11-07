@@ -7,7 +7,6 @@
 * Replace `omnisharp` with `roslyn_ls` for the `C#` language server because `roslyn_ls` is fater.
 
 ### [Fixed]
-* Fix the bug about `minimum required version` for `roslyn_ls`. The reason of this bug is that the plugin `nvim-lspconfig` uses the wrong way to set the configuration for `roslyn_ls`.
 * Fix the bug about `Invalid JSON payload: syntax error...` for the plugin `codecompanion.nvim` on windows. The reason of this bug is that this plugin has some bugs causing the prompt uses the wrong encode on windows for the version `v20+`.
 * Fix the bug about failing to automatically install parser for the plugin `nvim-treesitter`.
 
