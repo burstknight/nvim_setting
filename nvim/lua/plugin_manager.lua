@@ -27,7 +27,6 @@ require("lazy").setup({
 	-- This plugin is a file explorer.
 	{
 		"FylerOrg/fyler.nvim",
-		opts = {},
 	},
 
 	-- 這個外掛可以用來括號類符號的自動補齊

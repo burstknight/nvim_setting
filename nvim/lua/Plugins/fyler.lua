@@ -4,3 +4,23 @@ if not status then
 	return
 end
 
+fyler.setup({
+	kind = "split_left_most",
+	extensions = {
+		git = {
+			enabled = true,
+			inline = true,
+		},
+		watcher = {
+			enabled = true,
+		},
+	},
+	integrations = {
+		icon = "mini_icons",
+	},
+	kind_presets = {
+		split_left_most = {
+			width = "35%",
+		},
+	},
+})

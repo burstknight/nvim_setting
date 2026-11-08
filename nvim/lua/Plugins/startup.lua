@@ -203,7 +203,7 @@ startup.setup({
 		margin = 0,
 		content = {
 			{ "  Find File", "Telescope find_files", "<leader>ff" },
-			{ "  File Browser", ":Fyler kind=split_left_most<CR>", "<F2>" },
+			{ "  File Browser", ":Fyler<CR>", "<F2>" },
 			{ "  Recent", "Telescope oldfiles", "<leader>fr" },
 			{ "󰙨 Leet Code", "Leet", "<leader>LL" },
 		},
