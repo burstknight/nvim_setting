@@ -1,7 +1,6 @@
 -- Load all settings for the plugins.
 local plugins = {
 	"Plugins.nvim-notify",
-	"Plugins.chadtree",
 	"Plugins.vim-gitgutter",
 	"Plugins.vim-rainbow",
 	"Plugins.ibl",
