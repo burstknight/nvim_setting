@@ -10,6 +10,7 @@
 ### [Security]
 
 ### [Removed]
+* Remove the plugin `chadtree`.
 
 ### [Deprecated]
 
