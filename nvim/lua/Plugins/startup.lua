@@ -202,10 +202,10 @@ startup.setup({
 		title = "Basic Commands",
 		margin = 0,
 		content = {
-			{"  Find File", "Telescope find_files", "<leader>ff"},
-			{"  File Browser", "CHADopen", "<F2>"},
-			{"  Recent", "Telescope oldfiles", "<leader>fr"},
-			{"󰙨 Leet Code", "Leet", "<leader>LL"},
+			{ "  Find File", "Telescope find_files", "<leader>ff" },
+			{ "  File Browser", ":Fyler kind=split_left_most<CR>", "<F2>" },
+			{ "  Recent", "Telescope oldfiles", "<leader>fr" },
+			{ "󰙨 Leet Code", "Leet", "<leader>LL" },
 		},
 		highlight = "String",
 		default_color = "",
@@ -213,9 +213,9 @@ startup.setup({
 	},
 	clock = {
 		type = "text",
-		content = function ()
+		content = function()
 			local time = "󰥔  " .. os.date("%Y/%m/%d %H:%M")
-			return {time}
+			return { time }
 		end,
 		oldfiles_directory = false,
 		align = "center",

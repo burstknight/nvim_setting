@@ -24,6 +24,12 @@ require("lazy").setup({
 	-- 這個外掛可以美化 neovim 的通知訊息
 	{ "rcarriga/nvim-notify" },
 
+	-- This plugin is a file explorer.
+	{
+		"FylerOrg/fyler.nvim",
+		opts = {},
+	},
+
 	-- 這個外掛可以用來括號類符號的自動補齊
 	{ "jiangmiao/auto-pairs" },
 	--

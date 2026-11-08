@@ -7,14 +7,14 @@ if not status then
 	return
 end
 
-local opts = {noremap = true, silent = true}
-local buffer_ops = {noremap = true, silent = true, buffer = bufnr}
+local opts = { noremap = true, silent = true }
+local buffer_ops = { noremap = true, silent = true, buffer = bufnr }
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- 設定外掛 NERDTree 的快捷鍵
-map('n', '<F2>', ':CHADopen<CR>', opts)
+map("n", "<F2>", ":Fyler<CR>", opts)
 
 -- 設定 terminal 相關的快捷鍵
 local defualt_shell = ""
@@ -34,60 +34,114 @@ local which_key = require("which-key")
 
 local wk_keymaps = {
 	-- For DAP
-    { "<leader>d", group = "DAP", nowait = false, remap = false },
-    { "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = "Breakpoint", nowait = false, remap = false },
-    { "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", desc = "Continue", nowait = false, remap = false },
-    { "<leader>dd", "<cmd>lua require'dap'.disconnect()<CR>", desc = "Disconnect", nowait = false, remap = false },
-    { "<leader>dn", "<cmd>lua require'dap'.step_over()<CR>", desc = "Next", nowait = false, remap = false },
-    { "<leader>dq", "<cmd>lua require'dap'.close()<CR>", desc = "Quit", nowait = false, remap = false },
-    { "<leader>ds", "<cmd>lua require'dap'.step_into()<CR>", desc = "Step", nowait = false, remap = false },
-    { "<leader>dx", "<cmd>lua require'dap'.terminate()<CR>", desc = "Terminate", nowait = false, remap = false },
+	{ "<leader>d", group = "DAP", nowait = false, remap = false },
+	{
+		"<leader>db",
+		"<cmd>lua require'dap'.toggle_breakpoint()<CR>",
+		desc = "Breakpoint",
+		nowait = false,
+		remap = false,
+	},
+	{ "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", desc = "Continue", nowait = false, remap = false },
+	{ "<leader>dd", "<cmd>lua require'dap'.disconnect()<CR>", desc = "Disconnect", nowait = false, remap = false },
+	{ "<leader>dn", "<cmd>lua require'dap'.step_over()<CR>", desc = "Next", nowait = false, remap = false },
+	{ "<leader>dq", "<cmd>lua require'dap'.close()<CR>", desc = "Quit", nowait = false, remap = false },
+	{ "<leader>ds", "<cmd>lua require'dap'.step_into()<CR>", desc = "Step", nowait = false, remap = false },
+	{ "<leader>dx", "<cmd>lua require'dap'.terminate()<CR>", desc = "Terminate", nowait = false, remap = false },
 
 	-- For MarkdownPreview
-	{"<leader>m", group = "MarkdownPreview", nowait = false, remap = false},
-    { "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Markdown preview", nowait = false, remap = false },
-    { "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", desc = "Markdown preview stop", nowait = false, remap = false },
-    { "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview toggle", nowait = false, remap = false },
+	{ "<leader>m", group = "MarkdownPreview", nowait = false, remap = false },
+	{ "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Markdown preview", nowait = false, remap = false },
+	{ "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", desc = "Markdown preview stop", nowait = false, remap = false },
+	{ "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown preview toggle", nowait = false, remap = false },
 
-	{"<leader>G", "<cmd>Gitignore<CR>", desc = "Generate '.gitignore'"},
+	{ "<leader>G", "<cmd>Gitignore<CR>", desc = "Generate '.gitignore'" },
 
 	-- For leetcode.nvim
-	{"<leader>L", group = "LeetCode", nowait = false, remap = false},
-	{"<leader>LL", "<cmd>Leet<CR>", desc = "Open leetcode.nvim", nowait = false, remap = false},
-	{"<leader>Lq", "<cmd>Leet exit<CR>", desc = "Close leetcode.nvim", nowait = false, remap = false},
-	{"<leader>Lm", "<cmd>Leet menu<CR>", desc = "Return leet code menu", nowait = false, remap = false},
-	{"<leader>Ld", "<cmd>Leet daily<CR>", desc = "Open the question of today", nowait = false, remap = false},
-	{"<leader>Ll", "<cmd>Leet list<CR>", desc = "Open a problem list picker", nowait = false, remap = false},
-	{"<leader>LR", "<cmd>Leet random<CR>", desc = "Open a random question", nowait = false, remap = false},
-	{"<leader>Lr", "<cmd>Leet run<CR>", desc = "Run currently opened question", nowait = false, remap = false},
-	{"<leader>La", "<cmd>Leet lang<CR>", desc = "Change the language", nowait = false, remap = false},
-	{"<leader>Ls", "<cmd>Leet submit<CR>", desc = "Submit currently opened question", nowait = false, remap = false},
+	{ "<leader>L", group = "LeetCode", nowait = false, remap = false },
+	{ "<leader>LL", "<cmd>Leet<CR>", desc = "Open leetcode.nvim", nowait = false, remap = false },
+	{ "<leader>Lq", "<cmd>Leet exit<CR>", desc = "Close leetcode.nvim", nowait = false, remap = false },
+	{ "<leader>Lm", "<cmd>Leet menu<CR>", desc = "Return leet code menu", nowait = false, remap = false },
+	{ "<leader>Ld", "<cmd>Leet daily<CR>", desc = "Open the question of today", nowait = false, remap = false },
+	{ "<leader>Ll", "<cmd>Leet list<CR>", desc = "Open a problem list picker", nowait = false, remap = false },
+	{ "<leader>LR", "<cmd>Leet random<CR>", desc = "Open a random question", nowait = false, remap = false },
+	{ "<leader>Lr", "<cmd>Leet run<CR>", desc = "Run currently opened question", nowait = false, remap = false },
+	{ "<leader>La", "<cmd>Leet lang<CR>", desc = "Change the language", nowait = false, remap = false },
+	{ "<leader>Ls", "<cmd>Leet submit<CR>", desc = "Submit currently opened question", nowait = false, remap = false },
 
 	-- For telescope
-	{"<leader>f", group = "Telescope", nowait = false, remap = false},
-	{"<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find the file", nowait = false, remap = false},
-	{"<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Globally find file with keyword", nowait = false, remap = false},
-	{"<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Globally find file with keyword", nowait = false, remap = false},
-	{"<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Find the recent file", nowait = false, remap = false},
+	{ "<leader>f", group = "Telescope", nowait = false, remap = false },
+	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find the file", nowait = false, remap = false },
+	{
+		"<leader>fg",
+		"<cmd>Telescope live_grep<CR>",
+		desc = "Globally find file with keyword",
+		nowait = false,
+		remap = false,
+	},
+	{
+		"<leader>fg",
+		"<cmd>Telescope live_grep<CR>",
+		desc = "Globally find file with keyword",
+		nowait = false,
+		remap = false,
+	},
+	{ "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Find the recent file", nowait = false, remap = false },
 
 	-- For terminal
-	{"<leader>t", group = "Terminal", nowait = false, remap = false},
-	{"<leader>tf", "<cmd>Lspsaga term_toggle " .. defualt_shell .. "<CR>", desc = "Open a floating terminal", nowait = false},
-	{"<leader>tv", ":vsplit | terminal " .. defualt_shell .. "<CR>", desc = "Vertically open a terminal.", nowait = false},
-	{"<leader>ts", ":split | terminal ".. defualt_shell .. "<CR>", desc = "Horizontally open a terminal.", nowait = false},
-	{"<leader>tt", ":tab terminal " .. defualt_shell .. "<CR>", desc = "Open a tab terminal.", nowait = false},
+	{ "<leader>t", group = "Terminal", nowait = false, remap = false },
+	{
+		"<leader>tf",
+		"<cmd>Lspsaga term_toggle " .. defualt_shell .. "<CR>",
+		desc = "Open a floating terminal",
+		nowait = false,
+	},
+	{
+		"<leader>tv",
+		":vsplit | terminal " .. defualt_shell .. "<CR>",
+		desc = "Vertically open a terminal.",
+		nowait = false,
+	},
+	{
+		"<leader>ts",
+		":split | terminal " .. defualt_shell .. "<CR>",
+		desc = "Horizontally open a terminal.",
+		nowait = false,
+	},
+	{ "<leader>tt", ":tab terminal " .. defualt_shell .. "<CR>", desc = "Open a tab terminal.", nowait = false },
 
 	-- For img-clip.nvim
-	{"<leader>i", group = "Image Paste", nowait = false, remap = false},
-	{"<leader>ip", "<cmd>PasteImage<CR>", desc = "Paste image from system clipboard.", nowait = false},
-	{"<leader>ib", "<cmd>ImgClipDebug<CR>", desc = "Show the debug log.", nowait = false},
-	{"<leader>ic", "<cmd>ImgClipConfig<CR>", desc = "Show the current configuration.", nowait = false},
+	{ "<leader>i", group = "Image Paste", nowait = false, remap = false },
+	{ "<leader>ip", "<cmd>PasteImage<CR>", desc = "Paste image from system clipboard.", nowait = false },
+	{ "<leader>ib", "<cmd>ImgClipDebug<CR>", desc = "Show the debug log.", nowait = false },
+	{ "<leader>ic", "<cmd>ImgClipConfig<CR>", desc = "Show the current configuration.", nowait = false },
 
 	-- For LLM assistant
-	{"<leader>a", group = "LLM assistant", nowait = false, remap = false, mode = { "n", "v" }},
-	{"<leader>ac", "<cmd>CodeCompanionChat Toggle<CR>", desc = "Toggle AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
-	{"<leader>aa", "<cmd>CodeCompanionChat Add<CR>", desc = "Add the selected code into AI chat.", nowait = false, remap = false, mode = { "n", "v" }},
-	{"<leader>as", "<cmd>CodeCompanionActions<CR>", desc = "Use the selected code to request AI to do something.", nowait = false, remap = false, mode = { "n", "v" }},
+	{ "<leader>a", group = "LLM assistant", nowait = false, remap = false, mode = { "n", "v" } },
+	{
+		"<leader>ac",
+		"<cmd>CodeCompanionChat Toggle<CR>",
+		desc = "Toggle AI chat.",
+		nowait = false,
+		remap = false,
+		mode = { "n", "v" },
+	},
+	{
+		"<leader>aa",
+		"<cmd>CodeCompanionChat Add<CR>",
+		desc = "Add the selected code into AI chat.",
+		nowait = false,
+		remap = false,
+		mode = { "n", "v" },
+	},
+	{
+		"<leader>as",
+		"<cmd>CodeCompanionActions<CR>",
+		desc = "Use the selected code to request AI to do something.",
+		nowait = false,
+		remap = false,
+		mode = { "n", "v" },
+	},
 }
 
 which_key.add(wk_keymaps)
@@ -107,7 +161,7 @@ end
 
 pluginKeys.cmpKeys = function(cmp)
 	local keys = {
-		["<A-j>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
+		["<A-j>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<A-k>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
