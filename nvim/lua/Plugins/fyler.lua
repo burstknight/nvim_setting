@@ -20,7 +20,10 @@ fyler.setup({
 	},
 	kind_presets = {
 		split_left_most = {
-			width = "35%",
+			width = "40%",
 		},
+	},
+	ui = {
+		indent_guides = true,
 	},
 })
