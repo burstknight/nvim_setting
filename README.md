@@ -24,7 +24,7 @@ This repo is my neovim setting.
 
 
 ## Requirements
-Neovim version must be `0.11.x+`.
+Neovim version must be `0.12.x+`.
 
 Some plugins need use `nerd font`, so we need download a font from [this web](https://www.nerdfonts.com/font-downloads). And then decompress the downloaded compressed file. Finally, please copy `*.ttf` files into the path `/usr/local/share/fonts`.
 
@@ -34,7 +34,7 @@ If you want to use neovim to write `gdscript` for godot, you have to install [go
 
 ## Used plugins
 ### For common functions
-* [chadtree](https://github.com/ms-jpq/chadtree.git): I use this plugin as the file explorer.
+* [fyler.nvim](https://github.com/FylerOrg/fyler.nvim.git): I use this plugin as the file explorer.
 * [nvim-notify](https://github.com/rcarriga/nvim-notify.git): It can use cool dialog to show message.
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs.git): It can automatically brackets, parens and quotes in pair.
 * [vim-code-dark](https://github.com/tomasiser/vim-code-dark.git): I use this plugin to set the color scheme for neovim.
