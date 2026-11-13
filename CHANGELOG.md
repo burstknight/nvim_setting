@@ -7,6 +7,7 @@
 * Replace the plugin `chadtree` with `fyler.nvim` as the file browser.
 
 ### [Fixed]
+* Fix the bug about failing to use `ollama` for the plugin `codecompanion.nvim`.
 
 ### [Security]
 
