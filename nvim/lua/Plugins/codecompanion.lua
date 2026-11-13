@@ -25,17 +25,12 @@ codecompanion.setup({
 			ollama = function()
 				return require("codecompanion.adapters").extend("ollama", {
 					name = "ollama",
-					url = "http://localhost:11434",
 					env = {
-						api_key = "",
+						url = "http://localhost:11434",
 					},
 					schema = {
 						model = {
-							default = "gemma3:4b",
-							choices = {
-								"gemma3:4b",
-								"gemma4:e2b",
-							},
+							default = "gemma4:e2b",
 						},
 					},
 					opts = {
