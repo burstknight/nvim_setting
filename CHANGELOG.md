@@ -4,13 +4,13 @@
 ### [Added]
 
 ### [Changed]
+* Replace the plugin `chadtree` with `fyler.nvim` as the file browser.
 
 ### [Fixed]
 
 ### [Security]
 
 ### [Removed]
-* Remove the plugin `chadtree`.
 
 ### [Deprecated]
 
