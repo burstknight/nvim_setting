@@ -1,7 +1,6 @@
 -- Load all settings for the plugins.
 local plugins = {
 	"Plugins.nvim-notify",
-	"Plugins.chadtree",
 	"Plugins.vim-gitgutter",
 	"Plugins.vim-rainbow",
 	"Plugins.ibl",
@@ -14,6 +13,7 @@ local plugins = {
 	"Plugins.fidget",
 	"Plugins.mini-icons",
 	"Plugins.nvim-treesitter",
+	"Plugins.fyler",
 }
 
 for i = 1, #plugins do

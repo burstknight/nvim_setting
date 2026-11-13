@@ -24,11 +24,9 @@ require("lazy").setup({
 	-- 這個外掛可以美化 neovim 的通知訊息
 	{ "rcarriga/nvim-notify" },
 
-	-- 這個外掛可以當檔案總管來瀏覽一個專案目錄下的檔案
+	-- This plugin is a file explorer.
 	{
-		"ms-jpq/chadtree",
-		branch = "chad",
-		build = "python -m chadtree deps",
+		"FylerOrg/fyler.nvim",
 	},
 
 	-- 這個外掛可以用來括號類符號的自動補齊

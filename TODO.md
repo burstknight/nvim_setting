@@ -11,11 +11,6 @@
 * Maybe I need use the plugin [cmake-tools.nvim](https://github.com/Civitasv/cmake-tools.nvim.git) to use cmake to build code on neovim.
 * Maybe I need the plugin [symbol-usage.nvim](https://github.com/Wansmer/symbol-usage.nvim.git) to show more information for lsp.
 * Maybe I will replace `pyright` with [`astral/ty`](https://github.com/astral-sh/ty.git) as the language server for python.
-* Maybe I will try to replace `chadtree` with other plugin for the file explorer.
-	* [fyler.nvim](https://github.com/A7Lavinraj/fyler.nvim.git)
-	* [oil.nvim](https://github.com/stevearc/oil.nvim.git)
-		- [oil.bar.nvim](https://github.com/Maelwalser/oil-bar.nvim.git)
-	* [yazi.nvim](https://github.com/mikavilpas/yazi.nvim.git)
 * Maybe I want to use the plugin [image.nvim](https://github.com/3rd/image.nvim.git) to show images on markdown files.
 * Maybe I want to use the plugin [uv.nvim](https://github.com/benomahony/uv.nvim.git) to integrate neovim and [uv](https://github.com/astral-sh/uv).
 * I need find a way to fix the bug about failing install language server via `mason.nvim` on windows. Maybe this bug exists on linux.
