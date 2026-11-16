@@ -14,4 +14,8 @@
 * Maybe I want to use the plugin [image.nvim](https://github.com/3rd/image.nvim.git) to show images on markdown files.
 * Maybe I want to use the plugin [uv.nvim](https://github.com/benomahony/uv.nvim.git) to integrate neovim and [uv](https://github.com/astral-sh/uv).
 * I need find a way to fix the bug about failing install language server via `mason.nvim` on windows. Maybe this bug exists on linux.
+* Maybe I need some plugins as SQL client:
+	* [nvim-dbee](https://github.com/kndndrj/nvim-dbee.git)
+	* [vim-dadbod](https://github.com/tpope/vim-dadbod.git)
+	* [sqlit.nvim](https://github.com/Maxteabag/sqlit.nvim.git)
 
