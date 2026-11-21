@@ -18,4 +18,4 @@
 	* [nvim-dbee](https://github.com/kndndrj/nvim-dbee.git)
 	* [vim-dadbod](https://github.com/tpope/vim-dadbod.git)
 	* [sqlit.nvim](https://github.com/Maxteabag/sqlit.nvim.git)
-
+* Maybe I need the plugin [trouble.nvim](https://github.com/folke/trouble.nvim.git) to improve coding experience.
