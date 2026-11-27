@@ -16,7 +16,6 @@ This repo is my neovim setting.
     - [Keymaps for completion](#keymaps-for-completion)
     - [Keymaps for DAP](#keymaps-for-dap)
     - [Keymaps for `leetcode.nvim`](#keymaps-for-leetcodenvim)
-    - [Keymaps for `chadtree`](#keymaps-for-chadtree)
     - [Keymaps for LLM](#keymaps-for-llm)
   - [Try it on docker](#try-it-on-docker)
     - [For linux](#for-linux)
@@ -114,13 +113,17 @@ I use `space key` as the leader key for neovim.
 ### Keymaps for LSP
 | Keymaps | Description |
 | -------------- | --------------- |
-| `<leader>lr` | Rename for variable or function. |
+| `<leader>lR` | Rename for variable or function. |
 | `<leader>la` | Perform code action. |
 | `<leader>ld` | Go to definition for variable or function. |
 | `<leader>lf` | Find the definition, reference or implementation for the keyword. |
+| `<leader>lt` | Go to type definition. |
+| `<leader>lr` | Go to references for variable or function. |
+| `<leader>ls` | Go to LSP document symbols in the currrent file. |
 | `<F3>` | Open the outline for the currrent file. |
 | `<leader>lh` | Hover the document for variable or function. |
 | `<leader>l=` | Format the currrent code. |
+| `<leader>lH` | Show LSP diagnostics. |
 
 ### Keymaps for completion
 | Keymaps | Description |
@@ -155,20 +158,6 @@ I use `space key` as the leader key for neovim.
 | `<leader>La` | Change the language for the currently opened question. |
 | `<leader>Ls` | Submit the currently opened question. |
 
-### Keymaps for `chadtree`
-| Keymaps | Description |
-| -------------- | --------------- |
-| `q` | Close the file browser. |
-| `L` | Show the status for a file or directory. |
-| `i` | Open the selected file in horizontal split. |
-| `I` | Open the selected file in vertical split. |
-| `c` | Collpase all subdirectories for the directory at the currrent cursor on the file browser. |
-| `W` | Change the current working directory for neovim. |
-| `a` | Create a new file or a new directory at the location under the current cursor on the file browser. |
-| `r` | Rename a file or a directory. |
-| `c` | Copy the selected files for directories to the location under the current cursor on the file browser. |
-| `x` | Move the selected files or directories to the location under the current cursor on the files browser. |
-| `d` | Delete the selected files. |
 
 ### Keymaps for LLM
 | Keymaps | Description |
