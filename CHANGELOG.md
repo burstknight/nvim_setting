@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 ### [Added]
+* Add some LSP shortcuts to improve coding experience:
+	* `<leader>ld`: Go to definition.
+	* `<leader>lt`: Go to type definition.
+	* `<leader>lr`: Go to references.
+	* `<leader>ls`: Go to LSP document symbols in the current file.
+	* `<leader>lH`: Show LSP diagnostics.
 
 ### [Changed]
 * Replace the plugin `chadtree` with `fyler.nvim` as the file browser.
