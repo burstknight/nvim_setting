@@ -150,9 +150,13 @@ local pluginKeys = {}
 
 -- 設定 LSP 快捷鍵
 pluginKeys.lspKeyBinding = function(mapbuf)
-	mapbuf("n", "<leader>lr", ":Lspsaga rename<CR>", opts)
+	mapbuf("n", "<leader>lR", ":Lspsaga rename<CR>", opts)
 	mapbuf("n", "<leader>la", ":Lspsaga code_action<CR>", opts)
-	mapbuf("n", "<leader>ld", ":lua vim.lsp.buf.definition()<CR>", opts)
+	mapbuf("n", "<leader>ld", ":Telescope lsp_definitions<CR>", opts)
+	mapbuf("n", "<leader>lt", ":Telescope lsp_type_definitions<CR>", opts)
+	mapbuf("n", "<leader>lr", ":Telescope lsp_references<CR>", opts)
+	mapbuf("n", "<leader>ls", ":Telescope lsp_document_symbols<CR>", opts)
+	mapbuf("n", "<leader>lH", ":Telescope diagnostics<CR>", opts)
 	mapbuf("n", "<leader>lf", ":Lspsaga finder def+ref+imp<CR>", opts)
 	mapbuf("n", "<F3>", ":Lspsaga outline<CR>", opts)
 	mapbuf("n", "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", opts)
